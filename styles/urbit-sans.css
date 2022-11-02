@@ -1,0 +1,98 @@
+
+@font-face {
+    font-family: "Urbit Sans";
+    font-style: normal;
+    font-weight: 350;
+    src: url("https://media.urbit.org/fonts/UrbitSans/UrbitSans-Book.woff2") format("woff2"), url("https://media.urbit.org/fonts/UrbitSans/UrbitSans-Book.woff") format("woff"), url("https://media.urbit.org/fonts/UrbitSans/UrbitSans-Book.otf") format("opentype");
+  }
+  
+  @font-face {
+    font-family: "Urbit Sans Mono";
+    font-style: normal;
+    font-weight: 350;
+    src: url("https://media.urbit.org/fonts/UrbitSans/UrbitSans-BookMono.woff2") format("woff2"), url("https://media.urbit.org/fonts/UrbitSans/UrbitSans-BookMono.woff") format("woff"), url("https://media.urbit.org/fonts/UrbitSans/UrbitSans-BookMono.otf") format("opentype");
+  }
+  
+  @font-face {
+    font-family: "Urbit Sans";
+    font-style: normal;
+    font-weight: 300;
+    src: url("https://media.urbit.org/fonts/UrbitSans/UrbitSans-Light.woff2") format("woff2"), url("https://media.urbit.org/fonts/UrbitSans/UrbitSans-Light.woff") format("woff"), url("https://media.urbit.org/fonts/UrbitSans/UrbitSans-Light.otf") format("opentype");
+  }
+  
+  @font-face {
+    font-family: "Urbit Sans Mono";
+    font-style: normal;
+    font-weight: 300;
+    src: url("https://media.urbit.org/fonts/UrbitSans/UrbitSans-LightMono.woff2") format("woff2"), url("https://media.urbit.org/fonts/UrbitSans/UrbitSans-LightMono.woff") format("woff"), url("https://media.urbit.org/fonts/UrbitSans/UrbitSans-LightMono.otf") format("opentype");
+  }
+  
+  @font-face {
+    font-family: "Urbit Sans";
+    font-style: normal;
+    font-weight: 500;
+    src: url("https://media.urbit.org/fonts/UrbitSans/UrbitSans-Medium.woff2") format("woff2"), url("https://media.urbit.org/fonts/UrbitSans/UrbitSans-Medium.woff") format("woff"), url("https://media.urbit.org/fonts/UrbitSans/UrbitSans-Medium.otf") format("opentype");
+  }
+  
+  @font-face {
+    font-family: "Urbit Sans Mono";
+    font-style: normal;
+    font-weight: 500;
+    src: url("https://media.urbit.org/fonts/UrbitSans/UrbitSans-MediumMono.woff2") format("woff2"), url("https://media.urbit.org/fonts/UrbitSans/UrbitSans-MediumMono.woff") format("woff"), url("https://media.urbit.org/fonts/UrbitSans/UrbitSans-MediumMono.otf") format("opentype");
+  }
+  
+  @font-face {
+    font-family: "Urbit Sans";
+    font-style: normal;
+    font-weight: normal;
+    src: url("https://media.urbit.org/fonts/UrbitSans/UrbitSans-Regular.woff2") format("woff2"), url("https://media.urbit.org/fonts/UrbitSans/UrbitSans-Regular.woff") format("woff"), url("https://media.urbit.org/fonts/UrbitSans/UrbitSans-Regular.otf") format("opentype");
+  }
+  
+  @font-face {
+    font-family: "Urbit Sans Mono";
+    font-style: normal;
+    font-weight: normal;
+    src: url("https://media.urbit.org/fonts/UrbitSans/UrbitSans-RegularMono.woff2") format("woff2"), url("https://media.urbit.org/fonts/UrbitSans/UrbitSans-RegularMono.woff") format("woff"), url("https://media.urbit.org/fonts/UrbitSans/UrbitSans-RegularMono.otf") format("opentype");
+  }
+  
+  @font-face {
+    font-family: "Urbit Sans";
+    font-style: normal;
+    font-weight: 600;
+    src: url("https://media.urbit.org/fonts/UrbitSans/UrbitSans-SemiBold.woff2") format("woff2"), url("https://media.urbit.org/fonts/UrbitSans/UrbitSans-SemiBold.woff") format("woff"), url("https://media.urbit.org/fonts/UrbitSans/UrbitSans-SemiBold.otf") format("opentype");
+  }
+  
+  @font-face {
+    font-family: "Urbit Sans Mono";
+    font-style: normal;
+    font-weight: 600;
+    src: url("https://media.urbit.org/fonts/UrbitSans/UrbitSans-SemiBoldMono.woff2") format("woff2"), url("https://media.urbit.org/fonts/UrbitSans/UrbitSans-SemiBoldMono.woff") format("woff"), url("https://media.urbit.org/fonts/UrbitSans/UrbitSans-SemiBoldMono.otf") format("opentype");
+  }
+  
+  @font-face {
+    font-family: "Urbit Sans";
+    font-style: normal;
+    font-weight: 200;
+    src: url("https://media.urbit.org/fonts/UrbitSans/UrbitSans-Thin.woff2") format("woff2"), url("https://media.urbit.org/fonts/UrbitSans/UrbitSans-Thin.woff") format("woff"), url("https://media.urbit.org/fonts/UrbitSans/UrbitSans-Thin.otf") format("opentype");
+  }
+  
+  @font-face {
+    font-family: "Urbit Sans Mono";
+    font-style: normal;
+    font-weight: 200;
+    src: url("https://media.urbit.org/fonts/UrbitSans/UrbitSans-ThinMono.woff2") format("woff2"), url("https://media.urbit.org/fonts/UrbitSans/UrbitSans-ThinMono.woff") format("woff"), url("https://media.urbit.org/fonts/UrbitSans/UrbitSans-ThinMono.otf") format("opentype");
+  }
+  
+  @font-face {
+    font-family: "Urbit Sans";
+    font-style: normal;
+    font-weight: 100;
+    src: url("https://media.urbit.org/fonts/UrbitSans/UrbitSans-UltraThin.woff2") format("woff2"), url("https://media.urbit.org/fonts/UrbitSans/UrbitSans-UltraThin.woff") format("woff"), url("https://media.urbit.org/fonts/UrbitSans/UrbitSans-UltraThin.otf") format("opentype");
+  }
+  
+  @font-face {
+    font-family: "Urbit Sans Mono";
+    font-style: normal;
+    font-weight: 100;
+    src: url("https://media.urbit.org/fonts/UrbitSans/UrbitSans-UltraThinMono.woff2") format("woff2"), url("https://media.urbit.org/fonts/UrbitSans/UrbitSans-UltraThinMono.woff") format("woff"), url("https://media.urbit.org/fonts/UrbitSans/UrbitSans-UltraThinMono.otf") format("opentype");
+  }
