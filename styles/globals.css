@@ -7,6 +7,8 @@ body {
   @apply antialiased;
   padding: 0;
   margin: 0;
+  width: 100%;
+  height: 100%;
 }
 
 a {
@@ -23,6 +25,16 @@ a {
 .button-lg:hover,
 a:hover {
   opacity: 0.66;
+}
+
+.sig::before {
+  position: absolute;
+  left: -2ch;
+  content: "~"
+}
+
+.sig {
+  position: relative;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -64,20 +64,20 @@ const Headings = ({ headings, activeId }) => (
                 <a
                     className={classNames({
                         "font-bold": index === 0,
-                        "font-medium text-sm": index !== 0,
-                        "text-green-400": heading.id === activeId && index !== 0,
+                        "font-medium text-base": index !== 0,
+                        "text-purple": heading.id === activeId && index !== 0,
                     })}
                     href={`#${heading.id}`}
                 >
                     {heading.title}
                 </a>
                 {heading.items.length > 0 && (
-                    <ul className="pl-2 text-xs">
+                    <ul className="pl-2 text-sm">
                         {heading.items.map((child) => (
                             <li
                                 key={child.id}
                                 className={
-                                    child.id === activeId ? "text-green-400" : "text-wall-500"
+                                    child.id === activeId ? "text-purple" : "text-black"
                                 }
                             >
                                 <a href={`#${child.id}`}>{child.title}</a>
