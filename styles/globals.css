@@ -33,8 +33,14 @@ a:hover {
   content: "~"
 }
 
-.sig {
+.sig, .caret {
   position: relative;
+}
+
+.caret::before {
+  position: absolute;
+  left: -2ch;
+  content: ">"
 }
 
 @media (prefers-color-scheme: dark) {

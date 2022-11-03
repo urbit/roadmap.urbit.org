@@ -4,8 +4,13 @@ import Container from "../components/Container"
 import Grid from "../components/Grid";
 import { Markdown, getPostBySlug } from '@urbit/foundation-design-system';
 import TableOfContents from "../components/TableOfContents";
+import { dirs } from '../lib/constants';
+import Link from 'next/link';
+import cn from 'classnames'
+import { useRouter } from 'next/router';
 
-export default function Home({ search, post, markdown }) {
+export default function Home({ search, markdown }) {
+  const router = useRouter();
   return (
     <Container>
       <IntraNav search={{}} />
@@ -13,15 +18,24 @@ export default function Home({ search, post, markdown }) {
         <div className="w-full col-span-full grid grid-cols-12 p-4 md:p-0 md:mt-44">
           {/* Header row */}
           <h2 className="text-3xl font-semibold sig col-start-2 col-end-4">Roadmap</h2>
-          <h2 className="text-3xl col-start-2 md:col-start-4">Overview</h2>
+          <h2 className="text-3xl col-start-2 md:col-start-4 mt-4 md:mt-0">Overview</h2>
           {/* Content row */}
           <div className="w-full col-span-full grid grid-cols-12 md:mt-40">
             {/* Sidebar */}
-            <div className="col-start-2 col-end-4">
-
+            <div className="col-start-2 col-end-4 list-none text-2xl hidden md:flex space-y-2 flex-col">
+              {dirs.map((dir) => {
+                return <li key={dir.title}>
+                  <Link href={dir.link}>
+                    <a className={cn({
+                      "text-purple": dir.link !== router.pathname,
+                      "text-black caret": dir.link === router.pathname
+                    })}>{dir.title}</a>
+                  </Link>
+                </li>
+              })}
             </div>
             {/* Content */}
-            <div className="col-start-2 col-end-11 md:col-start-4 md:col-end-9 markdown">
+            <div className="col-start-2 col-end-11 md:col-start-4 md:col-end-9 markdown mt-16 md:mt-0">
               <Markdown.render content={JSON.parse(markdown)} />
             </div>
             {/* Table of contents */}
