@@ -10,14 +10,14 @@ Over the next year or two, the Urbit core devs are focused on making the Urbit O
 
 I want the members of the broader Urbit ecosystem to understand what needs to be done, how each piece will be built and why, a rough timeline of what to expect when, and ideally how they can help accelerate development.
 
-The plan is of course subject to change, but I expect our orientation to be stable.  Here are the high-level tasks that need to be done to make Urbit a consumer product:
-- solidify the interface between applications and the kernel
-- manage larger amounts of data in the runtime
-- security: runtime hardening and userspace permissioning
-- network scaling: new high-bandwidth read protocols, better routing
-- developer experience, e.g. dependency management
-- zero-click maintenance: better upgrades and error handling
-- better cloud hosting support: quiescence, lower memory footprint
+The plan is of course subject to change, but I expect our orientation to be stable.  Here are the high-level goals that need to be achieved to make Urbit a consumer product:
+- raise kernel and runtime release frequency to weekly
+- develop confidence in security across the board
+- manage enough data in the runtime that users don't need external S3 storage
+- approach zero-click maintenance for users
+- improve network performance until a ship can handle 100,000 chat subscribers
+- make hosting businesses profitable by reducing unit and maintenance costs
+- stop breaking backward compatibility for apps
 
 The rest of this document describes the breakdown of these large tasks into smaller projects.
 
@@ -36,6 +36,8 @@ On the memory use front, "tombstoning" was added to Clay to allow files to be de
 
 As for bug fixing, the "gall request queue fix", which involved major changes to Ames and Gall and a complex online migration, was the largest bugfixing project.  Fixes were also deployed for Ames breach handling, Behn timers getting stuck, insecure "bail: meme" out-of-memory error handling, and stuck Azimuth PKI tracking.
 
+#### Upgrade System Overhaul
+
 Early in the year, bugs were identified in Arvo's upgrade system that have made pushing out new releases risky.  As of the latest release, those bugs no longer brick users' ships, but they can still erroneously turn off apps that should be running, requiring manual user attention to resolve.  The "agents-in-Clay" project addresses these bugs by greatly simplifying the upgrade system, making its correctness much easier to verify.
 
 Here is the specification for the agents-in-Clay work (slightly out of date):
@@ -43,11 +45,19 @@ https://gist.github.com/belisarius222/2ae74bfb5a40860b59d28970d29b3329
 
 The agents-in-Clay work is now nearing completion (the first version, without migration waypoints).  Once it's deployed, release frequency for the kernel and runtime can increase.  Projects blocked on this release include the basic remote scry protocol and userspace permissioning.
 
+#### Event Log Truncation
+
 In parallel, a major update to the runtime is also approaching release: "event log truncation".  This is a basic feature of "prevalence systems" such as Urbit's, to ensure disk usage stays roughly constant over time instead of increasing linearly as it does now.
 
 Implementing event log truncation required first moving the responsibility for managing the event log from Vere's "Urth" I/O process to its "Mars" Nock worker process, colocating event log persistence with snapshot persistence to ensure consistency when deleting old events from the log.
 
+#### Terminal Improvements
+
 `~palfun-foslup`'s improvements to the terminal subsystems, having languished unreleased for many months, are slated for the next release after event log truncation and agents-in-Clay.
+
+#### Basic Remote Scry
+
+The basic remote scry protocol is also on the docket, needing only some more review and testing before release.
 
 ### Strategic Objectives
 
@@ -111,18 +121,6 @@ Defending the system against an experienced team determined to find memory corru
 TODO: link to current projects
 
 ##### Next Projects
-
-After all the current projects are released, some projects are next up.
-
-One of these is breadth-first move order in Arvo.  This intends to improve the reliability of parts of the kernel, including upgrades and breach handling, by modifying the order in which Arvo dispatches moves to vanes: https://github.com/urbit/urbit/pull/6041
-
-The basic remote scry protocol is also on the docket, needing only some more review and testing before release.
-
-A bug in the "gall request queue fix" work is an occasional crash with the error message "ack crashed exit".  This is high priority to fix, while the GRQF project is still fresh in people's minds.  It is likely a relatively small project.
-
-One thing we can do to begin protecting against DoS is to validate packets in Vere before injecting them as Arvo events.  This will make it harder for an attacker to lock up a victim's event loop, and it should be a straightforward project.
-
-Experimenting with different designs for the jet dashboard is also high priority, since it could improve performance, security, and general simplicity of the codebase.  Backporting New Mars's "subject knowledge analysis" to Vere is worth trying, for similar reasons.
 
 ### Scale the Team and Processes
 
