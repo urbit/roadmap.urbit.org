@@ -6,11 +6,9 @@ title = "Overview"
 
 Urbit has been in development for over a decade.  Most of that time has been spent on building the first or second versions of each major component, often as little more than a prototype.  Only in the last year has the system matured enough for us to be able to enumerate the remaining blockers to mass adoption.
 
-Over the next year or two, the Urbit core devs are focused on making the Urbit OS a fully featured, bulletproof, easy-to-use consumer product.  This roadmap is intended to clarify how the core devs plan to accomplish this task, in as much detail as possible.
+Over the next year or two, the Urbit core devs are focused on making the Urbit OS a fully featured, bulletproof, easy-to-use consumer product.  This roadmap is intended to clarify how the core devs plan to accomplish this task, in as much detail as possible: what needs to be done, how each piece will be built and why, a rough timeline of what to expect when, and ideally how they can help accelerate development.
 
-I want the members of the broader Urbit ecosystem to understand what needs to be done, how each piece will be built and why, a rough timeline of what to expect when, and ideally how they can help accelerate development.
-
-The plan is of course subject to change, but I expect our orientation to be stable.  Here are the high-level goals that need to be achieved to make Urbit a consumer product:
+The plan is of course subject to change, but we expect our orientation to be stable.  Here are the high-level goals that need to be achieved to make Urbit a consumer product:
 - raise kernel and runtime release frequency to weekly
 - develop confidence in security across the board
 - manage enough data in the runtime to handle multimedia apps
