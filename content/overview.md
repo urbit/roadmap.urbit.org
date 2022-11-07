@@ -13,13 +13,51 @@ I want the members of the broader Urbit ecosystem to understand what needs to be
 The plan is of course subject to change, but I expect our orientation to be stable.  Here are the high-level goals that need to be achieved to make Urbit a consumer product:
 - raise kernel and runtime release frequency to weekly
 - develop confidence in security across the board
-- manage enough data in the runtime that users don't need external S3 storage
+- manage enough data in the runtime to handle multimedia apps
 - approach zero-click maintenance for users
 - improve network performance until a ship can handle 100,000 chat subscribers
 - make hosting businesses profitable by reducing unit and maintenance costs
-- stop breaking backward compatibility for apps
+- establish backward compatibility for apps
 
 The rest of this document describes the breakdown of these large tasks into smaller projects.
+
+## Release Frequency
+
+## Security
+
+Security can be broken down into denial of service mitigation,
+penetration, and software supply chain.
+
+### Security: Denial of Service
+
+- Vere
+- Arvo
+
+### Security: Penetration
+
+- Azimuth
+- Vere
+- Arvo
+
+### Security: Software Supply Chain
+
+- Azimuth
+- Vere
+- Arvo
+
+
+## Runtime Data Management
+
+## Zero-Click Maintenance
+
+## Network Performance
+
+## Hosting Costs
+
+## Backward Compatibility
+
+
+
 
 ## Strategy and Timing
 
