@@ -49,7 +49,7 @@
   }
   
   .markdown p {
-    @apply text-base md:text-lg leading-relaxed;
+    @apply text-base md:text-xl leading-relaxed;
   }
   
   .markdown-callout p {
