@@ -19,6 +19,8 @@ The rest of this document describes the breakdown of these large goals into smal
 
 ## Release Frequency
 
+### Development Work to Increase Release Frequency
+
 Increasing the speed of releases is a high priority, since it will accelerate the pace of development overall.
 
 The first step is to make the upgrade process itself more reliable.  The "agents in Clay" project, slated for the next release as November 2022, rewrites the kernel's upgrade system in a much simpler way, making it much easier to reason about and less fragile.
@@ -32,6 +34,18 @@ links TODO:
 - kelvin shims for userspace
 - automatic binary upgrades
 - logging
+
+### Scale the Team and Processes
+
+The Urbit Foundation and Tlon are both expanding their internal core dev teams.  UF plans to add four full-time core devs over the next year, and Tlon added one recently.  TODO rewrite this sentence
+
+In addition to raw numbers, core dev needs to become more of a traditional open-source project than it has been so far.  This means we need better reference documentation, guides, training, roadmaps, and specifications, especially targeted toward intermediate and advanced developers -- Hoon School has been bringing in a large number of such developers, some of whom should be brought into core development.  Publishing this roadmap represents the core team's first major step toward developing in public, which we plan to increase dramatically.
+
+The architecture of the system will also be examined critically to evaluate points where boundaries can be drawn between subsystems to facilitate their independent development.  Splitting out I/O drivers and event log persistence into their own Unix processes is an example of this kind of thinking. 
+
+Also important for scaling the team is the quality of the testing and release processes.  Tlon has made major strides in the release process this year: their "devstream process" for phased deployment has caught many bugs that would have hit users in previous years.  More automated tests (unit tests, integration tests, and end-to-end "aqua" tests that simulate a fleet of virtual ships inside the Aqua agent) will increase the level of assurance of each deployment, reducing risk and increasing confidence when making a change.
+
+TODO link to jobs page
 
 ## Security
 
@@ -101,62 +115,4 @@ Defending the system against an experienced team determined to find memory corru
 
 ## Backward Compatibility
 
-
-
-
-## Strategy and Timing
-
-The core devs have a three-phase plan:
-- clear the backlog
-- prioritize new projects according to strategic objectives
-- scale the team and processes
-
-### Clear the Backlog
-
-The highest priority for the core team is to release a number of kernel and runtime projects that are in a completed or nearly completed state.  Some of these projects had to be shelved due to the need to fix some severe user-facing issues.  In addition to feature work, a large portion of dev time in 2022 was spent reducing kernel memory use and fixing bugs.
-
-On the memory use front, "tombstoning" was added to Clay to allow files to be deleted, freeing their memory.  Clay stopped storing diffs to files, switching to storing only snapshots of files.  The Ford cache was made referentially transparent, enabling global deduplication of memory for Ford builds across multiple app desks.  Space leaks in Ford where Clay state leaked into build results were plugged.
-
-As for bug fixing, the "gall request queue fix", which involved major changes to Ames and Gall and a complex online migration, was the largest bugfixing project.  Fixes were also deployed for Ames breach handling, Behn timers getting stuck, insecure "bail: meme" out-of-memory error handling, and stuck Azimuth PKI tracking.
-
-#### Upgrade System Overhaul
-
-Early in the year, bugs were identified in Arvo's upgrade system that have made pushing out new releases risky.  As of the latest release, those bugs no longer brick users' ships, but they can still erroneously turn off apps that should be running, requiring manual user attention to resolve.  The "agents-in-Clay" project addresses these bugs by greatly simplifying the upgrade system, making its correctness much easier to verify.
-
-Here is the specification for the agents-in-Clay work (slightly out of date):
-https://gist.github.com/belisarius222/2ae74bfb5a40860b59d28970d29b3329
-
-The agents-in-Clay work is now nearing completion (the first version, without migration waypoints).  Once it's deployed, release frequency for the kernel and runtime can increase.  Projects blocked on this release include the basic remote scry protocol and userspace permissioning.
-
-#### Event Log Truncation
-
-In parallel, a major update to the runtime is also approaching release: "event log truncation".  This is a basic feature of "prevalence systems" such as Urbit's, to ensure disk usage stays roughly constant over time instead of increasing linearly as it does now.
-
-Implementing event log truncation required first moving the responsibility for managing the event log from Vere's "Urth" I/O process to its "Mars" Nock worker process, colocating event log persistence with snapshot persistence to ensure consistency when deleting old events from the log.
-
-#### Terminal Improvements
-
-`~palfun-foslup`'s improvements to the terminal subsystems, having languished unreleased for many months, are slated for the next release after event log truncation and agents-in-Clay.
-
-#### Basic Remote Scry
-
-The basic remote scry protocol is also on the docket, needing only some more review and testing before release.
-
-### Strategic Objectives
-
-#### Other Strategic Priorities
-
-TODO: link to current projects
-
-##### Next Projects
-
-### Scale the Team and Processes
-
-The first step in scaling the core dev team is to hire more devs.  The Urbit Foundation and Tlon are both expanding their internal dev teams.  UF plans to add four full-time core devs over the next year, and Tlon added one recently.
-
-In addition to raw numbers, core dev needs to become more of a traditional open-source project than it has been so far.  This means we need better reference documentation, guides, training, roadmaps, and specifications, especially targeted toward intermediate and advanced developers -- Hoon School has been bringing in a large number of such developers, some of whom should be brought into core development.  Publishing this roadmap represents the core team's first major step toward developing in public, which we plan to increase dramatically.
-
-The architecture of the system will also be examined critically to evaluate points where boundaries can be drawn between subsystems to facilitate their independent development.  Splitting out I/O drivers and event log persistence into their own Unix processes is an example of this kind of thinking. 
-
-Also important for scaling the team is the quality of the testing and release processes.  Tlon has made major strides in the release process this year: their "devstream process" for phased deployment has caught many bugs that would have hit users in previous years.  More automated tests (unit tests, integration tests, and end-to-end "aqua" tests that simulate a fleet of virtual ships inside the Aqua agent) will increase the level of assurance of each deployment, reducing risk and increasing confidence when making a change.
 
