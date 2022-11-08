@@ -13,7 +13,7 @@ export default function Home({ search, markdown }) {
   const router = useRouter();
   return (
     <Container>
-      <IntraNav search={{}} />
+      <IntraNav search={search} />
       <Grid>
         <div className="w-full col-span-full grid grid-cols-12 p-4 md:p-0 md:mt-44">
           {/* Header row */}
