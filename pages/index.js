@@ -26,8 +26,8 @@ export default function Home({ search, markdown }) {
               {dirs.map((dir) => {
                 return <li key={dir.title}>
                   <Link href={dir.link}>
-                    <a className={cn({
-                      "text-purple": dir.link !== router.pathname,
+                    <a className={cn("font-urbit-sans", {
+                      "text-green-400": dir.link !== router.pathname,
                       "text-black caret": dir.link === router.pathname
                     })}>{dir.title}</a>
                   </Link>
@@ -35,11 +35,11 @@ export default function Home({ search, markdown }) {
               })}
             </div>
             {/* Content */}
-            <div className="col-start-2 col-end-11 md:col-start-4 md:col-end-9 markdown mt-16 md:mt-0">
+            <div className="col-span-full md:col-start-4 md:col-end-11 lg:col-end-9 markdown mt-16 md:mt-0">
               <Markdown.render content={JSON.parse(markdown)} />
             </div>
             {/* Table of contents */}
-            <div className="col-start-9">
+            <div className="col-start-10">
               <TableOfContents />
             </div>
           </div>

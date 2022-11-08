@@ -25,23 +25,23 @@ export default function IntraNav({ search, ourSite = "https://roadmap.urbit.org"
         { title: "Roadmap", href: "https://roadmap.urbit.org" }
     ];
     return (
-        <div className="bg-black text-white w-full grid grid-cols-12">
+        <div className="bg-wall-100 w-full grid grid-cols-12">
             <div className="hidden md:block col-start-2 col-end-11">
                 <div className="flex justify-between items-center py-2">
                     <div className="flex space-x-4 items-center">
                         {sites.map((site) => (
                             <a
                                 key={site.title}
-                                className={classNames("text-sm", {
-                                    "font-bold text-white": ourSite.includes(site.href),
+                                className={classNames("text-xs", {
+                                    "font-bold text-black": ourSite.includes(site.href),
                                 })}
                                 href={site.href}
                             >
                                 {site.title}
                             </a>
                         ))}
-                        <div className="w-[1px] h-[1.25rem] bg-gray-500" />
-                        <a className="text-sm" href="https://network.urbit.org">
+                        <div className="w-[1px] h-[1.25rem] bg-wall-400" />
+                        <a className="text-xs" href="https://network.urbit.org">
                             Network Explorer
                         </a>
                     </div>
@@ -50,10 +50,10 @@ export default function IntraNav({ search, ourSite = "https://roadmap.urbit.org"
                             e.stopPropagation();
                             search.toggleSearch(e);
                         }}
-                        className="text-gray-800 border items-center justify-center flex space-x-6 px-3 py-2 leading-none rounded-full text-sm font-medium"
+                        className="bg-white text-wall-500 flex px-3 py-2 rounded-lg text-xs font-medium"
                     >
                         <div>Search</div>
-                        <div className="text-gray-500">{shortcut}</div>
+                        <div className="ml-2 text-wall-400">{shortcut}</div>
                     </button>
                 </div>
             </div>

@@ -41,3 +41,11 @@ a:hover {
   left: -2ch;
   content: ">"
 }
+
+.markdown a {
+  @apply break-words;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "Urbit Sans" !important;
+}
