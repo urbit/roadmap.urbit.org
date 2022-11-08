@@ -15,15 +15,15 @@ Here are the high-level goals that need to be achieved to make Urbit a consumer 
 - make hosting businesses profitable by reducing unit and maintenance costs
 - establish backward compatibility for apps
 
-The rest of this document describes the breakdown of these large goals into smaller projects.
+The rest of this document describes the strategies for achieving these goals.
 
 ## Release Frequency
 
+Increasing the speed of releases is the core dev team's highest priority, since it will accelerate the pace of development overall.  We will make a number of changes to the kernel and runtime for this purpose.  Also, the Urbit Foundation and Tlon are both expanding their core dev teams.
+
 ### Development Work to Increase Release Frequency
 
-Increasing the speed of releases is a high priority, since it will accelerate the pace of development overall.
-
-The first step is to make the upgrade process itself more reliable.  The "agents in Clay" project, slated for the next release as November 2022, rewrites the kernel's upgrade system in a much simpler way, making it much easier to reason about and less fragile.
+The first step is to make the upgrade process itself more reliable.  The "agents in Clay" project, slated for the next release as November 2022, rewrites the kernel's upgrade system in a much simpler way, making it easier to reason about and less fragile.
 
 The next steps involve building support into the kernel for maintaining backward compatibility across kernel upgrades, so that app developers won't need to change their code to keep their apps running on newer kernels.
 
@@ -37,11 +37,9 @@ links TODO:
 
 ### Scale the Team and Processes
 
-The Urbit Foundation and Tlon are both expanding their internal core dev teams.  UF plans to add four full-time core devs over the next year, and Tlon added one recently.  TODO rewrite this sentence
-
 In addition to raw numbers, core dev needs to become more of a traditional open-source project than it has been so far.  This means we need better reference documentation, guides, training, roadmaps, and specifications, especially targeted toward intermediate and advanced developers -- Hoon School has been bringing in a large number of such developers, some of whom should be brought into core development.  Publishing this roadmap represents the core team's first major step toward developing in public, which we plan to increase dramatically.
 
-The architecture of the system will also be examined critically to evaluate points where boundaries can be drawn between subsystems to facilitate their independent development.  Splitting out I/O drivers and event log persistence into their own Unix processes is an example of this kind of thinking. 
+The architecture of the system will be examined critically to evaluate points where boundaries can be drawn between subsystems to facilitate their independent development.  Splitting out I/O drivers and event log persistence into their own Unix processes is an example of this kind of thinking. 
 
 Also important for scaling the team is the quality of the testing and release processes.  Tlon has made major strides in the release process this year: their "devstream process" for phased deployment has caught many bugs that would have hit users in previous years.  More automated tests (unit tests, integration tests, and end-to-end "aqua" tests that simulate a fleet of virtual ships inside the Aqua agent) will increase the level of assurance of each deployment, reducing risk and increasing confidence when making a change.
 
@@ -49,14 +47,26 @@ TODO link to jobs page
 
 ## Security
 
-Much work remains to bulletproof Urbit to the point where it can not only defend its memory safety and cryptographic safety, but can also fend off denial of service attacks by dedicated assailants.
+Much work remains to bulletproof Urbit to the point where it can not only defend its memory safety and cryptographic safety, but can also fend off denial of service attacks by dedicated assailants.  We will start raising the bar for security incrementally to be resilient against increasingly determined and well-resourced attackers.
 
-It is critical to ratchet up the security of the system incrementally to assure we reach our security goals.  Since security is a newly high-priority item for the core team, we will largely do the low-hanging fruit first, to "get in the mood" -- we will then ramp up to the more difficult tasks as we develop more mastery of the domain. 
+Securing Urbit breaks down coarsely into:
+- securing the software supply chain ("the components, activities, and practices involved in the creation and deployment of software"),
+- mitigating denial of service attacks ("malicious attempts to overwhelm an online service and render it unusable"), and
+- preventing penetration (e.g. corrupting memory to hijack the virtual machine).
 
-Securing Urbit breaks down coarsely into securing the software supply chain
-("the components, activities, and practices involved in the creation and deployment of software"), mitigation of denial of service attacks, and prevention of penetration (e.g. corrupting memory to hijack the virtual machine).
+We will first secure the system against an individual or small group intending to casually DoS the network by spamming packets.  This work will largely consist of many small modifications to process incoming packets more efficiently, improve monitoring and incident response, and ban malicious IP addresses and Urbit ships.
 
-Urbit security has several dimensions, with tasks ordered within each category in roughly increasing order by level of vulnerability:
+Tlon is developing an incident response plan, and basic logging is being developed, which is the first step in DoS protection.  The next step in DoS protection is to validate incoming Ames packets in Vere -- also a high priority.
+
+Concurrently, we will tighten down intra-Arvo security.  Once two known issues are addressed -- by adding a basic userspace permissioning system and closing a vulnerability known as the "zapgal type hole" -- Arvo should be secure against penetration, assuming a secure runtime.  Mitigating DoS in Arvo and all its userspace agents will require more work, including interaction with Vere.
+
+Along with tightening Arvo security and basic DoS protection, basic software supply chain protection is being established.  This entails using best practices for managing permissions to interact with infrastructure nodes (live galaxies and stars) and places that distribute software, including Urbit's GitHub repository and the HTTP endpoints from which executables -- Vere binaries and "pills" (Nock bootloaders) -- are downloaded.  We will also need to build protections against DNS spoofing that would allow an attacker to feed a ship bunk PKI data from a fake Ethereum node.
+
+Defending the system against an experienced team determined to find memory corruption in the runtime to gain remote code execution will require the most lead time.  We can start on this soon by improving the quality of the architecture and code in the most critical parts of the runtime; we also plan to experiment with "design for verification", i.e. structuring the code to be amenable to pen-and-paper correctness proofs, so that we can begin preparing the code for external audit and penetration testing.
+
+The Nock interpreter (bytecode interpreter, jet dashboard, and allocator) is the most difficult part of the system to secure.  The first step toward guaranteeing its security may be to simplify its architecture so it can be more effectively analyzed and verified.  Splitting out the I/O drivers into their own processes and dropping privileges will add some defense in depth to Vere and increase flexibility of implementation; that work is planned for relatively soon.
+
+Here is a list of security tasks ordered within each category in roughly increasing order by level of vulnerability:
 
 - PKI Security:
   - Azimuth PKI contracts: audited, mature
@@ -89,21 +99,7 @@ Urbit security has several dimensions, with tasks ordered within each category i
   - incident response plan: none
   - telemetry for DoS-related packet statistics: none
 
-(Note that there are also security agenda items for the web client, such as the need to strip EXIF image metadata to prevent geolocation data leak.  These are considered out of scope for this document, which concerns itself only with PKI, kernel, and runtime.)
-
-The deep end of Vere is the most difficult part of the system to secure: allocator, Nock interpreter, and jet dashboard.  The first step toward guaranteeing the security of these components is to simplify their architecture so they can be more effectively analyzed and verified.  
-
-Other tasks can be addressed immediately.  Tlon is developing an incident response plan presently, and basic logging is being developed, which is the first step in DoS protection.  The next step in DoS protection is to validate incoming Ames packets in Vere -- also a high priority.
-
-Splitting out the I/O drivers into their own processes and dropping privileges will add some defense in depth to Vere and increase flexibility of implementation; that work is planned for relatively soon.
-
-The overall story for security is to start raising the bar for security incrementally to be resilient against increasingly determined and well-resourced attackers.
-
-We will first secure the system against an individual or small group intending to casually DoS the network by spamming packets.  Concurrently, we will tighten down intra-Arvo security, since once a basic userspace permissioning system is added and the zapgal type hole is addressed (possibly in a minimal, ad-hoc way), Arvo will be secure against penetration assuming a secure runtime.  Securing Arvo and all its userspace agents against DoS requires more work, and requires interaction with Vere.
-
-Also concurrently with tightening Arvo security and basic DoS protection, incident response plans and basic software supply chain protection are being established.  This entails using best practices for managing permissions to interact with infrastructure nodes (live galaxies and stars), the GitHub repo, and the HTTP endpoints where Vere binaries and pills are distributed, in addition to building protections against DNS spoofing that would allow an attacker to feed a ship bunk PKI data from a fake Ethereum node.
-
-Defending the system against an experienced team determined to find memory corruption in the runtime to gain remote code execution will require the most lead time.  We can start on this soon by improving the quality of the architecture and code in the most critical parts of the runtime; we also plan to experiment with "design for verification", i.e. structuring the code to be amenable to pen-and-paper correctness proofs, so that we can begin preparing the code for external audit and penetration testing.
+TODO links to projects
 
 ## Runtime Data Management
 
@@ -137,6 +133,10 @@ An intermediate approach would be to use a 32-bit arena for cells, direct atoms,
 Building a 64-bit Vere is not an insurmountable project, but the result would almost certainly be significantly slower than the current interpreter, since cache locality is usually the limiting factor in most modern software, and that would be roughly halved by switching from 32-bit to 64-bit.
 
 ## Zero-Click Maintenance
+
+An Urbit ship should maintain itself so that a user does not need to intervene to keep it running properly.  In order for this to be true, the ship needs to be reliable, handle upgrades properly, and manage its resources (e.g. RAM and disk space) efficiently.
+
+TODO project listing
 
 ## Network Performance
 
