@@ -48,7 +48,7 @@ const useHeadingsData = (noh3s) => {
 
         const newNestedHeadings = getNestedHeadings(headingElements);
         setNestedHeadings(newNestedHeadings);
-    }, []);
+    }, [query]);
 
     return { nestedHeadings };
 };
