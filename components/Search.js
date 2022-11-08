@@ -401,6 +401,7 @@ class Search extends Component {
                                                 ] = `https://operators.urbit.org${item.content.slug}`;
                                                 return (
                                                     <li
+                                                        key={item.content.slug}
                                                         className={`cursor-pointer flex text-left w-full ${selected ? "bg-green-400" : ""
                                                             }`}
                                                         {...getItemProps({
