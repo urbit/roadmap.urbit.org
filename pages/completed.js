@@ -8,6 +8,7 @@ export default function Completed({ search, posts }) {
             posts={posts}
             title="Completed Projects"
             columns={["Duration", "Manpower"]}
+            timeline
         />
     )
 }
