@@ -32,14 +32,22 @@ a:hover {
   content: "~"
 }
 
-.sig, .caret {
+.sig, .caret, .back {
   position: relative;
 }
 
 .caret::before {
   position: absolute;
   left: -2ch;
+  top: -25%;
   content: ">"
+}
+
+.back::before {
+  position: absolute;
+  left: -2ch;
+  top: -25%;
+  content: "<-"
 }
 
 .markdown a {
