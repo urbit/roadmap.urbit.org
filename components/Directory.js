@@ -7,9 +7,20 @@ import { useRouter } from 'next/router';
 import BasicPage from '../components/BasicPage';
 import Sidebar from "../components/Sidebar";
 import React from "react";
+import TimelineDot from "../components/icons/TimelineDot";
 
-export default function Directory({ search, title, posts, columns }) {
+export default function Directory({ search, title, posts, columns, timeline = false }) {
     const router = useRouter();
+
+    const dateGroup = timeline ? posts.reduce((groups, post) => {
+        const month = new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'numeric' });
+        if (!groups[month]) {
+            groups[month] = [];
+        }
+        groups[month].push(post);
+        return groups
+    }, {}) : null;
+
     return (
         <BasicPage
             post={{
@@ -34,22 +45,45 @@ export default function Directory({ search, title, posts, columns }) {
                     </Sidebar>
                 </div>
                 {/* Content */}
-                <div className="col-span-full md:col-start-4 md:col-end-11 lg:col-end-9 mt-16 md:mt-0 markdown">
-                    {posts.map((post) => {
-                        return <React.Fragment key={post.title}>
-                            <h2>{post.title}</h2>
-                            <div className="flex space-x-16">
-                                {columns.map((col) => {
-                                    return <div key={col} className="flex flex-col space-y-2 font-urbit-sans">
-                                        <p className="!my-0 font-semibold text-wall-400 uppercase !text-base">{col}</p>
-                                        <p className="!my-0">{post?.[col.toLowerCase()] || "TBA"}</p>
+                <div className={cn("col-span-full md:col-start-4 md:col-end-11 lg:col-end-9 mt-16 md:mt-0 markdown", {
+                    "border-l border-dashed pl-8": timeline
+                })}>
+                    {timeline ? Object.entries(dateGroup).map(([date, content]) => {
+                        return <div key={date} className="relative mb-8">
+                            <h2 className="!mt-0" id={date}>{date}</h2>
+                            <TimelineDot className="absolute top-2 -left-[2.58rem]" />
+                            {content.map((post) => {
+                                return <React.Fragment key={post.title}>
+                                    <h3 id={post.title.toLowerCase()}>{post.title}</h3>
+                                    <div className="flex space-x-16">
+                                        {columns.map((col) => {
+                                            return <div key={col} className="flex flex-col space-y-2 font-urbit-sans">
+                                                <p className="!my-0 font-semibold text-wall-400 uppercase !text-base">{col}</p>
+                                                <p className="!my-0">{post?.[col.toLowerCase()] || "TBD"}</p>
+                                            </div>
+                                        })}
                                     </div>
-                                })}
-                            </div>
-                            <p>{post.description}</p>
-                            <Link href={`/project/${post.slug}`} passHref><a className="text-green-400 font-urbit-sans">More Information -{">"}</a></Link>
-                        </React.Fragment>
-                    })}
+                                    <p>{post.description}</p>
+                                    <Link href={`/project/${post.slug}`} passHref><a className="text-green-400 font-urbit-sans block">More Information -{">"}</a></Link>
+                                </React.Fragment>
+                            })}
+                        </div>
+                    })
+                        : posts.map((post) => {
+                            return <React.Fragment key={post.title}>
+                                <h2 id={post.title.toLowerCase()}>{post.title}</h2>
+                                <div className="flex space-x-16">
+                                    {columns.map((col) => {
+                                        return <div key={col} className="flex flex-col space-y-2 font-urbit-sans">
+                                            <p className="!my-0 font-semibold text-wall-400 uppercase !text-base">{col}</p>
+                                            <p className="!my-0">{post?.[col.toLowerCase()] || "TBD"}</p>
+                                        </div>
+                                    })}
+                                </div>
+                                <p>{post.description}</p>
+                                <Link href={`/project/${post.slug}`} passHref><a className="text-green-400 font-urbit-sans">More Information -{">"}</a></Link>
+                            </React.Fragment>
+                        })}
                 </div>
                 {/* Table of contents */}
                 <div className="col-start-10">
