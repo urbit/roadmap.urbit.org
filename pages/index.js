@@ -7,18 +7,21 @@ import Link from 'next/link';
 import cn from 'classnames'
 import { useRouter } from 'next/router';
 import BasicPage from '../components/BasicPage';
+import Sidebar from "../components/Sidebar";
 
 export default function Home({ search, markdown }) {
   const router = useRouter();
   return (
     <BasicPage
-      title="Overview"
+      post={{
+        title: "Overview"
+      }}
       search={search}
     >
       <Grid className="col-span-full md:mt-40 relative">
         {/* Sidebar */}
         <div className="col-start-2 col-end-4">
-          <ul className="list-none text-2xl hidden md:flex space-y-2 flex-col sticky top-32">
+          <Sidebar search={search}>
             {dirs.map((dir) => {
               return <li key={dir.title}>
                 <Link href={dir.link}>
@@ -29,7 +32,7 @@ export default function Home({ search, markdown }) {
                 </Link>
               </li>
             })}
-          </ul>
+          </Sidebar>
         </div>
         {/* Content */}
         <div className="col-span-full md:col-start-4 md:col-end-11 lg:col-end-9 markdown mt-16 md:mt-0">
