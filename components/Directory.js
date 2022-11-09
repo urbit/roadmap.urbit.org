@@ -13,7 +13,7 @@ export default function Directory({ search, title, posts, columns, timeline = fa
     const router = useRouter();
 
     const dateGroup = timeline ? posts.reduce((groups, post) => {
-        const month = new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'numeric' });
+        const month = "~" + new Date(post.date).toLocaleDateString('en-CA', { year: 'numeric', month: 'numeric' }).replace('-', '.');
         if (!groups[month]) {
             groups[month] = [];
         }
