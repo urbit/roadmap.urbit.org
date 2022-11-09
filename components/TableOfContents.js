@@ -63,7 +63,7 @@ const Headings = ({ headings, activeId }) => (
             <li key={heading.id}>
                 <a
                     className={classNames("font-urbit-sans block", {
-                        "text-xl": index === 0,
+                        "font-medium text-xl": index === 0,
                         "font-medium text-xl my-3": index !== 0,
                         "text-green-400": heading.id === activeId && index !== 0,
                     })}
