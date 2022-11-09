@@ -28,7 +28,10 @@ export default function Directory({ search, title, posts, columns, timeline = fa
             }}
             search={search}
         >
-            <Grid className="col-span-full md:mt-40 relative mb-40">
+            {/* Lining up the timeline road to the sig on mobile layouts */}
+            <Grid className={cn("col-span-full md:mt-40 relative mb-40", {
+                "pl-2 md:pl-0": timeline
+            })}>
                 {/* Sidebar */}
                 <div className="col-start-2 col-end-4">
                     <Sidebar search={search}>
