@@ -1,11 +1,12 @@
 +++
-title = "Event Log Truncation"
+title = "Terminal Improvements"
 start_date = "2021-01-01"
-end_date = "2022-12-01"
-lead = "~master-morzod"
+end_date = "2023-01-15"
+lead = "~palfun-foslup"
 status = "Current"
 +++
 
-Event log truncation is a basic feature of "prevalence systems" such as Urbit's, to ensure disk usage stays roughly constant over time instead of increasing linearly as it does now.
+`~palfun-foslup`'s improvements to the terminal subsystems, having languished unreleased for many months, are slated for the next release after event log truncation and agents-in-Clay.  These improvements include two-dimensional drawing, a basic text editor, and tmux-style window multiplexing.
 
-Implementing event log truncation required first moving the responsibility for managing the event log from Vere's "Urth" I/O process to its "Mars" Nock worker process, colocating event log persistence with snapshot persistence to ensure consistency when deleting old events from the log.
+https://github.com/urbit/urbit/pull/5663
+TODO spec document
