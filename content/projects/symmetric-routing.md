@@ -1,7 +1,7 @@
 +++
 title = "Symmetric Routing"
 duration = "3-6 Months"
-contributors = "1-2 Engineers"
+manpower = "1-2 Engineers"
 status = "Future"
 lead = "~rovnys-ricfer"
 +++
