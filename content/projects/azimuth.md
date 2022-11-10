@@ -1,15 +1,14 @@
 +++
 title = "Azimuth"
 date = "2019-01-01"
-contributors = ["one", "two"]
+contributors = ["~palfun-foslup", "~nidsut-tomdun", "~wicdev-wisryt"]
 status = "Completed"
 +++
 
 In Urbit's early stages, when it was still highly experimental, the address
 space was managed and issued manually by Tlon. In 2017, it was decided that
 Urbit's address space would be moved to a smart contract on Ethereum ([see the
-blog post for
-details]((https://urbit.org/blog/bootstrapping-urbit-from-ethereum))), so
+blog post for details]((https://urbit.org/blog/bootstrapping-urbit-from-ethereum))), so
 address owners would truly own and control their Urbit IDs. Over the next year
 the system was designed, built and audited, and in early 2019 Urbit's PKI system
 called [Azimuth](https://urbit.org/docs/glossary/azimuth) was launched on the
