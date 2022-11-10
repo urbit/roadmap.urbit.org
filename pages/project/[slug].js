@@ -35,7 +35,7 @@ export default function ProjectPage({ search, post, markdown }) {
         <Grid className="col-span-full md:mt-40 mb-40">
             <div className="col-start-2 col-end-4">
                 <Sidebar search={search}>
-                    <li><Link href={`/${href}`}><a className="text-lg text-green-400 back">&lt;- Back</a></Link></li>
+                    <li><Link href={`/${href}`}><a className="text-lg text-green-400 back">{"<-"} Back</a></Link></li>
                 </Sidebar>
             </div>
 
@@ -45,7 +45,7 @@ export default function ProjectPage({ search, post, markdown }) {
                     {cols.map((col) => {
                         return <div key={col} className="flex flex-col space-y-2 ">
                             <p className="!my-0 font-semibold text-wall-400 uppercase !text-base">{col.replace("_", " ")}</p>
-                            <p className="!my-0">{post?.col?.join ? post[col].join(", ").toLowerCase() : post?.[col.toLowerCase()] || "TBD"}</p>
+                            <p className="!my-0">{Array.isArray(post[col.toLowerCase()]) ? post[col.toLowerCase()].join(", ").toLowerCase() : post?.[col.toLowerCase()] || "TBD"}</p>
                         </div>
                     })}
                 </div>
@@ -58,7 +58,7 @@ export default function ProjectPage({ search, post, markdown }) {
 export async function getStaticProps({ params }) {
     const post = getPostBySlug(
         params.slug,
-        ["title", "slug", "date", "description", "content", "contributors", "duration", "lead", "end_date"],
+        ["title", "slug", "date", "description", "content", "status", "contributors", "duration", "lead", "end_date"],
         "projects"
     );
 
