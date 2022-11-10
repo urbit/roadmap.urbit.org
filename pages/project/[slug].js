@@ -45,7 +45,7 @@ export default function ProjectPage({ search, post, markdown }) {
                     {cols.map((col) => {
                         return <div key={col} className="flex flex-col space-y-2 ">
                             <p className="!my-0 font-semibold text-wall-400 uppercase !text-base">{col.replace("_", " ")}</p>
-                            <p className="!my-0">{post?.col?.join ? post[col].join(", ").toLowerCase() : post?.[col.toLowerCase()] || "TBD"}</p>
+                            <p className="!my-0">{Array.isArray(post[col.toLowerCase()]) ? post[col.toLowerCase()].join(", ").toLowerCase() : post?.[col.toLowerCase()] || "TBD"}</p>
                         </div>
                     })}
                 </div>
