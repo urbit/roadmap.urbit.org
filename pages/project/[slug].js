@@ -59,7 +59,7 @@ export async function getStaticProps({ params }) {
     const post = getPostBySlug(
         params.slug,
         ["title", "slug", "date", "description", "content", "status"],
-        "/"
+        "projects"
     );
 
     const markdown = JSON.stringify(Markdown.parse({ post }));
@@ -70,8 +70,7 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-    const posts = getAllPosts(["slug", "date"], "/", "date")
-        .filter((p) => p.slug !== "overview");
+    const posts = getAllPosts(["slug", "date"], "projects", "date")
 
     return {
         paths: posts.map((post) => {
