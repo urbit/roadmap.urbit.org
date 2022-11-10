@@ -17,15 +17,15 @@ Here are the high-level goals that need to be achieved to make Urbit a consumer 
 
 The rest of this document describes the strategies for achieving these goals.
 
-## Release Frequency
+# Release Frequency
 
 Increasing the speed of releases is the core dev team's highest priority, since it will accelerate the pace of development overall.  We will make a number of changes to the kernel and runtime for this purpose.  Also, the Urbit Foundation and Tlon are both expanding their core dev teams.
 
-### Development Work to Increase Release Frequency
+## Development Work to Increase Release Frequency
 
 The first step is to make the upgrade process itself more reliable.  The "agents in Clay" project, slated for the next release as November 2022, rewrites the kernel's upgrade system in a much simpler way, making it easier to reason about and less fragile.
 
-The next steps involve building support into the kernel for maintaining backward compatibility across kernel upgrades, so that app developers won't need to change their code to keep their apps running on newer kernels.
+Backward compatibility for apps will also increase release frequency for the kernel, so that is being worked on already.  See the "backward compatibility" section for more detail.  A related project is to automate runtime upgrades to lessen the maintenance burden runtime releases impose on users.
 
 Later work will likely involve building more extensive testing and telemetry tools to expedite the quality assurance phase of releases.
 
@@ -35,7 +35,7 @@ links TODO:
 - automatic binary upgrades
 - logging
 
-### Scale the Team and Processes
+## Scale the Team and Processes
 
 In addition to raw numbers, core dev needs to become more of a traditional open-source project than it has been so far.  This means we need better reference documentation, guides, training, roadmaps, and specifications, especially targeted toward intermediate and advanced developers -- Hoon School has been bringing in a large number of such developers, some of whom should be brought into core development.  Publishing this roadmap represents the core team's first major step toward developing in public, which we plan to increase dramatically.
 
@@ -45,7 +45,7 @@ Also important for scaling the team is the quality of the testing and release pr
 
 TODO link to jobs page
 
-## Security
+# Security
 
 Much work remains to bulletproof Urbit to the point where it can not only defend its memory safety and cryptographic safety, but can also fend off denial of service attacks by dedicated assailants.  We will start raising the bar for security incrementally to be resilient against increasingly determined and well-resourced attackers.
 
@@ -101,7 +101,7 @@ Here is a list of security tasks ordered within each category in roughly increas
 
 TODO links to projects
 
-## Runtime Data Management
+# Runtime Data Management
 
 There are three main phases to increasing the amount of data the runtime
 can manage:
@@ -109,7 +109,7 @@ can manage:
 + improve auxiliary tooling to handle more data than fits in RAM
 + 64-bit or other more experimental increases in data storage
 
-### Pointer Compression
+## Pointer Compression
 
 Pointer compression, as detailed more in its own sections, can increase the amount of data stored in Vere by roughly 12x.  It can bring us from a 2GB "loom" (memory arena) to a 16GB loom whose cells are 2/3rds their current size.  This is large enough for effectively unlimited amounts of chat and notebook data, and it should also be enough data for most nodes involved in the Uqbar network, with the possible exception of archive nodes.
 
@@ -120,28 +120,50 @@ Once there are 8GB or 16GB in the loom, it will be common for there to be more d
 - snapshot management (taking an incremental snapshot is more complex)
 - tools, such as `|meld`, `|pack`, garbage collection, and deserializing large portable snapshots, will need to be rewritten to do their bookkeeping differently
 
-### Tool Scaling
+## Tool Scaling
 
 Only once these tools can scale up to larger-than-RAM data can the system effectively use more than 16GB of memory, so that is when switching to a 64-bit interpreter might make sense -- managing a large Arvo snapshot means a lot more than just addressing the memory.  By the time the first two phases are complete, New Mars might be ready.  Since New Mars is a 64-bit interpreter, it might make sense not to build a 64-bit version of Vere at all; if New Mars is not yet ready, then a 64-bit Vere would make more sense.
 
-### Separate Arena for Large Atoms
+## Separate Arena for Large Atoms
 
 An intermediate approach would be to use a 32-bit arena for cells, direct atoms, and double-pointers to indirect atoms, but then store large (indirect) atoms in a separate 64-bit arena.  When combined with pointer compression, this might be enough data to kick the can down the road for many more years, depending on the common use cases of Urbit.  If Uqbar has millions of accounts in its Merkle tree, this might not be sufficient, but if people just want to store their director's cut edition of Shrek 2, that could be a large atom stored outside the loom, and the loom itself could remain 32-bit.
 
-### 64-Bit Vere
+## 64-Bit Vere
 
 Building a 64-bit Vere is not an insurmountable project, but the result would almost certainly be significantly slower than the current interpreter, since cache locality is usually the limiting factor in most modern software, and that would be roughly halved by switching from 32-bit to 64-bit.
 
-## Zero-Click Maintenance
+# Zero-Click Maintenance
 
 An Urbit ship should maintain itself so that a user does not need to intervene to keep it running properly.  In order for this to be true, the ship needs to be reliable, handle upgrades properly, and manage its resources (e.g. RAM and disk space) efficiently.
 
 TODO project listing
 
-## Network Performance
+# Network Performance
 
-## Hosting Costs
+An ordinary Urbit ship needs to be able to host a large chatroom, in addition to other scaling considerations.  The performance of Urbit's networking is the bottleneck limiting this kind of scaling at the moment.
 
-## Backward Compatibility
+A number of incremental improvements need to be made to the implementation of Ames, Urbit's networking protocol, including fixes for flaky connections and more efficient use of timers.  A second protocol called Fine will also be added for scalable content distribution.  A multi-part project called "subscription reform" will allow apps to use this protocol effectively.
 
+TODO project listing
 
+# Hosting Costs
+
+Running an Urbit hosting company needs to have low enough unit costs per ship to have the possibility of profit.  Some of the costs of hosting have to do with Urbit resource usage, especially RAM.  Other costs stem from maintenance burden and difficulties with supervising Urbit processes from hosting environments.
+
+Demand paging in the runtime promises to reduce RAM usage significantly.  Establishing "quiescence" should also reduce costs, by letting a host move a ship's data out of RAM into disk-based storage when not in use.
+
+TODO project listing
+
+# Backward Compatibility
+
+As it stands, every Kelvin change breaks backward compatibility, requiring app devs to publish modified code so their users can keep the app running.  This needs to happen less frequently over time, until eventually apps can be "write once, run forever."
+
+The first step is to build scaffolding into the kernel so that compatibility shims can be added when a breaking change is released, so that app developers won't need to change their code to keep their apps running on newer kernels.
+
+Even once it's possible to build a shim to run old apps, not every breaking change will include such a shim -- sometimes we will want to break backward compatibility, either because the shim would be unacceptably complex, or because we need to deprecate an old piece of functionality, especially something insecure or that would get int he way of scaling the network.
+
+Within the next few years, we need to get to the point where future changes never necessitate deprecating old functionality.  This requires stabilizing the interface the kernel presents to applications, so that old features are worth committing to maintaining, and future changes to the interface will be small enough that writing shims is not onerous.
+
+The interface can only be stabilized once a userspace permissioning system has been deployed, since it adds a new security layer, and we don't want to maintain old apps that don't have that security.  Before the interface can stabilize, apps also need an interface for publishing and requesting data to and from other ships that could plausibly be implemented by the kernel in a scalable manner -- the "subscription reform" project aims to provide this scalability.
+
+TODO project listing
