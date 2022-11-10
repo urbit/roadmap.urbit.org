@@ -9,10 +9,8 @@ module.exports = {
     extend: {
       fontFamily: {
         'sans': 'Inter',
-        'urbit-sans': 'Urbit Sans',
-        'mono': 'Urbit Sans Mono'
-      },
+        'mono': 'Source Code Pro'
+      }
     }
-  },
-  plugins: [],
+  }
 }

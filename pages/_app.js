@@ -1,6 +1,6 @@
-import '../styles/urbit-sans.css';
-import "@urbit/foundation-design-system/styles/markdown.css";
 import "@urbit/foundation-design-system/styles/globals.css";
+import "@urbit/foundation-design-system/styles/markdown.css";
+import "@urbit/foundation-design-system/styles/prism.css";
 import '../styles/globals.css';
 import { configure, GlobalHotKeys } from "react-hotkeys";
 import Search from "../components/Search";

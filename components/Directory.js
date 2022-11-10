@@ -1,5 +1,5 @@
 import Grid from "../components/Grid";
-import TableOfContents from "../components/TableOfContents";
+import { TableOfContents } from "@urbit/foundation-design-system";
 import { dirs } from '../lib/constants';
 import Link from 'next/link';
 import cn from 'classnames'
@@ -38,9 +38,9 @@ export default function Directory({ search, title, posts, columns, timeline = fa
                         {dirs.map((dir) => {
                             return <li key={dir.title}>
                                 <Link href={dir.link}>
-                                    <a className={cn("font-urbit-sans", {
-                                        "text-green-400": dir.link !== router.pathname,
-                                        "text-black caret": dir.link === router.pathname
+                                    <a className={cn("text-xl", {
+                                        "text-wall-400": dir.link !== router.pathname,
+                                        "": dir.link === router.pathname
                                     })}>{dir.title}</a>
                                 </Link>
                             </li>
@@ -60,14 +60,14 @@ export default function Directory({ search, title, posts, columns, timeline = fa
                                     <h3 id={post.title.toLowerCase()}>{post.title}</h3>
                                     <div className="flex space-x-16">
                                         {columns.map((col) => {
-                                            return <div key={col} className="flex flex-col space-y-2 font-urbit-sans">
+                                            return <div key={col} className="flex flex-col space-y-2 ">
                                                 <p className="!my-0 font-semibold text-wall-400 uppercase !text-base">{col}</p>
                                                 <p className="!my-0">{post?.[col.toLowerCase()] || "TBD"}</p>
                                             </div>
                                         })}
                                     </div>
                                     <p>{post.description}</p>
-                                    <Link href={`/project/${post.slug}`} passHref><a className="text-green-400 font-urbit-sans block">More Information -{">"}</a></Link>
+                                    <Link href={`/project/${post.slug}`} passHref><a className="text-green-400  block">More Information -{">"}</a></Link>
                                 </React.Fragment>
                             })}
                         </div>
@@ -77,14 +77,14 @@ export default function Directory({ search, title, posts, columns, timeline = fa
                                 <h2 id={post.title.toLowerCase()}>{post.title}</h2>
                                 <div className="flex space-x-16">
                                     {columns.map((col) => {
-                                        return <div key={col} className="flex flex-col space-y-2 font-urbit-sans">
+                                        return <div key={col} className="flex flex-col space-y-2 ">
                                             <p className="!my-0 font-semibold text-wall-400 uppercase !text-base">{col}</p>
                                             <p className="!my-0">{post?.[col.toLowerCase()] || "TBD"}</p>
                                         </div>
                                     })}
                                 </div>
                                 <p>{post.description}</p>
-                                <Link href={`/project/${post.slug}`} passHref><a className="text-green-400 font-urbit-sans">More Information -{">"}</a></Link>
+                                <Link href={`/project/${post.slug}`} passHref><a className="text-green-400 ">More Information -{">"}</a></Link>
                             </React.Fragment>
                         })}
                 </div>

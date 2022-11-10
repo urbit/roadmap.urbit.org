@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Grid from "../components/Grid";
-import { Markdown, getPostBySlug } from '@urbit/foundation-design-system';
-import TableOfContents from "../components/TableOfContents";
+import { Markdown, TableOfContents, getPostBySlug } from '@urbit/foundation-design-system';
 import { dirs } from '../lib/constants';
 import Link from 'next/link';
 import cn from 'classnames'
@@ -25,9 +24,9 @@ export default function Home({ search, markdown }) {
             {dirs.map((dir) => {
               return <li key={dir.title}>
                 <Link href={dir.link}>
-                  <a className={cn("font-urbit-sans", {
-                    "text-green-400": dir.link !== router.pathname,
-                    "text-black caret": dir.link === router.pathname
+                  <a className={cn("font-light text-xl", {
+                    "text-wall-400": dir.link !== router.pathname,
+                    "": dir.link === router.pathname
                   })}>{dir.title}</a>
                 </Link>
               </li>

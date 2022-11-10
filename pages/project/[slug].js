@@ -35,7 +35,7 @@ export default function ProjectPage({ search, post, markdown }) {
         <Grid className="col-span-full md:mt-40 mb-40">
             <div className="col-start-2 col-end-4">
                 <Sidebar search={search}>
-                    <li><Link href={`/${href}`}><a className="font-urbit-sans text-green-400 back">Back</a></Link></li>
+                    <li><Link href={`/${href}`}><a className=" text-green-400 back">Back</a></Link></li>
                 </Sidebar>
             </div>
 
@@ -43,7 +43,7 @@ export default function ProjectPage({ search, post, markdown }) {
                 <h2>{post.title}</h2>
                 <div className="flex space-x-12">
                     {cols.map((col) => {
-                        return <div key={col} className="flex flex-col space-y-2 font-urbit-sans">
+                        return <div key={col} className="flex flex-col space-y-2 ">
                             <p className="!my-0 font-semibold text-wall-400 uppercase !text-base">{col}</p>
                             <p className="!my-0">{post?.[col.toLowerCase()] || "TBD"}</p>
                         </div>

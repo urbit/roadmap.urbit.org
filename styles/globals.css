@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 html,
 body {
   padding: 0;
@@ -26,34 +22,6 @@ a:hover {
   opacity: 0.66;
 }
 
-.sig::before {
-  position: absolute;
-  left: -2ch;
-  content: "~"
-}
-
-.sig, .caret, .back {
-  position: relative;
-}
-
-.caret::before {
-  position: absolute;
-  left: -2ch;
-  top: -25%;
-  content: ">"
-}
-
-.back::before {
-  position: absolute;
-  left: -2ch;
-  top: -25%;
-  content: "<-"
-}
-
 .markdown a {
   @apply break-words;
-}
-
-h1, h2, h3, h4, h5 {
-  font-family: "Urbit Sans" !important;
 }
