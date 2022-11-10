@@ -44,8 +44,8 @@ export default function ProjectPage({ search, post, markdown }) {
                 <div className="flex space-x-12">
                     {cols.map((col) => {
                         return <div key={col} className="flex flex-col space-y-2 ">
-                            <p className="!my-0 font-semibold text-wall-400 uppercase !text-base">{col}</p>
-                            <p className="!my-0">{post?.[col.toLowerCase()] || "TBD"}</p>
+                            <p className="!my-0 font-semibold text-wall-400 uppercase !text-base">{col.replace("_", " ")}</p>
+                            <p className="!my-0">{post?.col?.join ? post[col].join(", ").toLowerCase() : post?.[col.toLowerCase()] || "TBD"}</p>
                         </div>
                     })}
                 </div>
@@ -58,7 +58,7 @@ export default function ProjectPage({ search, post, markdown }) {
 export async function getStaticProps({ params }) {
     const post = getPostBySlug(
         params.slug,
-        ["title", "slug", "date", "description", "content", "status"],
+        ["title", "slug", "date", "description", "content", "contributors", "duration", "lead", "end_date"],
         "projects"
     );
 
