@@ -8,18 +8,9 @@ As for bug fixing, the "gall request queue fix", which involved major changes to
 
 TODO summary of current projects
 
-## Solid-State Publications
-
-For scalability, basic solid-state publications are being prototyped.  This is the next step after basic remote scry toward scalable data publishing on Urbit.  These prototypes live in userspace; once we've proven the model with some real-world examples, we can build kernel support into Gall.
-
-## Quick Boot
-
-The "quick boot" project aims to bring initial Urbit boot time down from ~10 minutes to well under a minute.  This is short enough to make a material impact on adoption, since if a user gets bored while waiting for a ship to boot, they're much more likely to forget about it and never complete the onboarding.  This is useful for hosting providers, CI testing, and developer experience.  It has been worked on for a few months, and the first few steps are complete.  One of the last steps, now written and in the testing phase (https://github.com/urbit/urbit/pull/6044), is to make Ford caches portable between ships.
-
 ## Store More Data
 
-Pointer compression, one of the projects in the [runtime data management](TODO:link)
-arc, is being worked on currently by ~barter-simsum.
+Pointer compression is the first project in the [runtime data management](/#runtime-data-management) arc.
 
 ## Reduce `|meld` Memory Use
 
