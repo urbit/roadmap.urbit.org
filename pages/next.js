@@ -1,4 +1,4 @@
-import { getAllPosts, getPostBySlug } from '@urbit/foundation-design-system';
+import { getAllPosts, getPostBySlug, Markdown } from '@urbit/foundation-design-system';
 import Directory from "../components/Directory";
 
 export default function NextUp({ search, markdown, posts }) {
