@@ -8,7 +8,7 @@ export default function Current({ markdown, search, posts }) {
             search={search}
             posts={posts}
             title="Current Projects"
-            columns={["Duration", "Manpower"]}
+            columns={["lead", "end_date"]}
         />
     )
 }
@@ -23,7 +23,7 @@ export async function getStaticProps() {
     const markdown = JSON.stringify(Markdown.parse({ post: intro }));
 
     const posts = getAllPosts(
-        ["title", "slug", "date", "description", "contributors", "status"],
+        ["title", "slug", "date", "description", "contributors", "status", "lead", "end_date"],
         "projects",
         "date"
     ).filter((post) => {

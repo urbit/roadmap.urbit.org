@@ -2,8 +2,8 @@
 title = "Agents in Clay"
 start_date = "2022-07-06"
 end_date = "2022-12-01"
-contributors = ["~wicdev-wisryt"]
-status = "In Testing"
+lead = "~wicdev-wisryt"
+status = "Current"
 +++
 
 This project overhauls Arvo's upgrade system to make it simpler and more
