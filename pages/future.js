@@ -15,7 +15,7 @@ export default function Future({ search, posts }) {
 export async function getStaticProps() {
     const posts = getAllPosts(
         ["title", "slug", "date", "description", "contributors", "status"],
-        "/",
+        "projects",
         "date"
     ).filter((post) => {
         return post.status === "Future"
