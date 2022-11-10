@@ -1,6 +1,7 @@
 import Grid from "../components/Grid";
 import { TableOfContents, Markdown } from "@urbit/foundation-design-system";
 import { dirs } from '../lib/constants';
+import { dateToDa } from "../lib/util";
 import Link from 'next/link';
 import cn from 'classnames'
 import { useRouter } from 'next/router';
@@ -13,7 +14,7 @@ export default function Directory({ search, title, markdown, posts, columns, tim
     const router = useRouter();
 
     const dateGroup = timeline ? posts.reduce((groups, post) => {
-        const month = "~" + new Date(post.date).toLocaleDateString('en-CA', { year: 'numeric', month: 'numeric' }).replace('-', '.');
+        const month = dateToDa(new Date(post.date))
         if (!groups[month]) {
             groups[month] = [];
         }
