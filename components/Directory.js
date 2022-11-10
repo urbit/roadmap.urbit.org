@@ -68,7 +68,7 @@ export default function Directory({ search, title, markdown, posts, columns, tim
                                         })}
                                     </div>
                                     <p>{post.description}</p>
-                                    <Link href={`/project/${post.slug}`} passHref><a className="text-green-400  block">More Information {"->"}</a></Link>
+                                    <Link href={`/project/${post.slug}`} passHref><a className="text-green-400 text-lg block">More Information {"->"}</a></Link>
                                 </React.Fragment>
                             })}
                         </div>
@@ -85,7 +85,7 @@ export default function Directory({ search, title, markdown, posts, columns, tim
                                     })}
                                 </div>
                                 <p>{post.description}</p>
-                                <Link href={`/project/${post.slug}`} passHref><a className="text-green-400 ">More Information {"->"}</a></Link>
+                                <Link href={`/project/${post.slug}`} passHref><a className="text-green-400 text-lg">More Information {"->"}</a></Link>
                             </React.Fragment>
                         })}
                 </div>

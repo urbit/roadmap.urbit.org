@@ -1,5 +1,3 @@
-# Next Projects
-
 After all the current projects are released, some projects are next up.
 
 ## Breadth-First Arvo Move Order

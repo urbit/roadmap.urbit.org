@@ -35,7 +35,7 @@ export default function ProjectPage({ search, post, markdown }) {
         <Grid className="col-span-full md:mt-40 mb-40">
             <div className="col-start-2 col-end-4">
                 <Sidebar search={search}>
-                    <li><Link href={`/${href}`}><a className=" text-green-400 back">Back</a></Link></li>
+                    <li><Link href={`/${href}`}><a className="text-lg text-green-400 back">&lt;- Back</a></Link></li>
                 </Sidebar>
             </div>
 
