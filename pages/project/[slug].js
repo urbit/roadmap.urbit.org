@@ -58,7 +58,7 @@ export default function ProjectPage({ search, post, markdown }) {
 export async function getStaticProps({ params }) {
     const post = getPostBySlug(
         params.slug,
-        ["title", "slug", "date", "description", "content", "contributors", "duration", "lead", "end_date"],
+        ["title", "slug", "date", "description", "content", "status", "contributors", "duration", "lead", "end_date"],
         "projects"
     );
 
