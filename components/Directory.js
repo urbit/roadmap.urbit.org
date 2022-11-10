@@ -75,7 +75,7 @@ export default function Directory({ search, title, markdown, posts, columns, tim
                     })
                         : posts.map((post) => {
                             return <React.Fragment key={post.title}>
-                                <h2 id={post.title.toLowerCase()}>{post.title}</h2>
+                                <h3 id={post.title.toLowerCase()}>{post.title}</h3>
                                 <div className="flex space-x-16">
                                     {columns.map((col) => {
                                         return <div key={col} className="flex flex-col space-y-2 ">
