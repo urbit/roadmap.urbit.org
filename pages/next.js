@@ -1,9 +1,10 @@
-import { getAllPosts } from '@urbit/foundation-design-system';
+import { getAllPosts, getPostBySlug } from '@urbit/foundation-design-system';
 import Directory from "../components/Directory";
 
-export default function NextUp({ search, posts }) {
+export default function NextUp({ search, markdown, posts }) {
     return (
         <Directory
+            markdown={markdown}
             search={search}
             posts={posts}
             title="Next Up"
@@ -21,7 +22,16 @@ export async function getStaticProps() {
         return post.status === "Next Up"
     });
 
+    const intro = getPostBySlug(
+        "next",
+        ["title", "slug", "content"],
+        "/"
+    );
+
+    const markdown = JSON.stringify(Markdown.parse({ post: intro }));
+
+
     return {
-        props: { posts },
+        props: { markdown, posts },
     };
 }

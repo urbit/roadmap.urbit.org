@@ -1,5 +1,5 @@
 import Grid from "../components/Grid";
-import { TableOfContents } from "@urbit/foundation-design-system";
+import { TableOfContents, Markdown } from "@urbit/foundation-design-system";
 import { dirs } from '../lib/constants';
 import Link from 'next/link';
 import cn from 'classnames'
@@ -9,7 +9,7 @@ import Sidebar from "../components/Sidebar";
 import React from "react";
 import TimelineDot from "../components/icons/TimelineDot";
 
-export default function Directory({ search, title, posts, columns, timeline = false }) {
+export default function Directory({ search, title, markdown, posts, columns, timeline = false }) {
     const router = useRouter();
 
     const dateGroup = timeline ? posts.reduce((groups, post) => {
@@ -51,6 +51,7 @@ export default function Directory({ search, title, posts, columns, timeline = fa
                 <div className={cn("col-span-full md:col-start-4 md:col-end-11 lg:col-end-9 mt-16 md:mt-0 markdown", {
                     "border-l border-dashed pl-8": timeline
                 })}>
+                    {markdown && <Markdown.render content={JSON.parse(markdown)} />}
                     {timeline ? Object.entries(dateGroup).map(([date, content]) => {
                         return <div key={date} className="relative mb-8">
                             <h2 className="!mt-0" id={date}>{date}</h2>

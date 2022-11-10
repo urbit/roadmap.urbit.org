@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import Grid from "../components/Grid";
 import { Markdown, TableOfContents, getPostBySlug } from '@urbit/foundation-design-system';
 import { dirs } from '../lib/constants';

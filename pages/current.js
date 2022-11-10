@@ -1,9 +1,10 @@
-import { getAllPosts } from '@urbit/foundation-design-system';
+import { getAllPosts, getPostBySlug, Markdown } from '@urbit/foundation-design-system';
 import Directory from "../components/Directory";
 
-export default function Current({ search, posts }) {
+export default function Current({ markdown, search, posts }) {
     return (
         <Directory
+            markdown={markdown}
             search={search}
             posts={posts}
             title="Current Projects"
@@ -13,6 +14,14 @@ export default function Current({ search, posts }) {
 }
 
 export async function getStaticProps() {
+    const intro = getPostBySlug(
+        "current",
+        ["title", "slug", "content"],
+        "/"
+    );
+
+    const markdown = JSON.stringify(Markdown.parse({ post: intro }));
+
     const posts = getAllPosts(
         ["title", "slug", "date", "description", "contributors", "status"],
         "projects",
@@ -22,6 +31,6 @@ export async function getStaticProps() {
     });
 
     return {
-        props: { posts },
+        props: { markdown, posts },
     };
 }
