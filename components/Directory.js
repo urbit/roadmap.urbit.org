@@ -1,5 +1,6 @@
 import Grid from "../components/Grid";
-import { TableOfContents, Markdown } from "@urbit/foundation-design-system";
+import { Markdown } from "@urbit/foundation-design-system";
+import { TableOfContents } from "../components/TableOfContents"
 import { dirs } from '../lib/constants';
 import { dateToDa } from "../lib/util";
 import Link from 'next/link';
@@ -54,7 +55,7 @@ export default function Directory({ search, title, markdown, posts, columns, tim
                 })}>
                     {markdown && <Markdown.render content={JSON.parse(markdown)} />}
                     {timeline ? Object.entries(dateGroup).map(([date, content]) => {
-                        return <div key={date} className="relative mb-8">
+                        return <div key={date} className="relative my-24">
                             <h2 className="!mt-0" id={date}>{date}</h2>
                             <TimelineDot className="absolute top-2 -left-[2.58rem]" />
                             {content.map((post) => {
