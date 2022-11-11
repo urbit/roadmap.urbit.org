@@ -8,14 +8,6 @@ As for bug fixing, the "gall request queue fix", which involved major changes to
 
 TODO summary of current projects
 
-## Store More Data
-
-Pointer compression is the first project in the [runtime data management](/#runtime-data-management) arc.
-
-## Reduce `|meld` Memory Use
-
-Reducing `|meld` memory use is being worked on.  For many users, `|meld` is unusable, since they don't have swap space set up on the machine they use to run their ships and it can use enough memory to kill the Urbit process.  For users whose looms are almost full, this issue can prevent them from running their ships at all, so fixing it is an important step toward zero-click maintenance.
-
 ## Improve Vere Build System
 
 The build system for Vere has been the source of many headaches for years.  Experiments are being conducted to extract Vere from the monorepo into its own git repository and replace the current Nix build setup with a new one based on the Bazel build system.  If successful, these experiments could greatly reduce the amount of friction involved in Vere development, CI testing, and deployment, increasing the rate of development and releases.
