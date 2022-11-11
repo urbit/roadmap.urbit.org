@@ -3,6 +3,9 @@ title = "IPC Redux"
 date = "2020-07-23"
 contributors = ["~master-morzod", "~palfun-foslup", "~wicdev-wisryt", "~pilfer-pandex", "~siprel"]
 status = "Completed"
+description = """
+A significant rewrite to the runtime IPC protocol.
+"""
 +++
 
 The `urbit` runtime IPC protocol has been significantly rewritten.

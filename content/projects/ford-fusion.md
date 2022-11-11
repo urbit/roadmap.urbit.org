@@ -3,6 +3,11 @@ title = "Ford Fusion"
 date = "2020-06-29"
 contributors = ["~rovnys-ricfer", "~wicdev-wisryt"]
 status = "Completed"
+description = """
+Merged the old build system vane, Ford, into Clay, the filesystem vane,
+so that Clay handles the build process, ensuring atomic, self-contained,
+and ordered updates.
+"""
 +++
 
 Previously, [Arvo](https://urbit.org/docs/glossary/arvo) (Urbit's OS) had a

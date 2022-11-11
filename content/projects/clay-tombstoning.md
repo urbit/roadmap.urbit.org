@@ -3,6 +3,11 @@ title = "Clay Tombstoning"
 date = "2022-06-01"
 contributors = ["~wicdev-wisryt"]
 status = "Completed"
+description = """
+Because Clay, the filesystem vane, is version-controlled, it was
+previously not possible to delete old revisions of files. Tombstoning
+was introduced to retain the reference while removing the data.
+"""
 +++
 
 [Clay](https://urbit.org/docs/glossary/clay), the filesystem

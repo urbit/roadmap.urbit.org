@@ -3,6 +3,9 @@ title = "OS1"
 date = "2020-04-03"
 contributors = ["~tacryt-socryp", "~novlud-padtyv", "~haddef-sigwen", "~palfun-foslup", "~fabled-faster"]
 status = "Completed"
+description = """
+OS1 is the Landscape UI written to be organized entirely around groups.
+"""
 +++
 
 Urbit used to have a web UI called Modulo, which looked like:

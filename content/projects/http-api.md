@@ -3,6 +3,10 @@ title = "HTTP API"
 date = "2021-02-18"
 contributors = ["~radbur-sivmus"]
 status = "Completed"
+description = """
+The HTTP API is an NPM package that bundles interfaces for talking to an
+Urbit ship from a web browser.
+"""
 +++
 
 `@urbit/http-api` is an NPM package which makes it easy to talk to an Urbit ship

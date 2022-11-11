@@ -3,6 +3,11 @@ title = "Transaction Apps"
 date = "2019-05-30"
 contributors = ["~wicdev-wisryt"]
 status = "Completed"
+description = """
+Introduces libraries to implement an asynchronous transaction monad,
+similar to JavaScript promises, that enables imperative inline code for
+asynchronous input/output.
+"""
 +++
 
 Gall agents are great at handling I/O that can be fully processed in a single

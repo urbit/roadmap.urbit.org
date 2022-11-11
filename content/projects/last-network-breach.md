@@ -2,6 +2,14 @@
 title = "The Last Network Breach"
 date = "2020-12-08"
 status = "Completed"
+description = """
+Changes to the network protocol previously necessitated a complete reset (historically called a "breach") 
+of the entire network state, requiring all users to take action to get onto the new
+network.
+
+By introducing version negotiation between Arvo and Vere, future changes can be made
+entirely over-the-air.
+"""
 +++
 
 Throughout Urbit's development, changes to the
