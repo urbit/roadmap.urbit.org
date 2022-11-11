@@ -40,12 +40,12 @@ export default function ProjectPage({ search, post, markdown }) {
             </div>
 
             <div className="flex flex-col space-y-4 col-span-full md:col-start-4 md:col-end-11 lg:col-end-9 markdown mt-16 md:mt-0">
-                <h2>{post.title}</h2>
-                <div className="flex space-x-12">
+                <h2 className="!my-0">{post.title}</h2>
+                <div className="flex space-x-12 py-4">
                     {cols.map((col) => {
                         return <div key={col} className="flex flex-col space-y-2 ">
-                            <p className="!my-0 font-semibold text-wall-400 uppercase !text-base">{col.replace("_", " ")}</p>
-                            <p className="!my-0">{Array.isArray(post[col.toLowerCase()]) ? post[col.toLowerCase()].join(", ").toLowerCase() : post?.[col.toLowerCase()] || "TBD"}</p>
+                            <p className="!mb-1 font-semibold text-wall-400 uppercase !text-sm">{col.replace("_", " ")}</p>
+                            <p className="!my-0 !text-base">{Array.isArray(post[col.toLowerCase()]) ? post[col.toLowerCase()].join(", ").toLowerCase() : post?.[col.toLowerCase()] || "TBD"}</p>
                         </div>
                     })}
                 </div>

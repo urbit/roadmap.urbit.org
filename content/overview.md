@@ -45,7 +45,7 @@ Also important for scaling the team is the quality of the testing and release pr
 
 TODO link to jobs page
 
-# Security
+## Security
 
 Much work remains to bulletproof Urbit to the point where it can not only defend its memory safety and cryptographic safety, but can also fend off denial of service attacks by dedicated assailants.  We will start raising the bar for security incrementally to be resilient against increasingly determined and well-resourced attackers.
 
