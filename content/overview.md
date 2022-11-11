@@ -29,13 +29,6 @@ Backward compatibility for apps will also increase release frequency for the ker
 
 Later work will likely involve building more extensive testing and telemetry tools to expedite the quality assurance phase of releases.
 
-#### Related Projects
-
-- [Upgrade Overhaul ("Agents in Clay")](/project/agents-in-clay)
-- [Kelvin Shims for Userspace](/project/shims-old-kelvins)
-- [Automatic Binary Upgrades](/project/automatic-binary-upgrades)
-- [Logging](/project/logging)
-
 ### Scale the Team and Processes
 
 In addition to raw numbers, core dev needs to become more of a traditional open-source project than it has been so far.  This means we need better reference documentation, guides, training, roadmaps, and specifications, especially targeted toward intermediate and advanced developers -- Hoon School has been bringing in a large number of such developers, some of whom should be brought into core development.  Publishing this roadmap represents the core team's first major step toward developing in public, which we plan to increase dramatically.
@@ -44,12 +37,22 @@ The architecture of the system will be examined critically to evaluate points wh
 
 Also important for scaling the team is the quality of the testing and release processes.  Tlon has made major strides in the release process this year: their "devstream process" for phased deployment has caught many bugs that would have hit users in previous years.  More automated tests (unit tests, integration tests, and end-to-end "aqua" tests that simulate a fleet of virtual ships inside the Aqua agent) will increase the level of assurance of each deployment, reducing risk and increasing confidence when making a change.
 
-#### Related Projects
+### Related Projects
+
+#### Development Work to Increase Release Frequency
+
+- [Upgrade Overhaul ("Agents in Clay")](/project/agents-in-clay)
+- [Kelvin Shims for Userspace](/project/shims-old-kelvins)
+- [Automatic Binary Upgrades](/project/automatic-binary-upgrades)
+- [Logging](/project/logging)
+
+#### Scale the Team and Processes
 
 - [Multiprocess I/O](/project/multiprocess-io)
 - [Multiprocess Event Log](/project/multiprocess-event-log)
 - [Dropping Privileges](/project/dropping-privileges)
 - [Shared Memory IPC](/project/shared-memory-ipc)
+- [Improved Vere Build System](/project/vere-build-system)
 
 ## Security
 
@@ -107,13 +110,13 @@ Here is a list of security tasks ordered within each category in roughly increas
 
 #### Related Projects
 
+- [Logging](/project/logging)
 - [Validate Ames Packets in Vere](/project/validate-ames-packets-in-vere)
 - [Userspace Permissioning](/project/userspace-permissioning)
+- [Network DoS Protection](/project/network-dos-protection)
+- [Multiprocess IO](/project/multiprocess-io)
 - [Zapgal Security](/project/zapgal-security)
 - [Outer HMACs on Ames Packets](/project/outer-hmacs)
-- [Multiprocess IO](/project/multiprocess-io)
-- [Network DoS Protection](/project/network-dos-protection)
-- [Logging](/project/logging)
 - [Ames Forward Secrecy Ratchet](/project/forward-secrecy-ratchet)
 
 ## Runtime Data Management
@@ -180,6 +183,8 @@ An ordinary Urbit ship needs to be able to host a large chatroom, in addition to
 
 A number of incremental improvements need to be made to the implementation of Ames, Urbit's networking protocol, including fixes for flaky connections and more efficient use of timers.  A second protocol called Fine will also be added for scalable content distribution.  A multi-part project called "subscription reform" will allow apps to use this protocol effectively.
 
+### Related Projects
+
 - [Improved Sponsor Pinging](/project/sponsor-pinging)
 - [Tune %clog Constants](/project/tune-clog)
 - [Refactor Ames Vane](/project/refactor-ames-vane)
@@ -203,7 +208,18 @@ Running an Urbit hosting company needs to have low enough unit costs per ship to
 
 Demand paging in the runtime promises to reduce RAM usage significantly.  Establishing "quiescence" should also reduce costs, by letting a host move a ship's data out of RAM into disk-based storage when not in use.
 
-TODO project listing
+### Related Projects
+
+- [Logging](/project/logging)
+- [Event Log Truncation](/project/event-log-truncation)
+- [Quick Boot](/project/quick-boot)
+- [Demand Paging (TODO make listing)](/project/)
+- [Memory-Efficient Meld](/project/memory-efficient-meld)
+- [Consolidate Packet Re-Send Timers](/project/consolidate-packet-resend)
+- [Timer Improvements](/project/timer-improvements)
+- [Generalized Deferral Mechanism](/project/generalized-deferral-mechanism)
+- [Separate IPC Streams](/project/separate-ipc-streams)
+- [Vere Exit Code Scheme](/project/exit-code-scheme)
 
 ## Backward Compatibility
 
@@ -217,4 +233,19 @@ Within the next few years, we need to get to the point where future changes neve
 
 The interface can only be stabilized once a userspace permissioning system has been deployed, since it adds a new security layer, and we don't want to maintain old apps that don't have that security.  Before the interface can stabilize, apps also need an interface for publishing and requesting data to and from other ships that could plausibly be implemented by the kernel in a scalable manner -- the "subscription reform" project aims to provide this scalability.
 
-TODO project listing
+### Related Projects
+
+- [Upgrade Overhaul ("Agents in Clay")](/project/agents-in-clay)
+- [Userspace Permissioning](/project/userspace-permissioning)
+- [Shims for Old Kelvins](/project/shims-old-kelvins)
+- [Basic Remote Scry Protocol](/project/remote-scry)
+- [Encrypted Remote Scry](/project/encrypted-remote-scry)
+- [Solid-State Publications](/project/solid-state-publications)
+- [Typed Interface to Solid-State Publications](/project/typed-interface-solid-state-publication)
+- [Typed Paths](/project/typed-paths)
+- [Desk-Based Agent Namespacing](/project/desk-based-namespacing)
+- [Clay $care's](/project/clay-cares)
+- [Better Userspace Breach Handling](/project/on-rift)
+- [Versioned Pokes and Subscriptions](/project/versioned-pokes-and-subscriptions)
+- [+mink Stack Trace Determinism](/project/mink-stack-trace-determinism)
+- [Zapgal Security](/project/zapgal-security)
