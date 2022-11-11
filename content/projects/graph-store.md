@@ -1,6 +1,6 @@
 +++
 title = "Graph Store"
-date = "2020-07-01"
+date = "2020-07-30"
 contributors = ["~tacryt-socryp"]
 status = "Completed"
 +++

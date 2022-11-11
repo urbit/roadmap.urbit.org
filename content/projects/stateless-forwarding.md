@@ -1,6 +1,6 @@
 +++
 title = "Stateless Forwarding"
-date = "2020-08-01"
+date = "2020-08-06"
 contributors = ["~palfun-foslup"]
 status = "Completed"
 +++

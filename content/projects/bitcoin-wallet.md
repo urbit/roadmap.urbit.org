@@ -1,6 +1,6 @@
 +++
 title = "Bitcoin Wallet"
-date = "2021-05-01"
+date = "2021-05-27"
 contributors = ["~timluc-miptev", "~novlud-padtyv", "~dinleb-rambep"]
 status = "Completed"
 +++

@@ -1,6 +1,6 @@
 +++
 title = "New Ames"
-date = "2019-12-01"
+date = "2019-12-04"
 contributors = ["~rovnys-ricfer", "~wicdev-wisryt"]
 status = "Completed"
 +++

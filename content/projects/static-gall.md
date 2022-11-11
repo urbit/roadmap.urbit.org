@@ -1,6 +1,6 @@
 +++
 title = "Static Gall"
-date = "2019-12-01"
+date = "2019-12-04"
 contributors = ["~wicdev-wisryt"]
 status = "Completed"
 +++

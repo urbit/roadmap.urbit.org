@@ -1,6 +1,6 @@
 +++
 title = "Azimuth"
-date = "2019-01-01"
+date = "2019-01-13"
 contributors = ["~palfun-foslup", "~nidsut-tomdun", "~wicdev-wisryt"]
 status = "Completed"
 +++
