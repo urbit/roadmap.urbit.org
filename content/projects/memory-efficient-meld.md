@@ -2,7 +2,7 @@
 title = "Memory-Efficient Meld"
 duration = "1-2 Months"
 manpower = "1 Engineer"
-status = "Future"
+status = "Next Up"
 lead = "TBD"
 +++
 
