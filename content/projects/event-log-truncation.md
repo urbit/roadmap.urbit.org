@@ -14,6 +14,6 @@ There are a few levels of event log truncation:
 - automated rollover, manual truncation
 - automated rollover, automated truncation
 
-The first, fully manual, version of event log truncation is being polished by ~fanfun-mocbud and ~master-morzod and should be released soon. Automation will come later.
+The first, fully manual, version of event log truncation is being polished by `~fanfun-mocbud` and `~master-morzod` and should be released soon. Automation will come later.
 
 - [PR](https://github.com/urbit/urbit/pull/5701)
