@@ -7,13 +7,13 @@ title = "Overview"
 This roadmap describes the plan for making the Urbit OS suitable for mass adoption.  It is a living document, to be updated when milestones are achieved or when plans change.  This overview, intended for nontechnical readers, describes the core team's high-level goals.  Technical readers can also use this document as a starting point for learning more detailed information, such as who is working on what currently, what the next expected projects are, links to specifications, and links to fine-grained project tracking on GitHub.
 
 Here are the high-level goals that need to be achieved to make Urbit a consumer product:
-- raise kernel and runtime release frequency to weekly
-- develop confidence in security across the board
-- manage enough data in the runtime to handle multimedia apps
-- approach zero-click maintenance for users
-- improve network performance until a ship can handle 100,000 chat subscribers
-- make hosting businesses profitable by reducing unit and maintenance costs
-- establish backward compatibility for apps
+- [Raise kernel and runtime release frequency to weekly](/#release-frequency)
+- [Develop confidence in security across the board](/#security)
+- [Manage enough data in the runtime to handle multimedia apps](/#runtime-data-management)
+- [Approach zero-click maintenance for users](/#zero-click-maintenance)
+- [Improve network performance until a ship can handle 100,000 chat subscribers](/#network-performance)
+- [Make hosting businesses profitable by reducing unit and maintenance costs](/#hosting-costs)
+- [Establish backward compatibility for apps](/#backward-compatibility)
 
 The rest of this document describes the strategies for achieving these goals.
 
@@ -29,13 +29,14 @@ Backward compatibility for apps will also increase release frequency for the ker
 
 Later work will likely involve building more extensive testing and telemetry tools to expedite the quality assurance phase of releases.
 
-links TODO:
-- upgrade overhaul
-- kelvin shims for userspace
-- automatic binary upgrades
-- logging
+#### Related Projects
 
-## Scale the Team and Processes
+- [Upgrade Overhaul ("Agents in Clay")](/project/agents-in-clay)
+- [Kelvin Shims for Userspace](/project/shims-old-kelvins)
+- [Automatic Binary Upgrades](/project/automatic-binary-upgrades)
+- [Logging](/project/logging)
+
+### Scale the Team and Processes
 
 In addition to raw numbers, core dev needs to become more of a traditional open-source project than it has been so far.  This means we need better reference documentation, guides, training, roadmaps, and specifications, especially targeted toward intermediate and advanced developers -- Hoon School has been bringing in a large number of such developers, some of whom should be brought into core development.  Publishing this roadmap represents the core team's first major step toward developing in public, which we plan to increase dramatically.
 
@@ -43,7 +44,12 @@ The architecture of the system will be examined critically to evaluate points wh
 
 Also important for scaling the team is the quality of the testing and release processes.  Tlon has made major strides in the release process this year: their "devstream process" for phased deployment has caught many bugs that would have hit users in previous years.  More automated tests (unit tests, integration tests, and end-to-end "aqua" tests that simulate a fleet of virtual ships inside the Aqua agent) will increase the level of assurance of each deployment, reducing risk and increasing confidence when making a change.
 
-TODO link to jobs page
+#### Related Projects
+
+- [Multiprocess I/O](/project/multiprocess-io)
+- [Multiprocess Event Log](/project/multiprocess-event-log)
+- [Dropping Privileges](/project/dropping-privileges)
+- [Shared Memory IPC](/project/shared-memory-ipc)
 
 ## Security
 
@@ -99,7 +105,16 @@ Here is a list of security tasks ordered within each category in roughly increas
   - incident response plan: none
   - telemetry for DoS-related packet statistics: none
 
-TODO links to projects
+#### Related Projects
+
+- [Validate Ames Packets in Vere](/project/validate-ames-packets-in-vere)
+- [Userspace Permissioning](/project/userspace-permissioning)
+- [Zapgal Security](/project/zapgal-security)
+- [Outer HMACs on Ames Packets](/project/outer-hmacs)
+- [Multiprocess IO](/project/multiprocess-io)
+- [Network DoS Protection](/project/network-dos-protection)
+- [Logging](/project/logging)
+- [Ames Forward Secrecy Ratchet](/project/forward-secrecy-ratchet)
 
 ## Runtime Data Management
 
@@ -132,11 +147,32 @@ An intermediate approach would be to use a 32-bit arena for cells, direct atoms,
 
 Building a 64-bit Vere is not an insurmountable project, but the result would almost certainly be significantly slower than the current interpreter, since cache locality is usually the limiting factor in most modern software, and that would be roughly halved by switching from 32-bit to 64-bit.
 
+### Related Projects
+
+- [8GB Loom](/project/8gb-loom)
+- [Memory-Efficient Meld](/project/memory-efficient-meld)
+- [Loom Tool Scaling](/project/loom-tool-scaling)
+- [Cell Compression](/project/cell-compression)
+- [16GB Loom](/project/16gb-loom)
+- [New Mars Snapshot System](/project/new-mars-snapshot)
+- [New Mars](/project/new-mars)
+
 ## Zero-Click Maintenance
 
 An Urbit ship should maintain itself so that a user does not need to intervene to keep it running properly.  In order for this to be true, the ship needs to be reliable, handle upgrades properly, and manage its resources (e.g. RAM and disk space) efficiently.
 
-TODO project listing
+### Related Projects
+
+- [Automatic Error Handling on Replay](/project/automatic-error-handling)
+- [Fix Ames Bugs](/project/ames-bugs)
+- [Automatic Memory Pack/Trim/Meld](/project/automatic-memory-pack)
+- [Breadth-First Arvo Move Order](/project/breadth-first-moves)
+- [Ames Vane Refactor](/project/refactor-ames-vane)
+- [Better Userspace Breach Handling](/project/on-rift)
+- [Timer Improvements](/project/timer-improvements)
+- [Vere Error Handling Improvements](/project/vere-error-handling)
+- [Automatic Binary Upgrades](/project/automatic-binary-upgrades)
+- [Versioned Pokes and Subscriptions](/project/versioned-pokes-subscriptions)
 
 ## Network Performance
 
@@ -144,7 +180,22 @@ An ordinary Urbit ship needs to be able to host a large chatroom, in addition to
 
 A number of incremental improvements need to be made to the implementation of Ames, Urbit's networking protocol, including fixes for flaky connections and more efficient use of timers.  A second protocol called Fine will also be added for scalable content distribution.  A multi-part project called "subscription reform" will allow apps to use this protocol effectively.
 
-TODO project listing
+- [Improved Sponsor Pinging](/project/sponsor-pinging)
+- [Tune %clog Constants](/project/tune-clog)
+- [Refactor Ames Vane](/project/refactor-ames-vane)
+- [Consolidate Packet Re-Send Timers](/project/consolidate-packet-resend)
+- [Basic Remote Scry Protocol](/project/remote-scry)
+- [Encrypted Remote Scry](/project/encrypted-remote-scry)
+- [%pine Query at Latest Protocol](/project/pine-query-at-latest)
+- [Network Push Protocol](/project/urth-to-urth)
+- ["Nan Madol" (maybe)](/project/nan-madol)
+- [Solid-State Publications](/project/solid-state-publications)
+- [Symmetric Routing](/project/symmetric-routing)
+- [Typed Interface to Solid-State Publications](/project/typed-interface-solid-state-publication)
+- [Typed Paths](/project/typed-paths)
+- [Commit before Compute](/project/commit-compute)
+- [Timer Improvements](/project/timer-improvements)
+- [Generalized Deferral Mechanism](/project/generalized-deferral-mechanism)
 
 ## Hosting Costs
 
