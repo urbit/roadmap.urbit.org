@@ -3,6 +3,10 @@ title = "Bitcoin Wallet"
 date = "2021-05-27"
 contributors = ["~timluc-miptev", "~novlud-padtyv", "~dinleb-rambep"]
 status = "Completed"
+description = """
+The Bitcoin app is a non-custodial Bitcoin wallet which allows Urbit
+users to send each other Bitcoin using their planet names.
+"""
 +++
 
 The Bitcoin app is a non-custodial Bitcoin wallet which allows Urbit users to

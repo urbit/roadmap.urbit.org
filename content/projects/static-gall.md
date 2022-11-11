@@ -3,6 +3,9 @@ title = "Static Gall"
 date = "2019-12-04"
 contributors = ["~wicdev-wisryt"]
 status = "Completed"
+description = """
+Simplifies Gall agents, arms, and subscription logic.
+"""
 +++
 
 ## Old Gall

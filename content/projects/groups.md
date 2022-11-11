@@ -3,6 +3,10 @@ title = "Groups"
 date = "2019-10-01"
 contributors = ["~tacryt-socryp"]
 status = "Completed"
+description = """
+Groups allow different channels to be collected together under a unified
+membership management and policy.
+"""
 +++
 
 So far, each channel in apps like Chat have been totally independent of all the

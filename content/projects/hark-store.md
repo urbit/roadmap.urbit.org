@@ -3,6 +3,10 @@ title = "Hark Store"
 date = "2020-11-10"
 contributors = ["~hastuc-dibtux"]
 status = "Completed"
+description = """
+Hark is the notification system for Landscape, allowing apps to create
+and group notifications together in app-defined categories.
+"""
 +++
 
 Hark Store is a new notification system for Landscape. It allows apps on a

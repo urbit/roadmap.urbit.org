@@ -3,6 +3,9 @@ title = "Dbug"
 date = "2020-01-26"
 contributors = ["~palfun-foslup"]
 status = "Completed"
+description = """
+Dbug lets you inspect the internal state of a running agent from the Dojo.
+"""
 +++
 
 The recent release of "static" Gall gave agents a uniform type. This made it

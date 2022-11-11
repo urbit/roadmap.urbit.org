@@ -3,6 +3,10 @@ title = "Graph Store"
 date = "2020-07-30"
 contributors = ["~tacryt-socryp"]
 status = "Completed"
+description = """
+Graph Store is a non-relational database suitable for use in building
+social media applications.
+"""
 +++
 
 Urbit has so-far has three main communication apps: Chat, Publish and

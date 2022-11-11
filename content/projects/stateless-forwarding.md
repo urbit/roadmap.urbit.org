@@ -3,6 +3,10 @@ title = "Stateless Forwarding"
 date = "2020-08-06"
 contributors = ["~palfun-foslup"]
 status = "Completed"
+description = """
+Stateless packet forwarding allows ships to relay packets to
+other ships without writing to their own event log.
+"""
 +++
 
 When ships receive packets destined for a ship other than themselves, they

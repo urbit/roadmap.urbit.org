@@ -3,6 +3,9 @@ title = "Links"
 date = "2019-12-12"
 contributors = ["~palfun-foslup"]
 status = "Completed"
+description = """
+A social bookmarking app for groups to share links to other things on the web.
+"""
 +++
 
 Links is a new communication tool, to go with the existing Chat and Publish

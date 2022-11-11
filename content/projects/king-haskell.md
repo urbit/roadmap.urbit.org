@@ -3,6 +3,9 @@ title = "King Haskell"
 date = "2021-01-29"
 contributors = ["~littel-ponnys", "~pilfer-pandex", "~siprel"]
 status = "Completed"
+description = """
+A re-implementation of the Urbit runtime in Haskell.
+"""
 +++
 
 King Haskell is a re-implementation of Vere's C-based King. It has been in

@@ -3,6 +3,9 @@ title = "New Ames"
 date = "2019-12-04"
 contributors = ["~rovnys-ricfer", "~wicdev-wisryt"]
 status = "Completed"
+description = """
+A rewrite of the networking protocol to extend inter-ship subscription mechanics.
+"""
 +++
 
 Previously, the networking [Vane](https://urbit.org/docs/glossary/vane)

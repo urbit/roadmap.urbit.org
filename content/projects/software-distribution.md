@@ -3,6 +3,9 @@ title = "Software Distribution"
 date = "2021-09-29"
 contributors = ["~rovnys-ricfer", "~wolref-podlex", "~palfun-foslup", "~nocsyx-lassul", "~hastuc-dibtux", "~littel-wolfur", "~wicdev-wisryt"]
 status = "Completed"
+description = """
+A number of features written to support third-party application distribution on independent desks.
+"""
 +++
 
 While [Clay](https://urbit.org/docs/glossary/clay) (Urbit's filesystem) has long
