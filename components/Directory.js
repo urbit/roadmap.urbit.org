@@ -10,12 +10,13 @@ import BasicPage from '../components/BasicPage';
 import Sidebar from "../components/Sidebar";
 import React from "react";
 import TimelineDot from "../components/icons/TimelineDot";
+import dayjs from "dayjs";
 
 export default function Directory({ search, title, markdown, posts, columns, timeline = false }) {
     const router = useRouter();
 
     const dateGroup = timeline ? posts.reduce((groups, post) => {
-        const month = dateToDa(new Date(post.date))
+        const month = dayjs(post.date).startOf('month').toISOString()
         if (!groups[month]) {
             groups[month] = [];
         }
@@ -54,9 +55,11 @@ export default function Directory({ search, title, markdown, posts, columns, tim
                     "border-l border-dashed pl-8": timeline
                 })}>
                     {markdown && <Markdown.render content={JSON.parse(markdown)} />}
-                    {timeline ? Object.entries(dateGroup).map(([date, content]) => {
+                    {timeline ? Object.entries(dateGroup).sort(([dayA,], [dayB,]) => {
+                        return new Date(dayB) - new Date(dayA)
+                    }).map(([date, content]) => {
                         return <div key={date} className="relative my-24">
-                            <h2 className="!mt-0" id={date}>{date}</h2>
+                            <h2 className="!mt-0" id={date}>{dateToDa(new Date(date))}</h2>
                             <TimelineDot className="absolute top-2 -left-[2.58rem]" />
                             {content.map((post) => {
                                 return <React.Fragment key={post.title}>
