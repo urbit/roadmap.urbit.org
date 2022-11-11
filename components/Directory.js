@@ -63,34 +63,34 @@ export default function Directory({ search, title, markdown, posts, columns, tim
                             <TimelineDot className="absolute top-2 -left-[2.58rem]" />
                             {content.map((post) => {
                                 return <React.Fragment key={post.title}>
-                                    <h3 id={post.title.toLowerCase()}>{post.title}</h3>
+                                    <h3 className="!font-semibold" id={post.title.toLowerCase()}>{post.title}</h3>
                                     <div className="flex space-x-16">
                                         {columns.map((col) => {
                                             return <div key={col} className="flex flex-col space-y-2 ">
-                                                <p className="!my-0 font-semibold text-wall-400 uppercase !text-base">{col.replace("_", " ")}</p>
-                                                <p className="!my-0">{Array.isArray(post[col.toLowerCase()]) ? post[col.toLowerCase()].join(", ").toLowerCase() : post?.[col.toLowerCase()] || "TBD"}</p>
+                                                <p className="!mb-1 font-semibold text-wall-400 uppercase !text-sm">{col.replace("_", " ")}</p>
+                                                <p className="!my-0 !text-base">{Array.isArray(post[col.toLowerCase()]) ? post[col.toLowerCase()].join(", ").toLowerCase() : post?.[col.toLowerCase()] || "TBD"}</p>
                                             </div>
                                         })}
                                     </div>
                                     <p>{post.description}</p>
-                                    <Link href={`/project/${post.slug}`} passHref><a className="text-green-400 text-lg block">More Information {"->"}</a></Link>
+                                    <Link href={`/project/${post.slug}`} passHref><a className="text-green-400 text-base block">More Information {"->"}</a></Link>
                                 </React.Fragment>
                             })}
                         </div>
                     })
                         : posts.map((post) => {
                             return <React.Fragment key={post.title}>
-                                <h3 id={post.title.toLowerCase()}>{post.title}</h3>
+                                <h3 className="!font-semibold" id={post.title.toLowerCase()}>{post.title}</h3>
                                 <div className="flex space-x-16">
                                     {columns.map((col) => {
                                         return <div key={col} className="flex flex-col space-y-2 ">
-                                            <p className="!my-0 font-semibold text-wall-400 uppercase !text-base">{col.replace("_", " ")}</p>
-                                            <p className="!my-0">{Array.isArray(post[col.toLowerCase()]) ? post[col.toLowerCase()].join(", ").toLowerCase() : post?.[col.toLowerCase()] || "TBD"}</p>
+                                            <p className="!mb-1 font-semibold text-wall-400 uppercase !text-sm">{col.replace("_", " ")}</p>
+                                            <p className="!my-0 !text-base">{Array.isArray(post[col.toLowerCase()]) ? post[col.toLowerCase()].join(", ").toLowerCase() : post?.[col.toLowerCase()] || "TBD"}</p>
                                         </div>
                                     })}
                                 </div>
                                 <p>{post.description}</p>
-                                <Link href={`/project/${post.slug}`} passHref><a className="text-green-400 text-lg">More Information {"->"}</a></Link>
+                                <Link href={`/project/${post.slug}`} passHref><a className="text-green-400 text-base">More Information {"->"}</a></Link>
                             </React.Fragment>
                         })}
                 </div>
