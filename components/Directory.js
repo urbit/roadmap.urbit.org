@@ -52,7 +52,7 @@ export default function Directory({ search, title, markdown, posts, columns, tim
                 </div>
                 {/* Content */}
                 <div className={cn("col-span-full md:col-start-4 md:col-end-11 lg:col-end-9 mt-16 md:mt-0 markdown", {
-                    "border-l border-dashed pl-8": timeline
+                    "border-l border-dashed pl-8 border-wall-400": timeline
                 })}>
                     {markdown && <Markdown.render content={JSON.parse(markdown)} />}
                     {timeline ? Object.entries(dateGroup).sort(([dayA,], [dayB,]) => {
