@@ -15,7 +15,7 @@ export default function NextUp({ search, markdown, posts }) {
 
 export async function getStaticProps() {
     const posts = getAllPosts(
-        ["title", "slug", "date", "description", "contributors", "status"],
+        ["title", "slug", "date", "description", "contributors", "status", "duration", "manpower"],
         "projects",
         "date"
     ).filter((post) => {
