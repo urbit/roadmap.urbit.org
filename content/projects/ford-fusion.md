@@ -1,6 +1,6 @@
 +++
 title = "Ford Fusion"
-date = "2020-06-01"
+date = "2020-06-29"
 contributors = ["~rovnys-ricfer", "~wicdev-wisryt"]
 status = "Completed"
 +++

@@ -1,6 +1,6 @@
 +++
 title = "Transaction Apps"
-date = "2019-05-01"
+date = "2019-05-30"
 contributors = ["~wicdev-wisryt"]
 status = "Completed"
 +++

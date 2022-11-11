@@ -1,6 +1,6 @@
 +++
 title = "Links"
-date = "2019-12-01"
+date = "2019-12-12"
 contributors = ["~palfun-foslup"]
 status = "Completed"
 +++

@@ -1,6 +1,6 @@
 +++
 title = "Software Distribution"
-date = "2021-09-01"
+date = "2021-09-29"
 contributors = ["~rovnys-ricfer", "~wolref-podlex", "~palfun-foslup", "~nocsyx-lassul", "~hastuc-dibtux", "~littel-wolfur", "~wicdev-wisryt"]
 status = "Completed"
 +++

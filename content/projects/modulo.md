@@ -1,6 +1,6 @@
 +++
 title = "Modulo"
-date = "2019-03-01"
+date = "2019-03-29"
 contributors = ["~tacryt-socryp", "~novlud-padtyv", "~wicdev-wisryt"]
 status = "Completed"
 +++

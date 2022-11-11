@@ -1,6 +1,6 @@
 +++
 title = "IPC Redux"
-date = "2020-07-01"
+date = "2020-07-23"
 contributors = ["~master-morzod", "~palfun-foslup", "~wicdev-wisryt", "~pilfer-pandex", "~siprel"]
 status = "Completed"
 +++

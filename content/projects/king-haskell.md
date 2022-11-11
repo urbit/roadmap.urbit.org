@@ -1,6 +1,6 @@
 +++
 title = "King Haskell"
-date = "2020-07-01"
+date = "2021-01-29"
 contributors = ["~littel-ponnys", "~pilfer-pandex", "~siprel"]
 status = "Completed"
 +++

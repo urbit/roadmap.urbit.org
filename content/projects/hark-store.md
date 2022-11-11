@@ -1,6 +1,6 @@
 +++
 title = "Hark Store"
-date = "2020-10-01"
+date = "2020-11-10"
 contributors = ["~hastuc-dibtux"]
 status = "Completed"
 +++
