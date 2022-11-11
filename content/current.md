@@ -8,10 +8,6 @@ As for bug fixing, the "gall request queue fix", which involved major changes to
 
 TODO summary of current projects
 
-## Improve Vere Build System
-
-The build system for Vere has been the source of many headaches for years.  Experiments are being conducted to extract Vere from the monorepo into its own git repository and replace the current Nix build setup with a new one based on the Bazel build system.  If successful, these experiments could greatly reduce the amount of friction involved in Vere development, CI testing, and deployment, increasing the rate of development and releases.
-
 ## Ames Bug Fixing
 
 Multiple bugs were introduced by a major release in mid-2022, called the "gall
