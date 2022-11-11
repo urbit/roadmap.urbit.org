@@ -7,11 +7,3 @@ On the memory use front, "tombstoning" was added to Clay to allow files to be de
 As for bug fixing, the "gall request queue fix", which involved major changes to Ames and Gall and a complex online migration, was the largest bugfixing project.  Fixes were also deployed for Ames breach handling, Behn timers getting stuck, insecure "bail: meme" out-of-memory error handling, and stuck Azimuth PKI tracking.
 
 TODO summary of current projects
-
-## Ames Bug Fixing
-
-Multiple bugs were introduced by a major release in mid-2022, called the "gall
-request queue fix".  `~norsyr-torryn` is fixing these bugs.
-
-TODO: github link
-
