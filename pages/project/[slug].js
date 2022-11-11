@@ -10,11 +10,11 @@ export default function ProjectPage({ search, post, markdown }) {
     if (post.status === "Next Up") {
         title = "Next Up"
         href = "next"
-        cols = ["Duration", "Start", "Contributors", "Lead"]
+        cols = ["Duration", "Manpower", "Lead"]
     } else if (post.status === "Current") {
         title = `${post.status} Projects`
         href = `${post.status.toLowerCase()}`
-        cols = ["Duration", "Completion", "Contributors", "Lead"]
+        cols = ["end_date", "Lead"]
     } else if (post.status === "Completed") {
         title = `${post.status} Projects`
         href = `${post.status.toLowerCase()}`
@@ -23,7 +23,7 @@ export default function ProjectPage({ search, post, markdown }) {
     else if (post.status === "Future") {
         title = `${post.status} Projects`
         href = `${post.status.toLowerCase()}`
-        cols = ["Duration", "Start", "Contributors", "Lead"]
+        cols = ["Duration", "Manpower", "Lead"]
     }
 
     return <BasicPage
@@ -58,7 +58,7 @@ export default function ProjectPage({ search, post, markdown }) {
 export async function getStaticProps({ params }) {
     const post = getPostBySlug(
         params.slug,
-        ["title", "slug", "date", "description", "content", "status", "contributors", "duration", "lead", "end_date"],
+        ["title", "slug", "date", "description", "content", "status", "contributors", "duration", "manpower", "lead", "end_date"],
         "projects"
     );
 
