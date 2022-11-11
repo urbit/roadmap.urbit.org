@@ -19,6 +19,8 @@ export async function getStaticProps() {
         "date"
     ).filter((post) => {
         return post.status === "Future"
+    }).sort((a, b) => {
+        return a.title.toLowerCase().localeCompare(b.title.toLowerCase())
     });
 
     return {
