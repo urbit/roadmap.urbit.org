@@ -1,12 +1,19 @@
 +++
-title = "Terminal Improvements"
+title = "Event Log Truncation"
 start_date = "2021-01-01"
-end_date = "2023-01-15"
-lead = "~palfun-foslup"
+end_date = "2022-12-15"
+lead = "~fanfun-mocbud"
 status = "Current"
 +++
 
-`~palfun-foslup`'s improvements to the terminal subsystems, having languished unreleased for many months, are slated for the next release after event log truncation and agents-in-Clay.  These improvements include two-dimensional drawing, a basic text editor, and tmux-style window multiplexing.
+The event log grows indefinitely, using more disk space over time. Once event logs can be truncated, disk space can be reclaimed, using a roughly constant amount of disk space over time (the size of the Arvo snapshot, which grows much more slowly than the event log). Reducing disk space in this way is important for reducing cost and maintenance burden for running ships.
 
-https://github.com/urbit/urbit/pull/5663
-TODO spec document
+There are a few levels of event log truncation:
+
+- manual rollover, manual truncation
+- automated rollover, manual truncation
+- automated rollover, automated truncation
+
+The first, fully manual, version of event log truncation is being polished by ~fanfun-mocbud and ~master-morzod and should be released soon. Automation will come later.
+
+- [PR](https://github.com/urbit/urbit/pull/5701)
