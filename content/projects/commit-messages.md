@@ -3,6 +3,9 @@ title = "Commit Messages"
 date = "2022-03-22"
 contributors = ["~sipfyn-pidmex"]
 status = "Completed"
+description = """
+Added commit messages to the file system for revisions.
+"""
 +++
 
 Clay (Urbit's filesystem) has so-far supported simple tags for commits, but it

@@ -3,6 +3,9 @@ title = "Threads"
 date = "2019-12-04"
 contributors = ["~wicdev-wisryt"]
 status = "Completed"
+description = """
+Threads are a stand-alone version of transactional applications.
+"""
 +++
 
 Back in May 2019, the concept of "transactional applications" were introduced,

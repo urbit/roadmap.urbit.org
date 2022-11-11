@@ -3,6 +3,10 @@ title = "Kahn"
 date = "2022-06-01"
 contributors = ["~silsyn-wathep"]
 status = "Completed"
+description = """
+Kahn is a "control plane" vane, allowing external processes to talk
+with a ship through a Unix socket.
+"""
 +++
 
 

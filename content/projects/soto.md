@@ -3,6 +3,9 @@ title = "Soto"
 date = "2019-11-19"
 contributors = ["~haddef-sigwen"]
 status = "Completed"
+description = """
+The Landscape app that let you use the Dojo from the web UI.
+"""
 +++
 
 Soto is new Landscape app which lets you use the

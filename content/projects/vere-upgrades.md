@@ -3,6 +3,9 @@ title = "Vere Upgrades"
 date = "2022-06-01"
 contributors = ["~master-morzod", "~silsyn-wathep"]
 status = "Completed"
+description = """
+Adds features to simplify upgrading the binary for users.
+"""
 +++
 
 So far, whenever a new version of the Urbit runtime Vere is released, it has

@@ -3,6 +3,9 @@ title = "Modulo"
 date = "2019-03-29"
 contributors = ["~tacryt-socryp", "~novlud-padtyv", "~wicdev-wisryt"]
 status = "Completed"
+description = """
+The Landscape UI pattern that organises applications around app tiles and discrete application endpoints.
+"""
 +++
 
 Modulo is a new Landscape UI:

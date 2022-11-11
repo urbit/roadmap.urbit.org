@@ -3,6 +3,12 @@ title = "Azimuth"
 date = "2019-01-13"
 contributors = ["~palfun-foslup", "~nidsut-tomdun", "~wicdev-wisryt"]
 status = "Completed"
+description = """
+In Urbit's early stages, when it was still highly experimental, the address
+space was managed and issued manually by Tlon. In 2017, it was decided that
+Urbit's address space would be moved to a smart contract on Ethereum. In early
+2019, Urbit's PKI system was launched on the Ethereum blockchain.
+"""
 +++
 
 In Urbit's early stages, when it was still highly experimental, the address
