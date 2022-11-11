@@ -25,7 +25,7 @@ Increasing the speed of releases is the core dev team's highest priority, since 
 
 The first step is to make the upgrade process itself more reliable.  The "agents in Clay" project, slated for the next release as November 2022, rewrites the kernel's upgrade system in a much simpler way, making it easier to reason about and less fragile.
 
-Backward compatibility for apps will also increase release frequency for the kernel, so that is being worked on already.  See the "backward compatibility" section for more detail.  A related project is to automate runtime upgrades to lessen the maintenance burden runtime releases impose on users.
+Backward compatibility for apps will also increase release frequency for the kernel, so that is being worked on already.  See the [backward compatibility section](/#backward-compatibility) for more detail.  A related project is to automate runtime upgrades to lessen the maintenance burden runtime releases impose on users.
 
 Later work will likely involve building more extensive testing and telemetry tools to expedite the quality assurance phase of releases.
 
