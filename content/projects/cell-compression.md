@@ -2,7 +2,7 @@
 title = "Pointer Compression: Cell Compression"
 manpower = "1 Engineer"
 duration = "2-4 Months"
-status = "Future"
+status = "Next"
 lead = "TBD"
 +++
 
