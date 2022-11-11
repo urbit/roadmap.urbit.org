@@ -37,6 +37,3 @@ request queue fix".  `~norsyr-torryn` is fixing these bugs.
 
 TODO: github link
 
-## Doccords
-
-The "doccords" project is also almost done.  This adds docstrings, a common programming language feature, to Hoon, which should aid especially new Hoon programmers in learning the system more easily.
