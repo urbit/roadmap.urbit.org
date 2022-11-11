@@ -1,5 +1,5 @@
 +++
-title = "Pointer Compression"
+title = "Pointer Compression: 8GB Loom"
 start_date = "2021-01-01"
 end_date = "2023-01-15"
 lead = "~rovnys-ricfer"

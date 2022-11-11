@@ -1,7 +1,7 @@
 +++
 title = "Commit Messages"
 date = "2022-03-01"
-contributors = [""]
+contributors = ["~sipfyn-pidmex"]
 status = "Completed"
 +++
 
