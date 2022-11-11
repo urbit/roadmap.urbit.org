@@ -1,5 +1,6 @@
 import Grid from "../components/Grid";
-import { Markdown, TableOfContents, getPostBySlug } from '@urbit/foundation-design-system';
+import { Markdown, getPostBySlug } from '@urbit/foundation-design-system';
+import TableOfContents from "../components/TableOfContents"
 import { dirs } from '../lib/constants';
 import Link from 'next/link';
 import cn from 'classnames'
