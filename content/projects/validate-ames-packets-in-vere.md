@@ -2,7 +2,7 @@
 title = "Validate Ames Packets in Vere"
 manpower = "1 Engineer"
 duration = "1 Month"
-status = "Next"
+status = "Next Up"
 lead = "TBD"
 +++
 
