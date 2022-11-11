@@ -152,12 +152,12 @@ Building a 64-bit Vere is not an insurmountable project, but the result would al
 
 ### Related Projects
 
-- [8GB Loom](/project/8gb-loom)
+- [8GB Loom](/project/pointer-compression-8gb-loom)
 - [Memory-Efficient Meld](/project/memory-efficient-meld)
 - [Loom Tool Scaling](/project/loom-tool-scaling)
 - [Demand Paging](/project/demand-paging)
 - [Cell Compression](/project/cell-compression)
-- [16GB Loom](/project/16gb-loom)
+- [16GB Loom](/project/pointer-compression-16gb-loom)
 - [New Mars Snapshot System](/project/new-mars-snapshot)
 - [New Mars](/project/new-mars)
 
