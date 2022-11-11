@@ -8,7 +8,7 @@ import Meta from "./Meta";
 export default function BasicPage({ search, post, children }) {
     return <Container>
         <IntraNav search={search} />
-        <Grid className="p-4 md:p-0 md:mt-44">
+        <Grid className="p-4 md:p-0 md:mt-44 mb-44">
             {/* Header row */}
             <Header title={post.title} />
             <Head>
