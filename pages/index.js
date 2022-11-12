@@ -7,9 +7,11 @@ import cn from 'classnames'
 import { useRouter } from 'next/router';
 import BasicPage from '../components/BasicPage';
 import Sidebar from "../components/Sidebar";
+import Pagination from "../components/Pagination";
 
 export default function Home({ search, markdown }) {
   const router = useRouter();
+  const nextDir = dirs[dirs.findIndex((e) => e.link === router.pathname) + 1];
   return (
     <BasicPage
       post={{
@@ -36,6 +38,7 @@ export default function Home({ search, markdown }) {
         {/* Content */}
         <div className="col-span-full md:col-start-4 md:col-end-11 lg:col-end-9 markdown mt-16 md:mt-0">
           <Markdown.render content={JSON.parse(markdown)} />
+          <Pagination dir={nextDir} />
         </div>
         {/* Table of contents */}
         <div className="col-start-10">
