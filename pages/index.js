@@ -26,7 +26,7 @@ export default function Home({ search, markdown }) {
             {dirs.map((dir) => {
               return <li key={dir.title}>
                 <Link href={dir.link}>
-                  <a className={cn("font-light text-xl", {
+                  <a className={cn("font-light text-base md:text-xl", {
                     "text-wall-400": dir.link !== router.pathname,
                     "": dir.link === router.pathname
                   })}>{dir.title}</a>

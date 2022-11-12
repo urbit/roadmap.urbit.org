@@ -45,7 +45,7 @@ export default function Directory({ search, title, markdown, posts, columns, tim
                         {dirs.map((dir) => {
                             return <li key={dir.title}>
                                 <Link href={dir.link}>
-                                    <a className={cn("text-xl", {
+                                    <a className={cn("text-base md:text-xl", {
                                         "text-wall-400": dir.link !== router.pathname,
                                         "": dir.link === router.pathname
                                     })}>{dir.title}</a>

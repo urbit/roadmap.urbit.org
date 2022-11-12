@@ -10,12 +10,25 @@ export default function Sidebar(props) {
                 {props.children}
             </ul>
             <MenuTray isOpen={isOpen} setTray={setTray} search={props.search}>
-                <header className="pl-4 flex shrink-0 justify-between items-center pb-4">
+                <header className="flex flex-col">
                     <Link href="/" passHref>
-                        <a className=" text-xl font-semibold sig">Roadmap</a>
+                        <a className="font-semibold mb-4">Roadmap</a>
                     </Link>
+                    <Link href="https://urbit.org" passHref>
+                        <a className="mt-2">Urbit.org</a>
+                    </Link>
+                    <Link href="https://operators.urbit.org" passHref>
+                        <a className="mt-2">Operators</a>
+                    </Link>
+                    <Link href="https://developers.urbit.org" passHref>
+                        <a className="mt-2">Developers</a>
+                    </Link>
+                    <Link href="/" passHref>
+                        <a className="font-semibold mt-2 mb-4">Roadmap</a>
+                    </Link>
+                    <hr className="border-wall-200" />
                 </header>
-                <ul className="pl-4 list-none text-lg md:hidden  flex space-y-2 flex-col sticky top-32">
+                <ul className="mt-4 list-none text-lg md:hidden flex space-y-2 flex-col sticky top-32">
                     {props.children}
                 </ul>
                 <div className="pt-32" />
