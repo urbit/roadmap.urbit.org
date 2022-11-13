@@ -8,6 +8,7 @@ import cn from 'classnames'
 import { useRouter } from 'next/router';
 import BasicPage from '../components/BasicPage';
 import Sidebar from "../components/Sidebar";
+import Pagination from "../components/Pagination";
 import React from "react";
 import TimelineDot from "../components/icons/TimelineDot";
 import dayjs from "dayjs";
@@ -23,6 +24,9 @@ export default function Directory({ search, title, markdown, posts, columns, tim
         groups[month].push(post);
         return groups
     }, {}) : null;
+
+    const dirIndex = dirs.findIndex((e) => e.link === router.pathname);
+    const nextDir = dirIndex ? dirs[dirIndex + 1] : false;
 
     return (
         <BasicPage
@@ -41,7 +45,7 @@ export default function Directory({ search, title, markdown, posts, columns, tim
                         {dirs.map((dir) => {
                             return <li key={dir.title}>
                                 <Link href={dir.link}>
-                                    <a className={cn("text-xl", {
+                                    <a className={cn("text-base md:text-xl", {
                                         "text-wall-400": dir.link !== router.pathname,
                                         "": dir.link === router.pathname
                                     })}>{dir.title}</a>
@@ -93,6 +97,7 @@ export default function Directory({ search, title, markdown, posts, columns, tim
                                 <Link href={`/project/${post.slug}`} passHref><a className="text-green-400 text-base">More Information {"->"}</a></Link>
                             </React.Fragment>
                         })}
+                    {nextDir && <Pagination dir={nextDir} />}
                 </div>
                 {/* Table of contents */}
                 <div className="col-start-10">
