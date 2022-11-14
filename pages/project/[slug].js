@@ -29,7 +29,7 @@ export default function ProjectPage({ search, post, markdown }) {
     return <BasicPage
         search={search}
         post={{
-            title
+            title: post.title
         }}
     >
         <Grid className="col-span-full md:mt-40 mb-40">
