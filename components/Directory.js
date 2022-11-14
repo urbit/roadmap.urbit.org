@@ -62,9 +62,9 @@ export default function Directory({ search, title, markdown, posts, columns, tim
                     {timeline ? Object.entries(dateGroup).sort(([dayA,], [dayB,]) => {
                         return new Date(dayB) - new Date(dayA)
                     }).map(([date, content]) => {
-                        return <div key={date} className="relative my-24">
+                        return <div key={date} className="relative timeline my-24">
                             <h2 className="!mt-0" id={date}>{dateToDa(new Date(date))}</h2>
-                            <TimelineDot className="absolute top-2 -left-[2.58rem]" />
+                            <TimelineDot className="absolute top-2 -left-[2.58rem] leading-[0]" />
                             {content.map((post) => {
                                 return <React.Fragment key={post.title}>
                                     <h3 className="!font-semibold" id={post.title.toLowerCase()}>{post.title}</h3>
