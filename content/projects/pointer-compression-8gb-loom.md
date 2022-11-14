@@ -8,4 +8,3 @@ status = "Current"
 
 This project raises the amount of data the runtime can manage from 2GB to 8GB.  It is the first phase of the [runtime data management](/#runtime-data-management) arc.
 
-TODO: github link to release candidate
