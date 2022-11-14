@@ -5,12 +5,12 @@ import Grid from "./Grid";
 import Header from "./Header";
 import Meta from "./Meta";
 
-export default function BasicPage({ search, post, children }) {
+export default function BasicPage({ search, sectionTitle = "", post, children }) {
     return <Container>
         <IntraNav search={search} />
         <Grid className="p-4 md:p-0 md:mt-44 mb-16">
             {/* Header row */}
-            <Header title={post.title} />
+            <Header title={sectionTitle || post.title} />
             <Head>
                 <title>{post.title} • roadmap.urbit.org</title>
                 {Meta(post)}

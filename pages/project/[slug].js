@@ -28,6 +28,7 @@ export default function ProjectPage({ search, post, markdown }) {
 
     return <BasicPage
         search={search}
+        sectionTitle={title}
         post={{
             title: post.title
         }}
