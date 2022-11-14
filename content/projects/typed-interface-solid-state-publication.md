@@ -1,6 +1,6 @@
 +++
 title = "Typed Interface to Solid-State Publications"
-duration = "3-6 Months"
+duration = "4-8 Months"
 manpower = "1-2 Engineers"
 status = "Future"
 lead = "~rovnys-ricfer"

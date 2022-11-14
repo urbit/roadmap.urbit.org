@@ -1,6 +1,6 @@
 +++
 title = "Versioned Pokes and Subscriptions"
-duration = "3-6 Months"
+duration = "4-8 Months"
 manpower = "1-2 Engineers"
 status = "Future"
 lead = "TBD"
