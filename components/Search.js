@@ -86,7 +86,7 @@ class Search extends Component {
                         type: "PATP",
                         content: {
                             patp: patp,
-                            slug: `/ids/${patp}`,
+                            slug: `https://urbit.org/ids/${patp}`,
                         },
                     },
                 ]
