@@ -1,6 +1,5 @@
 import Grid from "../components/Grid";
-import { Markdown } from "@urbit/foundation-design-system";
-import { TableOfContents } from "../components/TableOfContents"
+import { Markdown, TableOfContents } from "@urbit/foundation-design-system";
 import { dirs } from '../lib/constants';
 import { dateToDa } from "../lib/util";
 import Link from 'next/link';
