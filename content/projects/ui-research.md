@@ -4,6 +4,9 @@ status = "Future"
 lead = "TBD"
 duration = "TBD"
 manpower = "TBD"
+description = """
+One of the main barriers to writing an Urbit app is that the standard way to present a user interface is by writing it in JavaScript that runs in a web browser.  This has advantages, but it requires writing code in two languages, and it means you can't stay in Urbit entirely when writing an app.
+"""
 +++
 
 One of the main barriers to writing an Urbit app is that the standard way to present a user interface is by writing it in JavaScript that runs in a web browser.  This has advantages, but it requires writing code in two languages, and it means you can't stay in Urbit entirely when writing an app.

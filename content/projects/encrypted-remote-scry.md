@@ -4,6 +4,9 @@ duration = "2-3 Months"
 manpower = "1-2 Engineers"
 status = "Future"
 lead = "TBD"
+description = """
+Arvo needs to encrypt scry paths and the values bound to them in order to use the remote scry protocol for private data such as group chats.  This requires changes to the kernel to distribute encryption keys and let applications determine which other ships should have access to data in which publications.
+"""
 +++
 
 Arvo needs to encrypt scry paths and the values bound to them in order to use the remote scry protocol for private data such as group chats.  This requires changes to the kernel to distribute encryption keys and let applications determine which other ships should have access to data in which publications.

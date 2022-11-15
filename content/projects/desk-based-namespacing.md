@@ -4,6 +4,9 @@ duration = "3-6 Months"
 manpower = "1-2 Engineers"
 status = "Future"
 lead = "TBD"
+description = """
+Desk-based namespacing should improve reliability, maintenance, and developer experience.
+"""
 +++
 
 Desk-based namespacing should improve reliability, maintenance, and developer experience.

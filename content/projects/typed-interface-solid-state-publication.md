@@ -4,6 +4,9 @@ duration = "4-8 Months"
 manpower = "1-2 Engineers"
 status = "Future"
 lead = "~rovnys-ricfer"
+description = """
+A typed interface to solid-state publications should improve developer experience and performance (by avoiding runtime typechecks and type coercions).
+"""
 +++
 
 A typed interface to solid-state publications should improve developer experience and performance (by avoiding runtime typechecks and type coercions).

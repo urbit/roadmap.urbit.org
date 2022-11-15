@@ -4,6 +4,9 @@ duration = "TBD"
 manpower = "TBD"
 lead = "TBD"
 status = "Future"
+description = """
+Improving the Arvo/Vere version negotiation will increase release rate by reducing the amount of work it takes to release a new Kelvin version.
+"""
 +++
 
 Improving the Arvo/Vere version negotiation will increase release rate by reducing the amount of work it takes to release a new Kelvin version.

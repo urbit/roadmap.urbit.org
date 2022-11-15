@@ -4,6 +4,9 @@ manpower = "1 Engineer"
 duration = "2 Months"
 lead = "~wicdev-wisryt"
 status = "Next Up"
+description = """
+Switching from Arvo's current "depth-first" move order to "breadth-first" intends to improve the reliability of parts of the kernel, including upgrades and breach handling, by switching to chronological ordering of intra-event delivery of moves to vanes.
+"""
 +++
 
 Switching from Arvo's current "depth-first" move order to "breadth-first" intends to improve the reliability of parts of the kernel, including upgrades and breach handling, by switching to chronological ordering of intra-event delivery of moves to vanes.

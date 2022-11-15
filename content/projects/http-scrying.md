@@ -4,6 +4,9 @@ duration = "2-3 Months"
 manpower = "1-2 Engineers"
 status = "Future"
 lead = "TBD"
+description = """
+The scry namespace should be made available over HTTP, to improve developer experience and performance for Urbit clients ("airlocks").
+"""
 +++
 
 The scry namespace should be made available over HTTP, to improve developer experience and performance for Urbit clients ("airlocks").  This likely looks like carving out a subset of URL paths (maybe those that start with `/scry`, or similar) to be reserved for scry requests, and the rest of the URL would be a scry path.  Note that mark-converting the scry result to `%mime` will likely be required for inclusion in an HTTP response.  Also, a subset of this functionality already exists, for `%gx` scrys into Gall.

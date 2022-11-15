@@ -4,6 +4,9 @@ duration = "1 Month"
 manpower = "1"
 status = "Future"
 lead = "TBD"
+description = """
+Turning off the `!<` ("zapgal") rune in userspace will reduce the security attack surface of the kernel, reducing the kernel's vulnerability to attack by malicious applications.
+"""
 +++
 
 Turning off the `!<` ("zapgal") rune in userspace will reduce the security attack surface of the kernel, reducing the kernel's vulnerability to attack by malicious applications.

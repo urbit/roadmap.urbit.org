@@ -6,6 +6,9 @@ end_date = "2023-02-01"
 contributors = ["~tinnus-napbus", "~dinleb-rambep"]
 lead = "~dinleb-rambep"
 status = "Current"
+description = """
+As it stands, every Kelvin change breaks backward compatibility, requiring app devs to publish modified code so their users can keep the app running.  This needs to happen less frequently over time, until eventually apps can be "write once, run forever."
+"""
 +++
 
 As it stands, every Kelvin change breaks backward compatibility, requiring app devs to publish modified code so their users can keep the app running.  This needs to happen less frequently over time, until eventually apps can be "write once, run forever."

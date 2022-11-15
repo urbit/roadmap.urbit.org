@@ -4,6 +4,9 @@ duration = "1-2 Months"
 manpower = "1 Engineer"
 status = "Next Up"
 lead = "TBD"
+description = """
+A more memory-efficient implementation of `|meld` should reduce dangerous memory pressure.  This would reduce maintenance burden.
+"""
 +++
 
 The `|meld` command, to deduplicate and defragment memory, can take up to 8GB to run (or maybe more), often eating all available RAM.  For machines that don't have swap space configured, this crashes the process.  A more memory-efficient implementation should reduce this dangerous memory pressure.  This would reduce maintenance burden.

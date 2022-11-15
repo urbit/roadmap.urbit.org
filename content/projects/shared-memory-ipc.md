@@ -4,6 +4,9 @@ duration = "2-3 Months"
 manpower = "1-2 Engineers"
 status = "Future"
 lead = "TBD"
+description = """
+Vere's two processes, Urth (the I/O process) and Mars (the Nock worker process), communicate using a custom noun-based interprocess communication (IPC) protocol.  This currently uses the Unix stdin and stdout, but using shared memory instead would make IPC significantly faster, reducing event processing latency and improving overall data throughput.
+"""
 +++
 
 Vere's two processes, Urth (the I/O process) and Mars (the Nock worker process), communicate using a custom noun-based interprocess communication (IPC) protocol.  This currently uses the Unix stdin and stdout, but using shared memory instead would make IPC significantly faster, reducing event processing latency and improving overall data throughput.

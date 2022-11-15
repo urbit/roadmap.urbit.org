@@ -4,6 +4,9 @@ duration = "1 Month"
 manpower = "1 Engineer"
 lead = "~watter-parter"
 status = "Next Up"
+description = """
+Urbit should be able to serve websites at custom URLs efficiently to support serving websites to the old web from a single ship without needing to configure caching reverse proxies such as nginx or varnish.
+"""
 +++
 
 Urbit should be able to serve websites at custom URLs efficiently to support serving websites to the old web from a single ship without needing to configure caching reverse proxies such as nginx or varnish.

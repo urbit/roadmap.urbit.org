@@ -4,6 +4,9 @@ manpower = "TBD"
 duration = "TBD"
 status = "Future"
 lead = "TBD"
+description = """
+There are a number of cases where Arvo can crash in a way where it gets into an inconsistent state (e.g. Clay does not always handle Ames crashes properly) or gets stuck on something and fails to continue to make progress.
+"""
 +++
 
 There are a number of cases where Arvo can crash in a way where it gets into an inconsistent state (e.g. Clay does not always handle Ames crashes properly) or gets stuck on something and fails to continue to make progress (e.g. Behn timer expiry events can fail and prevent further timers from running).

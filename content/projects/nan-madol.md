@@ -4,6 +4,9 @@ duration = "TBD"
 manpower = "TBD"
 lead = "TBD"
 status = "Future"
+description = """
+A far-out proposal is to have the runtime perform serialization, packetization, encryption, and congestion control, instead of Arvo.
+"""
 +++
 
 A far-out proposal is to have the runtime perform serialization, packetization, encryption, and congestion control, instead of Arvo.  This would be a big conceptual shift and has risks associated with that, but it would massively increase network bandwidth and it would be a big step toward making Ames a true overlay network, by making it more transport-agnostic.

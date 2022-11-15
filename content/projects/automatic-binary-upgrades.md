@@ -4,6 +4,9 @@ duration = "TBD"
 manpower = "TBD"
 lead = "TBD"
 status = "Future"
+description = """
+Arvo updates itself over the air, but current Vere does not.  We should let the binary update itself by downloading a new version and replacing itself with that, instead of forcing the user to run terminal commands to stay up to date. 
+"""
 +++
 
 Arvo updates itself over the air, but current Vere does not.  We should let the binary update itself by downloading a new version and replacing itself with that, instead of forcing the user to run terminal commands to stay up to date.  This would be a big step along the way to zero-click maintenance.
