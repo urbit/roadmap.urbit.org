@@ -3,7 +3,7 @@ import "@urbit/foundation-design-system/styles/markdown.css";
 import "@urbit/foundation-design-system/styles/prism.css";
 import '../styles/globals.css';
 import { configure, GlobalHotKeys } from "react-hotkeys";
-import Search from "../components/Search";
+import { Search } from "@urbit/foundation-design-system";
 import { useState, useEffect } from "react";
 import { init } from "@socialgouv/matomo-next";
 
@@ -65,8 +65,9 @@ function MyApp({ Component, pageProps }) {
       toggleSearch={toggleSearch}
       closeSearch={closeSearch}
       openSearch={openSearch}
+      order={["roadmap", "org", "dev", "ops"]}
+      ourSite="https://roadmap.urbit.org"
     />
-
     <Component
       {...pageProps}
       search={{
