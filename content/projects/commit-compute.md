@@ -4,6 +4,9 @@ duration = "1-3 Months"
 manpower = "1-2 Engineers"
 status = "Future"
 lead = "TBD"
+description = """
+Current Vere needs to run Nock on an event before it can write it to disk.  This places a lower bound on event latency, defined as time between receiving an event and performing its effects, at `D + N`, i.e. disk write latency (`D`) plus nock execution time (`N`).  Commit-before-compute has amortized latency `max(D, N)`, which is usually significantly better.
+"""
 +++
 
 Current Vere needs to run Nock on an event before it can write it to disk.  This places a lower bound on event latency, defined as time between receiving an event and performing its effects, at `D + N`, i.e. disk write latency (`D`) plus nock execution time (`N`).  Commit-before-compute has amortized latency `max(D, N)`, which is usually significantly better.

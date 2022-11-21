@@ -4,6 +4,9 @@ status = "Future"
 lead = "TBD"
 duration = "2-4 Months"
 manpower = "1 Engineer"
+description = """
+Once there are 8GB or 16GB in the loom, it will be common for there to be more data in Urbit than fits in RAM.  This presents several new problems, and demands solutions.
+"""
 +++
 
 Once there are 8GB or 16GB in the loom, it will be common for there to be more data in Urbit than fits in RAM.  This presents several new problems:

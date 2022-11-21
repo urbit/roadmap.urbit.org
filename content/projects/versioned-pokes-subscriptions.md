@@ -4,6 +4,10 @@ duration = "4-8 Months"
 manpower = "1-2 Engineers"
 status = "Future"
 lead = "TBD"
+description = """
+Standardizing application protocol versioning in the kernel should improve developer experience and lead to more applications behaving correctly across upgrades, thereby improving user experience too.
+"""
+
 +++
 
 Standardizing application protocol versioning in the kernel should improve developer experience and lead to more applications behaving correctly across upgrades, thereby improving user experience too.

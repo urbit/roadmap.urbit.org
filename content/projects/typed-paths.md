@@ -4,6 +4,9 @@ status = "Next Up"
 duration = "1 Week"
 manpower = "1 Engineer"
 lead = "~palfun-foslup"
+description = """
+Typed paths should improve performance and developer experience, and it could unblock a typed interface to publications.
+"""
 +++
 Typed paths should improve performance and developer experience, and it could unblock a typed interface to publications.
 

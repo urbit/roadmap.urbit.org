@@ -4,6 +4,9 @@ manpower = "1-2 Engineers"
 duration = "3-6 Months"
 lead = "TBD"
 status = "Future"
+description = """
+Ames has no forward secrecy other than manual on-chain key rotation.  This means if an attacker finds the symmetric key between two ships or one of the private keys, they could decrypt the whole history of communication between those ships.
+"""
 +++
 
 Ames has no forward secrecy other than manual on-chain key rotation.  This means if an attacker finds the symmetric key between two ships or one of the private keys, they could decrypt the whole history of communication between those ships.

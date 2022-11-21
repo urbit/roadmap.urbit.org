@@ -6,6 +6,9 @@ duration = "1-2 Months"
 manpower = "1-2 Engineers"
 lead = "~rovnys-ricfer"
 status = "Next Up"
+description = """
+The "Fine" remote scry protocol will form the foundation of scalable content distribution in Urbit, by allowing many subscriber ships to read data efficiently from a publisher ship without incurring excessive load on the publisher.
+"""
 +++
 
 The "Fine" remote scry protocol will form the foundation of scalable content distribution in Urbit, by allowing many subscriber ships to read data efficiently from a publisher ship without incurring excessive load on the publisher, which is the bottleneck.

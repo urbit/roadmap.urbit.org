@@ -3,6 +3,9 @@ title = "Userspace Permissioning"
 end_date = "2023-03-01"
 status = "Current"
 lead = "~palfun-foslup"
+description = """
+Kernel and applications are both unprotected against malicious applications until userspace permissioning is added.
+"""
 +++
 
 Kernel and applications are both unprotected against malicious applications until userspace permissioning is added.

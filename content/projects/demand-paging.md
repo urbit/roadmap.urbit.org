@@ -4,6 +4,9 @@ duration = "1-3 Months"
 manpower = "1 Engineer"
 lead = "~master-morzod"
 status = "Next Up"
+description = """
+Demand paging refers to the ability to load only needed pages of memory into RAM, leaving other pages on disk, to reduce memory use.  Operating systems almost always include this feature.  Urbit does not include it yet, but it will need to, since Urbit is a "single-level store".
+"""
 +++
 
 Demand paging refers to the ability to load only needed pages of memory into RAM, leaving other pages on disk, to reduce memory use.  Operating systems almost always include this feature.  Urbit does not include it yet, but it will need to, since Urbit is a "single-level store".

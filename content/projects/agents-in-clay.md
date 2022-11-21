@@ -4,10 +4,14 @@ start_date = "2022-07-06"
 end_date = "2022-12-01"
 lead = "~wicdev-wisryt"
 status = "Current"
+description = """
+This project overhauls Arvo's upgrade system to make it simpler and more
+reliable.  Since it moves the locus of control of agents from Gall to Clay, it's often referred to as the "Agents in Clay" project.
+"""
 +++
 
 This project overhauls Arvo's upgrade system to make it simpler and more
-reliable.  Since it moves the locus of control of agents from Gall to Clay, it's often referred to as the "agents in Clay" project.
+reliable.  Since it moves the locus of control of agents from Gall to Clay, it's often referred to as the "Agents in Clay" project.
 
 
 Early in 2022, bugs were identified in Arvo's upgrade system that have made pushing out new releases risky.  As of the latest release, those bugs no longer brick users' ships, but they can still erroneously turn off apps that should be running, requiring manual user attention to resolve.  The "agents-in-Clay" project addresses these bugs by greatly simplifying the upgrade system, making its correctness much easier to verify.

@@ -4,6 +4,9 @@ duration = "TBD"
 manpower = "TBD"
 status = "Future"
 lead = "TBD"
+description = """
+Urbit's timer system could be better in several ways.  
+"""
 +++
 
 Urbit's timer system could be better in several ways.  As it stands, it's hard to ensure Arvo crashes don't break future timers.  Worse, one broken timer can break all the other ones, even unrelated timers.
