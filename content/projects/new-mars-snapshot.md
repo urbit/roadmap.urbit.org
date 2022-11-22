@@ -1,5 +1,6 @@
 +++
 title = "New Mars Snapshot Design"
+arcs = ["Increase Runtime Data Capacity"]
 manpower = "1 Engineer"
 duration = "2 Months"
 status = "Future"

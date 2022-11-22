@@ -1,5 +1,6 @@
 +++
 title = "Automatic Memory Pack/Trim/Meld"
+arcs = ["Zero-click Maintenance"]
 duration = "TBD"
 manpower = "TBD"
 status = "Future"

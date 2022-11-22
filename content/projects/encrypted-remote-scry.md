@@ -1,5 +1,6 @@
 +++
 title = "Encrypted Remote Scry"
+arcs = ["Improve Network Performance"]
 duration = "2-3 Months"
 manpower = "1-2 Engineers"
 status = "Future"

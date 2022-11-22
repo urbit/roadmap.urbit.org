@@ -1,5 +1,6 @@
 +++
 title = "Commit Before Compute"
+arcs = ["Improve Network Performance"]
 duration = "1-3 Months"
 manpower = "1-2 Engineers"
 status = "Future"

@@ -1,5 +1,6 @@
 +++
 title = "Typed Paths"
+arcs = ["Improve Network Performance","Improve Backward Compatibility"]
 status = "Next Up"
 duration = "1 Week"
 manpower = "1 Engineer"

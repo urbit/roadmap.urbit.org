@@ -1,5 +1,6 @@
 +++
 title = "Consolidate Packet Re-Send Timers"
+arcs = ["Improve Network Performance", "Reduce Hosting Costs"]
 duration = "1 Month"
 manpower = "1 Engineer"
 status = "Future"

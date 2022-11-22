@@ -1,5 +1,6 @@
 +++
 title = "Add %pine Query-At-Latest Protocol"
+arcs = ["Improve Network Performance"]
 status = "Future"
 manpower = "1-2 Engineers"
 duration = "1-2 Months"

@@ -1,5 +1,6 @@
 +++
 title = "Exit Code Scheme for Mars"
+arcs = ["Reduce Hosting Costs"]
 duration = "1 Month"
 manpower = "1 Engineer"
 status = "Future"

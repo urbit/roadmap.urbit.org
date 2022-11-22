@@ -1,5 +1,6 @@
 +++
 title = "Logging"
+arcs = ["Increase Release Frequency", "Improve Security", "Reduce Hosting Costs"]
 end_date = "2023-03-01"
 manpower = "1 Engineer"
 status = "Current"

@@ -1,5 +1,6 @@
 +++
 title = "Basic Remote Scry Protocol"
+arcs = ["Improve Network Performance", "Improve Backward Compatibility"]
 start_date = "2021-01-01"
 end_date = "2023-01-15"
 duration = "1-2 Months"

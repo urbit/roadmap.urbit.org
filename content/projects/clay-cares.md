@@ -1,5 +1,6 @@
 +++
 title = "Clean up Clay %cares"
+arcs = ["Improve Backward Compatibility"]
 manpower = "1 Engineer"
 duration = "2 Months"
 lead = "~wicdev-wisryt"

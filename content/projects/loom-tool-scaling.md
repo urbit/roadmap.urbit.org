@@ -1,5 +1,6 @@
 +++
 title = "Loom Tool Scaling"
+arcs = ["Increase Runtime Data Capacity"]
 status = "Future"
 lead = "TBD"
 duration = "2-4 Months"
