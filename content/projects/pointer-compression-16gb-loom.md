@@ -1,5 +1,6 @@
 +++
 title = "Pointer Compression: 16GB Loom"
+arcs = ["Increase Runtime Data Capacity"]
 manpower = "1 Engineer"
 duration = "1 Month"
 status = "Future"

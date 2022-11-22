@@ -1,5 +1,6 @@
 +++
 title = "Quick Boot"
+arcs = ["Reduce Hosting Costs"]
 start_date = "2022-07-01"
 end_date = "2022-12-15"
 lead = "~nidsut-tomdun"

@@ -1,5 +1,6 @@
 +++
 title = "Shared Memory IPC"
+arcs = ["Increase Release Frequency"]
 duration = "2-3 Months"
 manpower = "1-2 Engineers"
 status = "Future"

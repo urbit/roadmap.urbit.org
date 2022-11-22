@@ -1,5 +1,6 @@
 +++
 title = "Improve Vere Build System"
+arcs = ["Increase Release Frequency"]
 start_date = "2022-11-01"
 end_date = "2023-02-01"
 lead = "~mastyr-bottec"

@@ -10,7 +10,7 @@ Here are the high-level goals that need to be achieved to make Urbit a consumer 
 - [Raise kernel and runtime release frequency to weekly](/#release-frequency)
 - [Develop confidence in security across the board](/#security)
 - [Manage enough data in the runtime to handle multimedia apps](/#runtime-data-management)
-- [Approach zero-click maintenance for users](/#zero-click-maintenance)
+- [Approach Zero-click maintenance for users](/#Zero-click-maintenance)
 - [Improve network performance until a ship can handle 100,000 chat subscribers](/#network-performance)
 - [Make hosting businesses profitable by reducing unit and maintenance costs](/#hosting-costs)
 - [Establish backward compatibility for apps](/#backward-compatibility)
@@ -161,7 +161,7 @@ Building a 64-bit Vere is not an insurmountable project, but the result would al
 - [New Mars Snapshot System](/project/new-mars-snapshot)
 - [New Mars](/project/new-mars)
 
-## Zero-Click Maintenance
+## Zero-click Maintenance
 
 An Urbit ship should maintain itself so that a user does not need to intervene to keep it running properly.  In order for this to be true, the ship needs to be reliable, handle upgrades properly, and manage its resources (e.g. RAM and disk space) efficiently.
 

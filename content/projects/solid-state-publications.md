@@ -1,5 +1,6 @@
 +++
 title = "Solid-State Publications"
+arcs = ["Improve Network Performance", "Improve Backward Compatibility"]
 start_date = "2022-10-25"
 end_date = "2023-01-15"
 lead = "~wicrum-wicrun"

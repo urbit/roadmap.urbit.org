@@ -1,5 +1,6 @@
 +++
 title = "Refactor Ames Vane"
+arcs = ["Zero-click Maintenance", "Improve Network Performance"]
 manpower = "1 Engineer"
 duration = "1-2 Months"
 lead = "TBD"

@@ -1,5 +1,6 @@
 +++
 title = "Breadth-First Arvo Move Order"
+arcs = ["Zero-click Maintenance"]
 manpower = "1 Engineer"
 duration = "2 Months"
 lead = "~wicdev-wisryt"

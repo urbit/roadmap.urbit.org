@@ -1,5 +1,6 @@
 +++
 title = "Timer Improvements"
+arcs = ["Zero-click Maintenance", "Improve Network Performance", "Reduce Hosting Costs"]
 duration = "TBD"
 manpower = "TBD"
 status = "Future"

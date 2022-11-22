@@ -1,5 +1,6 @@
 +++
 title = "Demand Paging"
+arcs = ["Increase Runtime Data Capacity", "Reduce Hosting Costs"]
 duration = "1-3 Months"
 manpower = "1 Engineer"
 lead = "~master-morzod"

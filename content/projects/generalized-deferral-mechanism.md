@@ -1,5 +1,6 @@
 +++
 title = "Generalized Deferral Mechanism"
+arcs = ["Improve Network Performance", "Reduce Hosting Costs"]
 duration = "TBD"
 manpower = "TBD"
 status = "Future"
