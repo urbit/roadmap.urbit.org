@@ -1,6 +1,7 @@
 +++
 title = "Versioned Pokes and Subscriptions"
 arcs = ["Zero-click Maintenance","Improve Backward Compatibility"]
+spec = "https://github.com/urbit/plan/blob/master/oort/infra-offsite/versioned-marks.txt"
 duration = "4-8 Months"
 manpower = "1-2 Engineers"
 status = "Future"
@@ -26,6 +27,3 @@ Hard:
 Tlon's Landscape suite was the first set of applications to establish development patterns to handle this versioning reliably.  The push and pull hook libraries embed this pattern, among other features.  The general answer is to add a version number to each publication and perform an explicit version negotiation to determine the latest version that both sides understand.
 
 Instead of the push and pull hook libraries, the kernel should handle this version negotiation for applications.  The developer should only need to write a couple of migration functions describing the application-specific parts of the upgrade, and the kernel will handle the version negotiation.
-
-A spec for versioned subscriptions can be found here:
-https://github.com/urbit/plan/blob/master/oort/infra-offsite/versioned-marks.txt
