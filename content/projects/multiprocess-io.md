@@ -1,10 +1,10 @@
 +++
 title = "Multiprocess I/O"
-arcs = ["Increase Release Frequency", "Increase Security"]
+arcs = ["Increase Release Frequency", "Improve Security"]
 duration = "2-3 Months"
 manpower = "1 Engineer"
 status = "Future"
-lead = "TBD"
+owner = "TBD"
 description = """
 We intend to split the Urth I/O process into multiple processes -- one dispatcher process and one process for each I/O driver.
 """

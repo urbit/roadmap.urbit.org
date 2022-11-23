@@ -4,6 +4,7 @@ import IntraNav from "./IntraNav";
 import Grid from "./Grid";
 import Header from "./Header";
 import Meta from "./Meta";
+import Footer from "./Footer";
 
 export default function BasicPage({ search, sectionTitle = "", post, children }) {
     return <Container>
@@ -18,5 +19,6 @@ export default function BasicPage({ search, sectionTitle = "", post, children })
             {/* Content row */}
             {children}
         </Grid>
+        <Footer />
     </Container>
 }

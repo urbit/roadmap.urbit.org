@@ -1,10 +1,10 @@
 +++
 title = "Desk-Based Namespacing"
-arcs = ["Improve Backward Compatibility","Improve Backward Compatibility"]
+arcs = ["Improve Backward Compatibility"]
 duration = "3-6 Months"
 manpower = "1-2 Engineers"
 status = "Future"
-lead = "TBD"
+owner = "TBD"
 description = """
 Desk-based namespacing should improve reliability, maintenance, and developer experience.
 """

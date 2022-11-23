@@ -4,7 +4,7 @@ arcs = ["Zero-click Maintenance", "Improve Network Performance", "Reduce Hosting
 duration = "TBD"
 manpower = "TBD"
 status = "Future"
-lead = "TBD"
+owner = "TBD"
 description = """
 Urbit's timer system could be better in several ways.  
 """

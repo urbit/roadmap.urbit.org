@@ -3,7 +3,7 @@ title = "Agents in Clay"
 arcs = ["Increase Release Frequency", "Improve Backward Compatibility"]
 start_date = "2022-07-06"
 end_date = "2022-12-01"
-lead = "~wicdev-wisryt"
+owner = "~wicdev-wisryt"
 status = "Current"
 description = """
 This project overhauls Arvo's upgrade system to make it simpler and more

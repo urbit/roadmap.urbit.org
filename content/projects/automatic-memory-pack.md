@@ -4,7 +4,7 @@ arcs = ["Zero-click Maintenance"]
 duration = "TBD"
 manpower = "TBD"
 status = "Future"
-lead = "TBD"
+owner = "TBD"
 description = """
 
 """
