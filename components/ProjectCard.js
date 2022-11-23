@@ -33,10 +33,10 @@ export default function ProjectCard({ project, cols = ["duration", "start_date",
             <div className={`rounded-xl cursor-pointer !p-7 !mb-8 ${bg} z-0`}>
                 <p className={"uppercase font-semibold !text-xs !mb-2 " + accent}>{project.status}</p>
                 <h3 className="!m-0 !font-semibold !text-lg" id={project.slug}>{project.title}</h3>
-                <div className="flex flex-col lg:flex-row my-5 z-10">
+                <div className="flex flex-col lg:flex-row my-5 z-10 flex-wrap">
                     {cols.map((col) => {
                         if (project?.[col]) {
-                            return <div key={col} className="flex flex-col shrink-0 basis-full my-2 lg:my-0 lg:basis-1/3">
+                            return <div key={col} className="flex flex-col shrink-0 basis-full my-2 lg:my-0 lg:basis-1/4">
                                 <p className="uppercase !font-semibold !text-xs !text-wall-500 !m-0">{col.replace("_", " ")}</p>
                                 {col === "owner" && ob.isValidPatp(project[col])
                                     ? <a className="!my-0 !text-base font-semibold text-green-400"
