@@ -3,7 +3,9 @@ import { useRouter } from "next/router";
 import cn from 'classnames';
 import ob from 'urbit-ob';
 import External from "./icons/External";
-export default function ProjectCard({ project }) {
+import ArcLink from "../components/ArcLink";
+
+export default function ProjectCard({ project, cols = ["duration", "start_date", "end_date", "owner"] }) {
     const router = useRouter();
     const stopAndNavigate = (e, href, blank) => {
         e.stopPropagation();
@@ -31,17 +33,28 @@ export default function ProjectCard({ project }) {
             <div className={`rounded-xl cursor-pointer !p-7 !mb-8 ${bg} z-0`}>
                 <p className={"uppercase font-semibold !text-xs !mb-2 " + accent}>{project.status}</p>
                 <h3 className="!m-0 !font-semibold !text-lg" id={project.slug}>{project.title}</h3>
-                <div className="flex my-5 z-10">
-                    {["duration", "start_date", "end_date", "owner"].map((col) => {
+                <div className="flex flex-col lg:flex-row my-5 z-10">
+                    {cols.map((col) => {
                         if (project?.[col]) {
-                            return <div key={col} className="flex flex-col shrink-0 basis-1/5">
+                            return <div key={col} className="flex flex-col shrink-0 basis-full my-2 lg:my-0 lg:basis-1/3">
                                 <p className="uppercase !font-semibold !text-xs !text-wall-500 !m-0">{col.replace("_", " ")}</p>
                                 {col === "owner" && ob.isValidPatp(project[col])
-                                    ? <a className="block !m-0 !text-base font-semibold text-green-400"
-                                        onClick={(e) => stopAndNavigate(e, `https://urbit.org/ids/${project[col]}`, true)}>
+                                    ? <a className="!my-0 !text-base font-semibold text-green-400"
+                                        href={`https://urbit.org/ids/${project[col]}`}
+                                        target="_blank" rel="noreferrer">
                                         {project[col]}
                                     </a>
-                                    : <p className="!m-0 !text-base">{project[col]}</p>}
+                                    : col === "contributors"
+                                        ? project[col].map((ea) =>
+                                            <a key={ea}
+                                                className="!my-0 !text-base font-semibold text-green-400"
+                                                href={`https://urbit.org/ids/${ea}`}
+                                                target="_blank"
+                                                rel="noreferrer">
+                                                {ea}
+                                            </a>)
+                                        : <p className="!my-0 !text-base">{project?.[col] || "TBD"}</p>
+                                }
                             </div>
                         }
                     })}
@@ -56,6 +69,9 @@ export default function ProjectCard({ project }) {
                     </div>}
                 </div>
                 <p className="!text-base !mt-2">{project.description}</p>
+                {project.arcs && <div className="flex flex-wrap items-center">
+                    {project.arcs.map((arc) => <ArcLink key={arc.title} arc={arc} />)}
+                </div>}
             </div>
         </Link>
     )
