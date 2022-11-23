@@ -1,10 +1,10 @@
 +++
 title = "Zapgal Security"
-arcs = ["Increase Security","Improve Backward Compatibility"]
+arcs = ["Improve Security","Improve Backward Compatibility"]
 duration = "1 Month"
 manpower = "1"
 status = "Future"
-lead = "TBD"
+owner = "TBD"
 description = """
 Turning off the `!<` ("zapgal") rune in userspace will reduce the security attack surface of the kernel, reducing the kernel's vulnerability to attack by malicious applications.
 """

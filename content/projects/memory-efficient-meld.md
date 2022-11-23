@@ -4,7 +4,7 @@ arcs = ["Increase Runtime Data Capacity", "Reduce Hosting Costs"]
 duration = "1-2 Months"
 manpower = "1 Engineer"
 status = "Next Up"
-lead = "TBD"
+owner = "TBD"
 description = """
 A more memory-efficient implementation of `|meld` should reduce dangerous memory pressure.  This would reduce maintenance burden.
 """
