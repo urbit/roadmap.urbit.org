@@ -1,6 +1,6 @@
 +++
 title = "Improve Network Performance"
-color = "#F7DD76"
+color = "#219DFF"
 +++
 
 An ordinary Urbit ship needs to be able to host a large chatroom, in addition to other scaling considerations.  The performance of Urbit's networking is the bottleneck limiting this kind of scaling at the moment.

@@ -1,6 +1,6 @@
 +++
 title = "Improve Security"
-color = "#000000"
+color = "#B95656"
 +++
 
 

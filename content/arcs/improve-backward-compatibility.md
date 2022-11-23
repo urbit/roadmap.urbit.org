@@ -1,6 +1,6 @@
 +++
 title = "Improve Backward Compatibility"
-color = "#ac81d2"
+color = "#24221E"
 +++
 
 As it stands, every Kelvin change breaks backward compatibility, requiring app devs to publish modified code so their users can keep the app running.  This needs to happen less frequently over time, until eventually apps can be "write once, run forever."
