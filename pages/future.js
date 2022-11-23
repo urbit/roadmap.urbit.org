@@ -1,5 +1,6 @@
 import { getAllPosts } from '@urbit/foundation-design-system';
 import Directory from "../components/Directory";
+import { getArcByTitle } from '../lib/util';
 
 export default function Future({ search, posts }) {
     return (

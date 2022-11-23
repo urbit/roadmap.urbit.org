@@ -1,5 +1,6 @@
 import { getAllPosts, getPostBySlug, Markdown } from '@urbit/foundation-design-system';
 import Directory from "../components/Directory";
+import { getArcByTitle } from '../lib/util';
 
 export default function NextUp({ search, markdown, posts }) {
     return (
