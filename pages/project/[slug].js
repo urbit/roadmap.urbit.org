@@ -5,6 +5,7 @@ import Sidebar from "../../components/Sidebar";
 import Link from "next/link";
 import { getArcByTitle } from "../../lib/util";
 import ob from 'urbit-ob';
+import ArcLink from "../../components/ArcLink";
 
 export default function ProjectPage({ search, post, arcs, markdown }) {
     let title, href, cols = [];
@@ -71,13 +72,7 @@ export default function ProjectPage({ search, post, arcs, markdown }) {
                 </div>
                 <div className="flex space-x-2 flex-wrap items-center pb-2">
                     {arcs && arcs.map((arc) => {
-                        return <Link key={arc.title} href={`/arcs/${arc.slug}`} passHref>
-                            <a
-                                className="rounded-full w-fit p-1 px-2 text-sm font-semibold text-white"
-                                style={{ backgroundColor: arc.color }}>
-                                {arc.title}
-                            </a>
-                        </Link>
+                        return <ArcLink key={arc.title} arc={arc} />
                     })}
                 </div>
                 <div className="markdown">
