@@ -24,7 +24,7 @@ export async function getStaticProps() {
     const markdown = JSON.stringify(Markdown.parse({ post: intro }));
 
     const posts = getAllPosts(
-        ["title", "slug", "date", "description", "contributors", "status", "owner", "end_date", "arcs"],
+        ["title", "slug", "date", "description", "contributors", "status", "owner", "end_date", "arcs", "spec"],
         "projects",
         "date"
     ).filter((post) => {

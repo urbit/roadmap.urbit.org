@@ -7,6 +7,7 @@ import { getArcByTitle } from "../../lib/util";
 import ob from 'urbit-ob';
 import ArcLink from "../../components/ArcLink";
 import cn from 'classnames';
+import External from "../../components/icons/External"
 
 export default function ProjectPage({ search, post, arcs, markdown }) {
     let href, cols = [];
@@ -73,6 +74,16 @@ export default function ProjectPage({ search, post, arcs, markdown }) {
                             }
                         </div>
                     })}
+                    {post?.spec && <div className="grow ml-4">
+                        <Link href={post.spec} passHref>
+                            <a target="_blank" className="!font-semibold !text-xs text-green-400 block w-fit !leading-none">
+                                SPECIFICATION
+                                <span className="ml-1">
+                                    <External className="fill-green-400" />
+                                </span>
+                            </a>
+                        </Link>
+                    </div>}
                 </div>
                 <div className="flex space-x-2 flex-wrap items-center pb-2">
                     {arcs && arcs.map((arc) => {
@@ -90,7 +101,7 @@ export default function ProjectPage({ search, post, arcs, markdown }) {
 export async function getStaticProps({ params }) {
     const post = getPostBySlug(
         params.slug,
-        ["title", "slug", "date", "description", "content", "status", "contributors", "duration", "manpower", "owner", "end_date", "arcs"],
+        ["title", "slug", "date", "description", "content", "status", "contributors", "duration", "manpower", "owner", "end_date", "arcs", "spec"],
         "projects"
     );
 
