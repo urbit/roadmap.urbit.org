@@ -68,7 +68,7 @@ export default function ProjectCard({ project, cols = ["duration", "start_date",
                         </a>
                     </div>}
                 </div>
-                <p className="!text-base !mt-2 !mb-6">{project.description}</p>
+                <p className="!text-base !mt-2">{project.description}</p>
                 {project.arcs && <div className="flex flex-wrap items-center">
                     {project.arcs.map((arc) => <ArcLink key={arc.title} arc={arc} />)}
                 </div>}
