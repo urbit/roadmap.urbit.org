@@ -1,9 +1,9 @@
 +++
 title = "Userspace Permissioning"
-arcs = ["Improve Security", "Improve Backward Compatibility"]
+arcs = ["Increase Security", "Improve Backward Compatibility"]
 end_date = "2023-03-01"
 status = "Current"
-owner = "~palfun-foslup"
+lead = "~palfun-foslup"
 description = """
 Kernel and applications are both unprotected against malicious applications until userspace permissioning is added.
 """

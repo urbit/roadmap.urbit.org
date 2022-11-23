@@ -3,7 +3,7 @@ title = "Nan Madol"
 arcs = ["Improve Network Performance"]
 duration = "TBD"
 manpower = "TBD"
-owner = "TBD"
+lead = "TBD"
 status = "Future"
 description = """
 A far-out proposal is to have the runtime perform serialization, packetization, encryption, and congestion control, instead of Arvo.

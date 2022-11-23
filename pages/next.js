@@ -1,6 +1,5 @@
 import { getAllPosts, getPostBySlug, Markdown } from '@urbit/foundation-design-system';
 import Directory from "../components/Directory";
-import { getArcByTitle } from '../lib/util';
 
 export default function NextUp({ search, markdown, posts }) {
     return (
@@ -16,17 +15,11 @@ export default function NextUp({ search, markdown, posts }) {
 
 export async function getStaticProps() {
     const posts = getAllPosts(
-        ["title", "slug", "date", "description", "contributors", "status", "duration", "manpower", "arcs"],
+        ["title", "slug", "date", "description", "contributors", "status", "duration", "manpower"],
         "projects",
         "date"
     ).filter((post) => {
         return post.status === "Next Up"
-    }).map((post) => {
-        if (post.arcs) {
-            return { ...post, ...{ arcs: post.arcs.map((e) => getArcByTitle(e)) } }
-        } else {
-            return post
-        }
     });
 
     const intro = getPostBySlug(

@@ -4,7 +4,7 @@ arcs = ["Increase Runtime Data Capacity"]
 manpower = "1 Engineer"
 duration = "2-4 Months"
 status = "Next Up"
-owner = "TBD"
+lead = "TBD"
 description = """
 An optimization would be to ensure that any page of memory inside the "loom" (noun memory arena) stores only cells (pairs) or atoms (numbers). 
 """

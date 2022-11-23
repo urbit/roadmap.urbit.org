@@ -4,7 +4,7 @@ arcs = ["Zero-click Maintenance"]
 duration = "1 Month"
 manpower = "1 Engineer"
 status = "Future"
-owner = "TBD"
+lead = "TBD"
 description = """
 There are a number of places where Vere crashes where it should instead handle the error and continue.
 """

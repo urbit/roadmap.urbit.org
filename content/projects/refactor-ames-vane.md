@@ -3,7 +3,7 @@ title = "Refactor Ames Vane"
 arcs = ["Zero-click Maintenance", "Improve Network Performance"]
 manpower = "1 Engineer"
 duration = "1-2 Months"
-owner = "TBD"
+lead = "TBD"
 status = "Future"
 description = """
 The Ames vane could be shorter, easier to read, more performant, and easier to prove correct.

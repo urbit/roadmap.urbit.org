@@ -1,10 +1,10 @@
 +++
 title = "Validate Ames Packets in Vere"
-arcs = ["Improve Security"]
+arcs = ["Increase Security"]
 manpower = "1 Engineer"
 duration = "1 Month"
 status = "Next Up"
-owner = "TBD"
+lead = "TBD"
 description = """
 One of the first things we can do to begin protecting against DoS is to validate packets in Vere before injecting them as Arvo events.  This will make it harder for an attacker to lock up a victim's event loop, and it should be a straightforward project.
 """

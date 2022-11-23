@@ -5,7 +5,7 @@ start_date = "2021-01-01"
 end_date = "2023-01-15"
 duration = "1-2 Months"
 manpower = "1-2 Engineers"
-owner = "~rovnys-ricfer"
+lead = "~rovnys-ricfer"
 status = "Next Up"
 description = """
 The "Fine" remote scry protocol will form the foundation of scalable content distribution in Urbit, by allowing many subscriber ships to read data efficiently from a publisher ship without incurring excessive load on the publisher.

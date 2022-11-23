@@ -4,7 +4,7 @@ arcs = ["Zero-click Maintenance"]
 duration = "TBD"
 manpower = "TBD"
 status = "Future"
-owner = "TBD"
+lead = "TBD"
 description = """
 If Vere hits a nondeterministic error on replay, it should retry instead of giving up and crashing. 
 """

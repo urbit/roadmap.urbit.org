@@ -4,7 +4,7 @@ arcs = ["Zero-click Maintenance","Improve Backward Compatibility"]
 duration = "4-8 Months"
 manpower = "1-2 Engineers"
 status = "Future"
-owner = "TBD"
+lead = "TBD"
 description = """
 Standardizing application protocol versioning in the kernel should improve developer experience and lead to more applications behaving correctly across upgrades, thereby improving user experience too.
 """

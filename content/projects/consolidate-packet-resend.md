@@ -4,7 +4,7 @@ arcs = ["Improve Network Performance", "Reduce Hosting Costs"]
 duration = "1 Month"
 manpower = "1 Engineer"
 status = "Future"
-owner = "TBD"
+lead = "TBD"
 description = """
 Ames sets a lot of timers to remind it to send packets again if they don't get acknowledged fast enough.  Reducing the number of timers lowers disk write usage, improves quiescence (which should eventually let hosting providers use less RAM and thereby lower costs), and should improve overall performance on publisher ships.
 """

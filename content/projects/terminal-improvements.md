@@ -2,10 +2,10 @@
 title = "Terminal Improvements"
 duration = "1 Month"
 manpower = "1 Engineer"
-owner = "~palfun-foslup"
+lead = "~palfun-foslup"
 status = "Next Up"
 description = """
-~palfun-foslup has written a whole suite of improvements to the terminal, which are slated for release soon.  This will open up a lot of opportunities for better developer experience and terminal-based user experience.  
+`~palfun-foslup` has written a whole suite of improvements to the terminal, which are slated for release soon.  This will open up a lot of opportunities for better developer experience and terminal-based user experience.  
 """
 +++
 
