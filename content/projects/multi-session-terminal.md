@@ -3,7 +3,7 @@ title = "Multi-Session Terminal"
 duration = "1 Month"
 manpower = "1 Engineer"
 status = "Future"
-lead = "~palfun-foslup"
+owner = "~palfun-foslup"
 description = """
 Dill, in the Arvo kernel, supports multiple sessions, but the current Urbit terminal client only uses one session.  To make the Urbit command-line more usable, the client should support multiple sessions too. 
 """

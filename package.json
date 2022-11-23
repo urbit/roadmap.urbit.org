@@ -11,15 +11,17 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@iarna/toml": "^2.2.5",
     "@socialgouv/matomo-next": "^1.4.0",
     "@tlon/sigil-js": "^1.4.5",
-    "@urbit/foundation-design-system": "^0.7.1",
+    "@urbit/foundation-design-system": "^0.7.3",
     "@urbit/markdoc": "^0.1.6",
     "classnames": "^2.3.2",
     "dayjs": "^1.11.6",
     "downshift": "^7.0.1",
     "eslint": "8.26.0",
     "eslint-config-next": "13.0.1",
+    "gray-matter": "^4.0.3",
     "leven-sort": "^3.0.0",
     "lodash.debounce": "^4.0.8",
     "next": "^12.1.5",
