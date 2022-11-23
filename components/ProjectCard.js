@@ -19,8 +19,8 @@ export default function ProjectCard({ project, cols = ["duration", "start_date",
     const bg = cn({
         "bg-wall-100": project.status === "Completed",
         "bg-green-100": project.status === "Current",
-        "bg-yellow-100": project.status === "Next Up",
-        "bg-purple-200 dark:bg-purple": project.status === "Future"
+        "bg-yellow-100 dark:bg-[#423d2c]": project.status === "Next Up",
+        "bg-purple-200 dark:bg-[#332a3d]": project.status === "Future"
     })
     const accent = cn({
         "text-wall-400": project.status === "Completed",
