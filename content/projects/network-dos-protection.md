@@ -1,6 +1,6 @@
 +++
 title = "Network DoS Protection"
-arcs = ["Increase Security"]
+arcs = ["Improve Security"]
 duration = "TBD"
 manpower = "TBD"
 status = "Future"

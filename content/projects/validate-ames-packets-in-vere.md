@@ -1,6 +1,6 @@
 +++
 title = "Validate Ames Packets in Vere"
-arcs = ["Increase Security"]
+arcs = ["Improve Security"]
 manpower = "1 Engineer"
 duration = "1 Month"
 status = "Next Up"

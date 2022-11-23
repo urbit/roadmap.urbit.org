@@ -1,6 +1,6 @@
 +++
 title = "Zapgal Security"
-arcs = ["Increase Security","Improve Backward Compatibility"]
+arcs = ["Improve Security","Improve Backward Compatibility"]
 duration = "1 Month"
 manpower = "1"
 status = "Future"

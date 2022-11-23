@@ -1,6 +1,6 @@
 +++
 title = "Multiprocess I/O"
-arcs = ["Increase Release Frequency", "Increase Security"]
+arcs = ["Increase Release Frequency", "Improve Security"]
 duration = "2-3 Months"
 manpower = "1 Engineer"
 status = "Future"

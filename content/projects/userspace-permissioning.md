@@ -1,6 +1,6 @@
 +++
 title = "Userspace Permissioning"
-arcs = ["Increase Security", "Improve Backward Compatibility"]
+arcs = ["Improve Security", "Improve Backward Compatibility"]
 end_date = "2023-03-01"
 status = "Current"
 owner = "~palfun-foslup"

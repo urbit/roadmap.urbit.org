@@ -1,6 +1,6 @@
 +++
 title = "Outer HMACs on Packets for DDoS Protection"
-arcs = ["Increase Security"]
+arcs = ["Improve Security"]
 duration = "1-3 Months"
 manpower = "1 Engineer"
 status = "Future"
