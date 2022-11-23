@@ -1,5 +1,6 @@
 import { getAllPosts, getPostBySlug, Markdown } from '@urbit/foundation-design-system';
 import Directory from "../components/Directory";
+import { getArcByTitle } from '../lib/util';
 
 export default function Current({ markdown, search, posts }) {
     return (
@@ -23,11 +24,17 @@ export async function getStaticProps() {
     const markdown = JSON.stringify(Markdown.parse({ post: intro }));
 
     const posts = getAllPosts(
-        ["title", "slug", "date", "description", "contributors", "status", "owner", "end_date"],
+        ["title", "slug", "date", "description", "contributors", "status", "owner", "end_date", "arcs"],
         "projects",
         "date"
     ).filter((post) => {
         return post.status === "Current"
+    }).map((post) => {
+        if (post.arcs) {
+            return { ...post, ...{ arcs: post.arcs.map((e) => getArcByTitle(e)) } }
+        } else {
+            return post
+        }
     });
 
     return {

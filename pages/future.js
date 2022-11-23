@@ -14,13 +14,19 @@ export default function Future({ search, posts }) {
 
 export async function getStaticProps() {
     const posts = getAllPosts(
-        ["title", "slug", "date", "description", "contributors", "status", "duration", "manpower"],
+        ["title", "slug", "date", "description", "contributors", "status", "duration", "manpower", "arcs"],
         "projects",
         "date"
     ).filter((post) => {
         return post.status === "Future"
     }).sort((a, b) => {
         return a.title.toLowerCase().localeCompare(b.title.toLowerCase())
+    }).map((post) => {
+        if (post.arcs) {
+            return { ...post, ...{ arcs: post.arcs.map((e) => getArcByTitle(e)) } }
+        } else {
+            return post
+        }
     });
 
     return {
