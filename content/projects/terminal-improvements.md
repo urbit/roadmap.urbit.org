@@ -1,5 +1,6 @@
 +++
 title = "Terminal Improvements"
+arcs = ["Improve Developer Experience"]
 duration = "1 Month"
 manpower = "1 Engineer"
 owner = "~palfun-foslup"

@@ -1,5 +1,6 @@
 +++
 title = "Better Arvo/Vere Version Negotiation"
+arcs = ["Zero-click Maintenance", "Improve Backward Compatibility"]
 duration = "TBD"
 manpower = "TBD"
 owner = "TBD"

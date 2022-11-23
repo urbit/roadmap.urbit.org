@@ -1,5 +1,6 @@
 +++
 title = "Multiprocess Event Log"
+arcs = ["Improve Security", "Reduce Hosting Costs"]
 duration = "TBD"
 manpower = "TBD"
 status = "Future"

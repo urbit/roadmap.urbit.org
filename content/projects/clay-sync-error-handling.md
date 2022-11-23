@@ -1,5 +1,6 @@
 +++
 title = "Clay Sync Error Handling"
+arcs = ["Zero-click Maintenance"]
 manpower = "TBD"
 duration = "TBD"
 status = "Future"

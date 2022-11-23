@@ -26,7 +26,7 @@ export default function ProjectCard({ project, cols = ["duration", "start_date",
         "text-wall-400": project.status === "Completed",
         "text-green-400": project.status === "Current",
         "text-yellow-400 dark:text-yellow-200": project.status === "Next Up",
-        "text-purple-400 dark:text-purple-100": project.status === "Future"
+        "text-purple-500 dark:text-purple-100": project.status === "Future"
     })
     return (
         <Link key={project.title} href={`/project/${project.slug}`}>
@@ -68,7 +68,7 @@ export default function ProjectCard({ project, cols = ["duration", "start_date",
                         </a>
                     </div>}
                 </div>
-                <p className="!text-base !mt-2">{project.description}</p>
+                <p className="!text-base !mt-2 !mb-6">{project.description}</p>
                 {project.arcs && <div className="flex flex-wrap items-center">
                     {project.arcs.map((arc) => <ArcLink key={arc.title} arc={arc} />)}
                 </div>}

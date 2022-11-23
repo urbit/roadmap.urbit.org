@@ -1,6 +1,6 @@
 +++
 title = "Dropping Privileges"
-arcs = ["Increase Release Frequency"]
+arcs = ["Improve Security"]
 duration = "TBD"
 manpower = "TBD"
 owner = "TBD"

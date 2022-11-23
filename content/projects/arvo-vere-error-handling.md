@@ -1,5 +1,6 @@
 +++
 title = "Arvo/Vere Error Handling"
+arcs = ["Zero-click Maintenance", "Improve Security"]
 manpower = "TBD"
 duration = "TBD"
 status = "Future"

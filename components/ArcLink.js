@@ -13,7 +13,7 @@ export default function ArcLink({ arc }) {
     }
     return <Link key={arc.title} href={`/arcs/${arc.slug}`} passHref>
         <a
-            className="rounded-full w-fit !p-1 !px-2 !m-1 !mr-2 text-sm font-semibold text-white dark:text-black"
+            className="rounded-full w-fit !p-1 !px-4 !m-1 !mr-2 text-sm font-semibold text-white dark:text-black"
             style={{ backgroundColor: arc.color }}
             onClick={(e) => stopAndNavigate(e, `/arcs/${arc.slug}`)}>
             {arc.title}
