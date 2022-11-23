@@ -4,22 +4,10 @@ import { getAllPosts, getPostBySlug, Markdown, TableOfContents } from "@urbit/fo
 import Sidebar from "../../components/Sidebar";
 import Link from "next/link";
 import { dirs } from '../../lib/constants';
-import cn from 'classnames'
-import { getArcByTitle, getProjectsByArc } from "../../lib/util";
-import External from "../../components/icons/External";
-import { useRouter } from "next/router";
-import ob from 'urbit-ob';
+import { getProjectsByArc } from "../../lib/util";
+import ProjectCard from "../../components/ProjectCard";
 
 export default function ProjectPage({ search, post, projects, markdown }) {
-    const router = useRouter();
-    const stopAndNavigate = (e, href, blank) => {
-        e.stopPropagation();
-        if (blank) {
-            return window.open(href, "_blank");
-        } else {
-            return router.push(href);
-        }
-    }
     return <BasicPage
         search={search}
         sectionTitle={post.title}
@@ -39,59 +27,12 @@ export default function ProjectPage({ search, post, projects, markdown }) {
                     })}
                 </Sidebar>
             </div>
-
             <div className="flex flex-col space-y-4 col-span-full md:col-start-4 md:col-end-11 lg:col-end-9 mt-16 md:mt-0">
                 <div className="markdown">
                     <h2 id="summary">Summary</h2>
                     <Markdown.render content={JSON.parse(markdown)} />
                     <h2 id="projects">Projects</h2>
-                    {projects.map((project) => {
-                        const bg = cn({
-                            "bg-wall-100": project.status === "Completed",
-                            "bg-green-100": project.status === "Current",
-                            "bg-yellow-100": project.status === "Next Up",
-                            "bg-purple-200 dark:bg-purple": project.status === "Future"
-                        })
-                        const accent = cn({
-                            "text-wall-400": project.status === "Completed",
-                            "text-green-400": project.status === "Current",
-                            "text-yellow-400 dark:text-yellow-200": project.status === "Next Up",
-                            "text-purple-400 dark:text-purple-100": project.status === "Future"
-                        })
-                        return (
-                            <Link key={project.title} href={`/project/${project.slug}`}>
-                                <div className={`rounded-xl cursor-pointer !p-7 !mb-8 ${bg} z-0`}>
-                                    <p className={"uppercase font-semibold !text-xs !mb-2 " + accent}>{project.status}</p>
-                                    <h3 className="!m-0 !font-semibold !text-lg" id={project.slug}>{project.title}</h3>
-                                    <div className="flex my-5 z-10">
-                                        {["duration", "start_date", "end_date", "owner"].map((col) => {
-                                            if (project?.[col]) {
-                                                return <div key={col} className="flex flex-col shrink-0 basis-1/5">
-                                                    <p className="uppercase !font-semibold !text-xs !text-wall-500 !m-0">{col.replace("_", " ")}</p>
-                                                    {col === "owner" && ob.isValidPatp(project[col])
-                                                        ? <a className="block !m-0 !text-base font-semibold text-green-400"
-                                                            onClick={(e) => stopAndNavigate(e, `https://urbit.org/ids/${project[col]}`, true)}>
-                                                            {project[col]}
-                                                        </a>
-                                                        : <p className="!m-0 !text-base">{project[col]}</p>}
-                                                </div>
-                                            }
-                                        })}
-                                        {project?.spec && <div className="grow ml-4">
-                                            <a className="!font-semibold !text-xs text-green-400 block w-fit !leading-none"
-                                                onClick={(e) => stopAndNavigate(e, project.spec, true)}>
-                                                SPEC
-                                                <span className="ml-1">
-                                                    <External className="fill-green-400" />
-                                                </span>
-                                            </a>
-                                        </div>}
-                                    </div>
-                                    <p className="!text-base !mt-2">{project.description}</p>
-                                </div>
-                            </Link>
-                        )
-                    })}
+                    {projects.map((project) => <ProjectCard key={project.title} project={project} />)}
                 </div>
             </div>
             <div className="col-start-10">
