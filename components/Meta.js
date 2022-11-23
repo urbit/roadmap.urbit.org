@@ -2,12 +2,33 @@ export default function Meta(post, disableImage) {
     const author = post?.extra?.author || "Urbit";
     const title = post?.title ? `${post.title} - ` : "";
     const description =
-        post?.description || "Urbit is a personal server built from scratch.";
+        post?.description || "The high-level goals that need to be achieved to make Urbit a consumer product.";
     const image =
-        post?.extra?.image || post?.image || "https://media.urbit.org/logo/urbit-logo-card.png";
+        post?.extra?.image || post?.image || "https://storage.googleapis.com/media.urbit.org/site/opengraph/roadmap.png";
     return (
 
         <>
+
+              <link rel="icon" type="image/png" href="/images/favicon.ico" />
+              <link
+                rel="apple-touch-icon"
+                sizes="180x180"
+                href="/images/apple-touch-icon.png"
+              />
+              <link
+                rel="icon"
+                type="image/png"
+                sizes="32x32"
+                href="/images/favicon-32x32.png"
+              />
+              <link
+                rel="icon"
+                type="image/png"
+                sizes="16x16"
+                href="/images/favicon-16x16.png"
+              />
+              <link rel="manifest" href="/images/site.webmanifest" />
+      
             <meta
                 name="twitter:card"
                 content="summary_large_image"
