@@ -94,7 +94,7 @@ export default function ProjectPage({ search, post, arcs, markdown }) {
                     <Markdown.render content={JSON.parse(markdown)} />
                 </div>
                 <hr />
-                {post.owner && post.status !== "Completed" && <div className="pt-4">
+                {post.owner && ob.isValidPatp(post.owner) && post.status !== "Completed" && <div className="pt-4">
                     <p>Interested in contributing to this project? <br />
                         Send a DM on Urbit to
                         <Link href={`https://urbit.org/ids/${post.owner}`}>
