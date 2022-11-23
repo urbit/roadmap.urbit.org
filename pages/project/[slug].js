@@ -29,7 +29,7 @@ export default function ProjectPage({ search, post, arcs, markdown }) {
         "text-wall-400": post.status === "Completed",
         "text-green-400": post.status === "Current",
         "text-yellow-400 dark:text-yellow-200": post.status === "Next Up",
-        "text-purple-400 dark:text-purple-100": post.status === "Future"
+        "text-purple-500 dark:text-purple-100": post.status === "Future"
     })
 
     return <BasicPage
@@ -47,9 +47,9 @@ export default function ProjectPage({ search, post, arcs, markdown }) {
             </div>
 
             <div className="flex flex-col space-y-4 col-span-full md:col-start-4 md:col-end-11 lg:col-end-9 mt-16 md:mt-0">
-                <p className={"uppercase font-semibold text-xs mb-2 " + accent}>{post.status}</p>
+                <p className={"uppercase font-semibold text-sm mb-4 " + accent}>{post.status}</p>
                 <h2 className="!my-0">{post.title}</h2>
-                <div className="flex space-x-12 py-4">
+                <div className="flex space-x-12 py-2">
                     {/* Map all patps into ID links -- first one-offs, then maps -- then the other columns */}
                     {cols.map((col) => {
                         return <div key={col} className="flex flex-col space-y-2 ">
@@ -79,7 +79,7 @@ export default function ProjectPage({ search, post, arcs, markdown }) {
                         return <ArcLink key={arc.title} arc={arc} />
                     })}
                 </div>
-                <div className="markdown">
+                <div className="markdown pt-4">
                     <Markdown.render content={JSON.parse(markdown)} />
                 </div>
             </div>
