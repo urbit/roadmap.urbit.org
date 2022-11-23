@@ -6,32 +6,35 @@ import Link from "next/link";
 import { getArcByTitle } from "../../lib/util";
 import ob from 'urbit-ob';
 import ArcLink from "../../components/ArcLink";
+import cn from 'classnames';
 
 export default function ProjectPage({ search, post, arcs, markdown }) {
-    let title, href, cols = [];
+    let href, cols = [];
 
     if (post.status === "Next Up") {
-        title = "Next Up"
         href = "next"
         cols = ["Duration", "Manpower", "Owner"]
     } else if (post.status === "Current") {
-        title = `${post.status} Projects`
         href = `${post.status.toLowerCase()}`
         cols = ["end_date", "Owner"]
     } else if (post.status === "Completed") {
-        title = `${post.status} Projects`
         href = `${post.status.toLowerCase()}`
         cols = ["Date", "Contributors"]
     }
     else if (post.status === "Future") {
-        title = `${post.status} Projects`
         href = `${post.status.toLowerCase()}`
         cols = ["Duration", "Manpower", "Owner"]
     }
+    const accent = cn({
+        "text-wall-400": post.status === "Completed",
+        "text-green-400": post.status === "Current",
+        "text-yellow-400 dark:text-yellow-200": post.status === "Next Up",
+        "text-purple-400 dark:text-purple-100": post.status === "Future"
+    })
 
     return <BasicPage
         search={search}
-        sectionTitle={title}
+        sectionTitle="Project"
         post={{
             title: post.title
         }}
@@ -44,6 +47,7 @@ export default function ProjectPage({ search, post, arcs, markdown }) {
             </div>
 
             <div className="flex flex-col space-y-4 col-span-full md:col-start-4 md:col-end-11 lg:col-end-9 mt-16 md:mt-0">
+                <p className={"uppercase font-semibold text-xs mb-2 " + accent}>{post.status}</p>
                 <h2 className="!my-0">{post.title}</h2>
                 <div className="flex space-x-12 py-4">
                     {/* Map all patps into ID links -- first one-offs, then maps -- then the other columns */}
