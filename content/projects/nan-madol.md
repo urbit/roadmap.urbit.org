@@ -4,7 +4,7 @@ arcs = ["Improve Network Performance"]
 spec = "https://gist.github.com/belisarius222/4ae249c07d9e169b38b4e9f57e0eced4"
 duration = "TBD"
 manpower = "TBD"
-lead = "TBD"
+owner = "TBD"
 status = "Future"
 description = """
 A far-out proposal is to have the runtime perform serialization, packetization, encryption, and congestion control, instead of Arvo.

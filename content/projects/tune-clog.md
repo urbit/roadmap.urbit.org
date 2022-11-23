@@ -4,7 +4,7 @@ arcs = ["Improve Network Performance"]
 duration = "1 Month"
 manpower = "1 Engineer"
 status = "Future"
-lead = "TBD"
+owner = "TBD"
 description = """
 Tuning the constants in Ames's `%clog` system should reduce network flakiness, reduce the number of Arvo events, and improve publication bandwidth, especially until chat uses remote scry and solid-state subscriptions.
 """

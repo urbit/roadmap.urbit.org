@@ -3,7 +3,7 @@ title = "Dropping Privileges"
 arcs = ["Increase Release Frequency"]
 duration = "TBD"
 manpower = "TBD"
-lead = "TBD"
+owner = "TBD"
 status = "Future"
 description = """
 According to the principle of least privilege, each Vere process should only have privileges from the host operating system that it needs for normal operation.  This is easier to understand, and likely easier to implement well, with multiprocess I/O.

@@ -3,7 +3,7 @@ title = "Add +on-rift or Similar For Userspace Breach Handling"
 arcs = ["Zero-click Maintenance", "Improve Backward Compatibility"]
 duration = "1 Month"
 manpower = "1 Engineer"
-lead = "TBD"
+owner = "TBD"
 status = "Future"
 description = """
 Applications often have bugs when a peer breaches.  Modifying the userspace/kernelspace API to give Gall agents clearer information about breaches should improve application reliability and developer experience.  

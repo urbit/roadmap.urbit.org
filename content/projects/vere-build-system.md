@@ -3,7 +3,7 @@ title = "Improve Vere Build System"
 arcs = ["Increase Release Frequency"]
 start_date = "2022-11-01"
 end_date = "2023-02-01"
-lead = "~mastyr-bottec"
+owner = "~mastyr-bottec"
 status = "Current"
 description = """
 Experiments are being conducted to extract Vere from the monorepo into its own git repository and replace the current Nix build setup with a new one based on the Bazel build system.
