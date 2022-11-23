@@ -10,11 +10,11 @@ export default function ProjectPage({ search, post, markdown }) {
     if (post.status === "Next Up") {
         title = "Next Up"
         href = "next"
-        cols = ["Duration", "Manpower", "Lead"]
+        cols = ["Duration", "Manpower", "Owner"]
     } else if (post.status === "Current") {
         title = `${post.status} Projects`
         href = `${post.status.toLowerCase()}`
-        cols = ["end_date", "Lead"]
+        cols = ["end_date", "Owner"]
     } else if (post.status === "Completed") {
         title = `${post.status} Projects`
         href = `${post.status.toLowerCase()}`
@@ -23,7 +23,7 @@ export default function ProjectPage({ search, post, markdown }) {
     else if (post.status === "Future") {
         title = `${post.status} Projects`
         href = `${post.status.toLowerCase()}`
-        cols = ["Duration", "Manpower", "Lead"]
+        cols = ["Duration", "Manpower", "Owner"]
     }
 
     return <BasicPage
