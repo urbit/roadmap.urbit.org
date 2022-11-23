@@ -4,7 +4,7 @@ arcs = ["Improve Network Performance"]
 duration = "3-6 Months"
 manpower = "1-2 Engineers"
 status = "Future"
-owner = "~rovnys-ricfer"
+lead = "~rovnys-ricfer"
 description = """
 Symmetric routing should improve multiple things about Ames networking, enabling star packet forwarding, as well as improving firewall flakiness and peer discovery.
 """

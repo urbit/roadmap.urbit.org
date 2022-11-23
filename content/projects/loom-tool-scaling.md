@@ -2,7 +2,7 @@
 title = "Loom Tool Scaling"
 arcs = ["Increase Runtime Data Capacity"]
 status = "Future"
-owner = "TBD"
+lead = "TBD"
 duration = "2-4 Months"
 manpower = "1 Engineer"
 description = """

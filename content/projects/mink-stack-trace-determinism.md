@@ -4,7 +4,7 @@ arcs = ["Improve Backward Compatibility"]
 duration = "TBD"
 manpower = "TBD"
 status = "Future"
-owner = "TBD"
+lead = "TBD"
 description = """
 If code run inside the `+mink` metacircular evaluation function in the Hoon standard library, which runs all userspace code, errors out deterministically (i.e. hits a trivial infinite loop in the Nock spec), then `+mink` catches the error and retursns a stack trace. 
 """

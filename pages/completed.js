@@ -1,6 +1,5 @@
 import { getAllPosts } from '@urbit/foundation-design-system';
 import Directory from "../components/Directory";
-import { getArcByTitle } from '../lib/util';
 
 export default function Completed({ search, posts }) {
     return (
@@ -16,17 +15,11 @@ export default function Completed({ search, posts }) {
 
 export async function getStaticProps() {
     const posts = getAllPosts(
-        ["title", "slug", "date", "description", "contributors", "status", "arcs"],
+        ["title", "slug", "date", "description", "contributors", "status"],
         "projects",
         "date"
     ).filter((post) => {
         return post.status === "Completed"
-    }).map((post) => {
-        if (post.arcs) {
-            return { ...post, ...{ arcs: post.arcs.map((e) => getArcByTitle(e)) } }
-        } else {
-            return post
-        }
     });
 
     return {

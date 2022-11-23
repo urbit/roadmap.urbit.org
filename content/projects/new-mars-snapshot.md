@@ -4,7 +4,7 @@ arcs = ["Increase Runtime Data Capacity"]
 manpower = "1 Engineer"
 duration = "2 Months"
 status = "Future"
-owner = "TBD"
+lead = "TBD"
 description = """
 New Mars has a novel scheme for ensuring copy-on-write semantics for memory pages in a way that minimizes disk write amplification when taking an incremental snapshot. 
 """

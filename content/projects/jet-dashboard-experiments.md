@@ -2,7 +2,7 @@
 title = "Jet Dashboard Experiments"
 manpower = "1-2 Engineers"
 duration = "2-4 Months"
-owner = "~master-morzod"
+lead = "~master-morzod"
 status = "Next Up"
 description = """
 Experimenting with different designs for the jet dashboard could improve performance, security, and general simplicity of the codebase.

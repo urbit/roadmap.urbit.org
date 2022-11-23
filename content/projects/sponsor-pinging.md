@@ -4,7 +4,7 @@ arcs = ["Improve Network Performance"]
 manpower = "1 Engineer"
 duration = "1 Week"
 status = "Future"
-owner = "TBD"
+lead = "TBD"
 description = """
 The way ships ping their sponsors doesn't always work well behind home routers or other NATs, causing flaky connections.
 """

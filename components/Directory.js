@@ -11,7 +11,6 @@ import Pagination from "../components/Pagination";
 import React from "react";
 import TimelineDot from "../components/icons/TimelineDot";
 import dayjs from "dayjs";
-import ProjectCard from "../components/ProjectCard";
 
 export default function Directory({ search, title, markdown, posts, columns, timeline = false }) {
     const router = useRouter();
@@ -66,17 +65,37 @@ export default function Directory({ search, title, markdown, posts, columns, tim
                             <h2 className="!mt-0" id={date}>{dateToDa(new Date(date))}</h2>
                             <TimelineDot className="absolute top-2 -left-[2.58rem]" />
                             {content.map((post) => {
-                                return <ProjectCard key={post.title} cols={["date", "contributors"]} project={post} />
+                                return <React.Fragment key={post.title}>
+                                    <h3 className="!font-semibold" id={post.title.toLowerCase()}>{post.title}</h3>
+                                    <div className="flex space-x-16">
+                                        {columns.map((col) => {
+                                            return <div key={col} className="flex flex-col space-y-2 ">
+                                                <p className="!mb-1 font-semibold text-wall-400 uppercase !text-sm">{col.replace("_", " ")}</p>
+                                                <p className="!my-0 !text-base">{Array.isArray(post[col.toLowerCase()]) ? post[col.toLowerCase()].join(", ").toLowerCase() : post?.[col.toLowerCase()] || "TBD"}</p>
+                                            </div>
+                                        })}
+                                    </div>
+                                    <p>{post.description}</p>
+                                    <Link href={`/project/${post.slug}`} passHref><a className="text-green-400 text-base block">More Information {"->"}</a></Link>
+                                </React.Fragment>
                             })}
                         </div>
                     })
-                        : <>
-                            <h2>Projects</h2>
-                            {posts.map((post) => {
-                                return <ProjectCard key={post.title} project={post} />
-                            })}
-                        </>
-                    }
+                        : posts.map((post) => {
+                            return <React.Fragment key={post.title}>
+                                <h2 className="!font-bold !mb-8 !text-2xl" id={post.title.toLowerCase()}>{post.title}</h2>
+                                <div className="flex space-x-16">
+                                    {columns.map((col) => {
+                                        return <div key={col} className="flex flex-col space-y-2 ">
+                                            <p className="!mb-1 font-semibold text-wall-400 uppercase !text-sm">{col.replace("_", " ")}</p>
+                                            <p className="!my-0 !text-base">{Array.isArray(post[col.toLowerCase()]) ? post[col.toLowerCase()].join(", ").toLowerCase() : post?.[col.toLowerCase()] || "TBD"}</p>
+                                        </div>
+                                    })}
+                                </div>
+                                <p>{post.description}</p>
+                                <Link href={`/project/${post.slug}`} passHref><a className="text-green-400 text-base">More Information {"->"}</a></Link>
+                            </React.Fragment>
+                        })}
                     {nextDir && <Pagination dir={nextDir} />}
                 </div>
                 {/* Table of contents */}

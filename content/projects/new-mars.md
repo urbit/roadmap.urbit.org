@@ -3,7 +3,7 @@ title = "New Mars"
 arcs = ["Increase Runtime Data Capacity"]
 start_date = "2022-01-01"
 end_date = "2024"
-owner = "~ritpub-sipsyl"
+lead = "~ritpub-sipsyl"
 status = "Current"
 description = """
 New Mars is an experimental rewrite of the Nock interpreter intended for much higher performance. 

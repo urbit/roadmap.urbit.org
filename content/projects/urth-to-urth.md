@@ -4,7 +4,7 @@ arcs = ["Improve Network Performance"]
 manpower = "2 Engineers"
 duration = "4-6 Months"
 status = "Future"
-owner = "TBD"
+lead = "TBD"
 description = """
 Solid-state publications that need low latency, such as chat, can't use the remote scry protocol without adding a new protocol to "push" updates to subscribers as soon as they are created.  This protocol is Urth-to-Urth, and opt-in, to ensure naive runtimes still work without it (both as publisher and subscriber).
 """

@@ -4,7 +4,7 @@ arcs = ["Improve Network Performance"]
 status = "Future"
 manpower = "1-2 Engineers"
 duration = "1-2 Months"
-owner = "TBD"
+lead = "TBD"
 description = """
 Remote scry on its own doesn't let one ship determine the latest state of a publication on another ship.  This is solved by adding another protocol alongside the remote scry network protocol to implement `%pine` query-at-latest requests over the network, as pure reads.
 """

@@ -4,7 +4,7 @@ arcs = ["Improve Network Performance", "Reduce Hosting Costs"]
 duration = "TBD"
 manpower = "TBD"
 status = "Future"
-owner = "TBD"
+lead = "TBD"
 description = """
 Arvo's Behn vane (kernel module) currently serves two purposes: setting timers, and deferring tasks to later events.  Deferral could be split out into a separate feature, which could aid both in refactoring Behn to be easier to verify and optimize.
 """
