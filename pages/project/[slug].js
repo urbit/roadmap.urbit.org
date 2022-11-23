@@ -56,7 +56,7 @@ export default function ProjectPage({ search, post, arcs, markdown }) {
                                     target="_blank" rel="noreferrer">
                                     {post[col.toLowerCase()]}
                                 </a>
-                                : col === "Contributors"
+                                : col === "Contributors" && post[col.toLowerCase()]
                                     ? post[col.toLowerCase()].map((ea) =>
                                         <a key={ea}
                                             className="!my-0 !text-base font-semibold text-green-400"
