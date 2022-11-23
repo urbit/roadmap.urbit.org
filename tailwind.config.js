@@ -4,6 +4,7 @@ module.exports = {
     "./node_modules/@urbit/foundation-design-system/**/*.js",
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
+    "./content/**/*.md"
   ],
   theme: {
     extend: {

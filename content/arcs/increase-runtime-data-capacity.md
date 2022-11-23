@@ -1,6 +1,6 @@
 +++
 title = "Increase Runtime Data Capacity"
-color = "#00B171"
+class = "bg-green-400"
 +++
 
 There are three main phases to increasing the amount of data the runtime

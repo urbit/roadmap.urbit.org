@@ -1,6 +1,6 @@
 +++
 title = "Increase Release Frequency"
-color = "#ac81d2"
+class = "bg-purple"
 +++
 
 Increasing the speed of releases is the core dev team's highest priority, since it will accelerate the pace of development overall.  

@@ -1,4 +1,4 @@
 +++
 title = "Improve Developer Experience"
-color = "#898887"
+class = "bg-wall-500"
 +++

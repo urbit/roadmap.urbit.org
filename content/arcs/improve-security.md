@@ -1,6 +1,6 @@
 +++
 title = "Improve Security"
-color = "#B95656"
+class = "bg-[#ad5c59]"
 +++
 
 
