@@ -1,9 +1,10 @@
 +++
 title = "Arvo/Vere Error Handling"
+arcs = ["Zero-click Maintenance", "Improve Security"]
 manpower = "TBD"
 duration = "TBD"
 status = "Future"
-lead = "TBD"
+owner = "TBD"
 description = """
 There are a number of cases where Arvo can crash in a way where it gets into an inconsistent state (e.g. Clay does not always handle Ames crashes properly) or gets stuck on something and fails to continue to make progress.
 """

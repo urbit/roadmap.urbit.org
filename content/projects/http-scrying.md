@@ -1,9 +1,10 @@
 +++
 title = "HTTP Scrying"
+arcs = ["Improve Network Performance"]
 duration = "2-3 Months"
 manpower = "1-2 Engineers"
 status = "Future"
-lead = "TBD"
+owner = "TBD"
 description = """
 The scry namespace should be made available over HTTP, to improve developer experience and performance for Urbit clients ("airlocks").
 """

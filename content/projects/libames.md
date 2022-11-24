@@ -1,8 +1,9 @@
 +++
 title = "libames"
+arcs = ["Improve Developer Experience"]
 duration = "TBD"
 manpower = "TBD"
-lead = "TBD"
+owner = "TBD"
 status = "Future"
 description = """
 `libames` would aid in integrating Urbit with other systems, writing iOS clients, and allowing Urbit to be used in internet-of-things applications.

@@ -1,9 +1,10 @@
 +++
 title = "Multiprocess Event Log"
+arcs = ["Improve Security", "Reduce Hosting Costs"]
 duration = "TBD"
 manpower = "TBD"
 status = "Future"
-lead = "TBD"
+owner = "TBD"
 description = """
 Similarly to breaking up the Urth process, we should split event log reading and writing into its own process, which will communicate with the Mars Nock runner process. 
 """

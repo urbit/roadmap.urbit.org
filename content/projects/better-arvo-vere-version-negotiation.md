@@ -1,8 +1,9 @@
 +++
 title = "Better Arvo/Vere Version Negotiation"
+arcs = ["Zero-click Maintenance", "Improve Backward Compatibility"]
 duration = "TBD"
 manpower = "TBD"
-lead = "TBD"
+owner = "TBD"
 status = "Future"
 description = """
 Improving the Arvo/Vere version negotiation will increase release rate by reducing the amount of work it takes to release a new Kelvin version.

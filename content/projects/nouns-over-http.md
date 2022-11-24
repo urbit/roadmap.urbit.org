@@ -1,9 +1,10 @@
 +++
 title = "Use Nouns over HTTP"
+arcs = ["Improve Developer Experience"]
 duration = "1 Month"
 manpower = "1 Engineer"
 status = "Future"
-lead = "~palfun-foslup"
+owner = "~palfun-foslup"
 description = """
 Eyre, Urbit's HTTP server, only supports communicating using JSON at the moment.  Using "jammed" (serialized) nouns over HTTP would move JSON conversion logic from the server to the client, allowing a fully featured Gall agent to be written, including communication with a web client, without needing to write JSON conversions in Hoon.
 """

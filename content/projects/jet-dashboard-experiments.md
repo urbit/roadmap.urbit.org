@@ -1,8 +1,9 @@
 +++
 title = "Jet Dashboard Experiments"
+arcs = ["Zero-click Maintenance","Improve Security"]
 manpower = "1-2 Engineers"
 duration = "2-4 Months"
-lead = "~master-morzod"
+owner = "~master-morzod"
 status = "Next Up"
 description = """
 Experimenting with different designs for the jet dashboard could improve performance, security, and general simplicity of the codebase.
