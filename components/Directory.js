@@ -57,7 +57,7 @@ export default function Directory({ search, title, markdown, posts, columns, tim
                 {/* Content */}
                 <div className={cn("col-span-full md:col-start-4 md:col-end-11 lg:col-end-9 mt-16 md:mt-0 markdown")}>
                     {markdown && <Markdown.render content={JSON.parse(markdown)} />}
-                    <div className={cn({ "border-l-hack pl-8 relative mt-16": timeline })}>
+                    <div className={cn("mt-16", { "border-l-hack pl-8 relative": timeline })}>
                         {timeline ? Object.entries(dateGroup).sort(([dayA,], [dayB,]) => {
                             if (sort === "reverse") {
                                 return new Date(dayB) - new Date(dayA)
