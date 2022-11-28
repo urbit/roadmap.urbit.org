@@ -13,11 +13,11 @@ import TimelineDot from "../components/icons/TimelineDot";
 import dayjs from "dayjs";
 import ProjectCard from "../components/ProjectCard";
 
-export default function Directory({ search, title, markdown, posts, columns, timeline = false }) {
+export default function Directory({ search, title, markdown, posts, columns, timeline = false, sort = "reverse" }) {
     const router = useRouter();
 
     const dateGroup = timeline ? posts.reduce((groups, post) => {
-        const month = dayjs(post.date).startOf('month').toISOString()
+        const month = dayjs(post.date || post.end_date).startOf('month').toISOString()
         if (!groups[month]) {
             groups[month] = [];
         }
@@ -55,28 +55,32 @@ export default function Directory({ search, title, markdown, posts, columns, tim
                     </Sidebar>
                 </div>
                 {/* Content */}
-                <div className={cn("col-span-full md:col-start-4 md:col-end-11 lg:col-end-9 mt-16 md:mt-0 markdown", {
-                    "border-l border-dashed pl-8 border-wall-400": timeline
-                })}>
+                <div className={cn("col-span-full md:col-start-4 md:col-end-11 lg:col-end-9 mt-16 md:mt-0 markdown")}>
                     {markdown && <Markdown.render content={JSON.parse(markdown)} />}
-                    {timeline ? Object.entries(dateGroup).sort(([dayA,], [dayB,]) => {
-                        return new Date(dayB) - new Date(dayA)
-                    }).map(([date, content]) => {
-                        return <div key={date} className="relative my-24">
-                            <h2 className="!mt-0" id={date}>{dateToDa(new Date(date))}</h2>
-                            <TimelineDot className="absolute top-2 -left-[2.58rem]" />
-                            {content.map((post) => {
-                                return <ProjectCard key={post.title} cols={["date", "contributors"]} project={post} />
-                            })}
-                        </div>
-                    })
-                        : <>
-                            <h2>Projects</h2>
-                            {posts.map((post) => {
-                                return <ProjectCard key={post.title} project={post} />
-                            })}
-                        </>
-                    }
+                    <div className={cn({ "border-l-hack pl-8 relative mt-16": timeline })}>
+                        {timeline ? Object.entries(dateGroup).sort(([dayA,], [dayB,]) => {
+                            if (sort === "reverse") {
+                                return new Date(dayB) - new Date(dayA)
+                            } else {
+                                return new Date(dayA) - new Date(dayB)
+                            }
+                        }).map(([date, content]) => {
+                            return <div key={date} className="relative my-24">
+                                <h2 className="!mt-0" id={date}>{dateToDa(new Date(date))}</h2>
+                                <TimelineDot className="absolute top-2 -left-[2.58rem] z-10" />
+                                {content.map((post) => {
+                                    return <ProjectCard key={post.title} cols={["date", "contributors"]} project={post} />
+                                })}
+                            </div>
+                        })
+                            : <>
+                                <h2>Projects</h2>
+                                {posts.map((post) => {
+                                    return <ProjectCard key={post.title} project={post} />
+                                })}
+                            </>
+                        }
+                    </div>
                     {nextDir && <Pagination dir={nextDir} />}
                 </div>
                 {/* Table of contents */}
