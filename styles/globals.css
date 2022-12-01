@@ -25,3 +25,10 @@ a:hover {
 .markdown a {
   @apply break-words;
 }
+
+.border-l-hack::after {
+  @apply border-l border-dashed border-wall-400 absolute top-4 z-0;
+  height: calc(100% - 1rem);
+  left: -1px;
+  content: "";
+}

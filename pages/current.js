@@ -10,6 +10,8 @@ export default function Current({ markdown, search, posts }) {
             posts={posts}
             title="Current Projects"
             columns={["owner", "end_date"]}
+            timeline
+            sort="forward"
         />
     )
 }

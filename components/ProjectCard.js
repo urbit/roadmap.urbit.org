@@ -58,7 +58,7 @@ export default function ProjectCard({ project, cols = ["duration", "start_date",
                             </div>
                         }
                     })}
-                    {project?.spec && <div className="grow ml-4">
+                    {project?.spec && <div className="grow">
                         <a className="!font-semibold !text-xs text-green-400 block w-fit !leading-none"
                             onClick={(e) => stopAndNavigate(e, project.spec, true)}>
                             SPEC
