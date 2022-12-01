@@ -27,6 +27,7 @@ export default function UpdatePost({
 
   return (
     <BasicPage
+      sectionTitle="Update"
       post={{
         title: post.title
       }}
@@ -56,6 +57,26 @@ export default function UpdatePost({
         </div>
         {/* Content */}
         <div className="col-span-full md:col-start-4 md:col-end-12 lg:col-end-10 markdown mt-16 md:mt-0">
+
+          <h2 className="!mb-6">{post.title}</h2>
+          <div className="flex space-x-12 pb-8">
+
+            <div class="flex flex-col space-y-2 ">
+              <p class="!mb-1 font-semibold text-wall-400 uppercase !text-sm">Date</p>
+              <p class="!my-0 !text-base">{post.date}</p>
+            </div>
+
+            <div class="flex flex-col space-y-2">
+              <p class="!mb-1 font-semibold text-wall-400 uppercase !text-sm">Author</p>
+              <p class="!my-0 !text-base">{post.extra.author}</p>
+            </div>
+
+            <div class="flex flex-col space-y-2">
+              <p class="!mb-1 font-semibold text-wall-400 uppercase !text-sm">@P</p>
+              <p class="!my-0 !text-base">{post.extra.ship}</p>
+            </div>
+          </div>
+
           <Markdown.render content={JSON.parse(markdown)} />
         </div>
       </Grid>
@@ -66,7 +87,7 @@ export default function UpdatePost({
 export async function getStaticProps({ params }) {
   const post = getPostBySlug(
     params.slug,
-    ["title", "slug", "date", "description", "content"],
+    ["title", "slug", "date", "description", "content", "extra"],
     "updates"
   );
 
