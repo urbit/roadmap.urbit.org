@@ -1,20 +1,33 @@
-import Grid from "../components/Grid";
-import { Markdown, TableOfContents, getPostBySlug } from '@urbit/foundation-design-system';
-import { dirs } from '../lib/constants';
+import Head from "next/head";
 import Link from 'next/link';
+import Header from "../components/Header";
 import cn from 'classnames'
+import {
+  Container,
+  SingleColumn,
+  Section,
+} from "@urbit/foundation-design-system";
+import { dirs } from '../lib/constants';
+import Grid from "../components/Grid";
+import { getAllPosts } from '@urbit/foundation-design-system';
+import UpdatePreview from "../components/UpdatePreview";
+import Directory from "../components/Directory";
 import { useRouter } from 'next/router';
 import BasicPage from '../components/BasicPage';
 import Sidebar from "../components/Sidebar";
-import Pagination from "../components/Pagination";
 
-export default function Home({ search, markdown }) {
+
+export default function Updates({ posts, search }) {
+
   const router = useRouter();
   const nextDir = dirs[dirs.findIndex((e) => e.link === router.pathname) + 1];
+
+  console.log(router.pathname);
+  
   return (
     <BasicPage
       post={{
-        title: "Overview"
+        title: "Weekly Updates"
       }}
       search={search}
     >
@@ -41,28 +54,27 @@ export default function Home({ search, markdown }) {
           </Sidebar>
         </div>
         {/* Content */}
-        <div className="col-span-full md:col-start-4 md:col-end-11 lg:col-end-9 markdown mt-16 md:mt-0">
-          <Markdown.render content={JSON.parse(markdown)} />
-          <Pagination dir={nextDir} />
-        </div>
-        {/* Table of contents */}
-        <div className="col-start-10">
-          <TableOfContents />
+        <div className="col-span-full md:col-start-4 md:col-end-12 lg:col-end-10 markdown mt-16 md:mt-0">
+        {posts.map((post) => (
+          <UpdatePreview key={post.slug} post={post} />
+        ))}
         </div>
       </Grid>
     </BasicPage>
   )
+
 }
 
 export async function getStaticProps() {
-  const post = getPostBySlug(
-    "overview",
-    ["title", "slug", "content"],
-    "/"
+  const posts = getAllPosts(
+    ["title", "slug", "date", "description"],
+    "updates",
+    "date"
   );
 
-  const markdown = JSON.stringify(Markdown.parse({ post }));
   return {
-    props: { markdown },
+    props: { posts },
   };
+
+
 }
