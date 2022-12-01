@@ -52,6 +52,13 @@ export default function Directory({ search, title, markdown, posts, columns, tim
                                 </Link>
                             </li>
                         })}
+                        <Link href="/updates">
+                            <a className={cn("text-base md:text-xl", {
+                                "text-wall-400": 'updates' !== router.pathname,
+                                "": 'updates' === router.pathname
+                            })}>Updates</a>
+                        </Link>
+
                     </Sidebar>
                 </div>
                 {/* Content */}
