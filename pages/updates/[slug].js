@@ -28,7 +28,7 @@ export default function UpdatePost({
   return (
     <BasicPage
       post={{
-        title: "Weekly Updates"
+        title: post.title
       }}
       search={search}
     >

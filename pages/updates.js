@@ -47,8 +47,8 @@ export default function Updates({ posts, search }) {
             })}
             <Link href="/updates">
                 <a className={cn("text-base md:text-xl", {
-                    "text-wall-400": 'updates' !== router.pathname,
-                    "": 'updates' === router.pathname
+                    "text-wall-400": '/updates' !== router.pathname,
+                    "": '/updates' === router.pathname
                 })}>Updates</a>
             </Link>
           </Sidebar>

@@ -9,7 +9,7 @@ export default function UpdatePreview({ post }) {
   const date = generateDisplayDate(post.date);
   return (
     <div key={post.slug} className="mb-12 cursor-pointer">
-      <Link href={`/update/${post.slug}`}>
+      <Link href={`/updates/${post.slug}`}>
         <div className="flex items-center md:flex-row flex-col">
 
           <div className="w-full">
