@@ -6,8 +6,13 @@ import Link from "next/link";
 import { dirs } from '../../lib/constants';
 import { getProjectsByArc } from "../../lib/util";
 import ProjectCard from "../../components/ProjectCard";
+import cn from 'classnames'
+import { useRouter } from 'next/router';
 
 export default function ProjectPage({ search, post, projects, markdown }) {
+
+  const router = useRouter();
+
     return <BasicPage
         search={search}
         sectionTitle={post.title}
@@ -25,6 +30,13 @@ export default function ProjectPage({ search, post, projects, markdown }) {
                             </Link>
                         </li>
                     })}
+                    <Link href="/updates">
+                        <a className={cn("text-base md:text-xl", {
+                            "text-wall-400": 'updates' !== router.pathname,
+                            "": 'updates' === router.pathname
+                        })}>Updates</a>
+                    </Link>
+
                 </Sidebar>
             </div>
             <div className="flex flex-col space-y-4 col-span-full md:col-start-4 md:col-end-11 lg:col-end-9 mt-16 md:mt-0">

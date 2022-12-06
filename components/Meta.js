@@ -4,7 +4,7 @@ export default function Meta(post, disableImage) {
     const description =
         post?.description || "The high-level goals that need to be achieved to make Urbit a consumer product.";
     const image =
-        post?.extra?.image || post?.image || "https://storage.googleapis.com/media.urbit.org/site/opengraph/roadmap.png";
+        post?.extra?.image || post?.image || "https://storage.googleapis.com/media.urbit.org/site/opengraph/sig-white.png";
     return (
 
         <>

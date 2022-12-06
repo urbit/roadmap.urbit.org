@@ -9,6 +9,13 @@ import Sidebar from "../components/Sidebar";
 import Pagination from "../components/Pagination";
 
 export default function Home({ search, markdown }) {
+
+  const post = {
+    title: "Urbit Roadmap",
+    description: "The high-level goals that need to be achieved to make Urbit a consumer product.",
+    image: "https://storage.googleapis.com/media.urbit.org/site/opengraph/roadmap.png"
+  };
+
   const router = useRouter();
   const nextDir = dirs[dirs.findIndex((e) => e.link === router.pathname) + 1];
   return (
