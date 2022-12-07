@@ -10,16 +10,25 @@ import Pagination from "../components/Pagination";
 import Head from "next/head";
 import Meta from "../components/Meta";
 
-export default function Home({ search, markdown }) {
+export default function Home({ search, markdown, posts }) {
 
+  const post = {
+    title: "The Urbit Roadmap",
+    description: "The high-level goals that need to be achieved to make Urbit a consumer product.",
+  };
 
   const router = useRouter();
   const nextDir = dirs[dirs.findIndex((e) => e.link === router.pathname) + 1];
   return (
-    
+
+
+
     <BasicPage post={{title: "Overview"}} search={search}>
 
-
+      <Head>
+        <title>The Urbit Roadmap</title>
+        {Meta(post, false, true)}
+      </Head>
 
       <Grid className="col-span-full md:mt-40 relative">
         {/* Sidebar */}

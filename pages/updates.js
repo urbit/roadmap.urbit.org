@@ -22,7 +22,6 @@ export default function Updates({ posts, search }) {
   const router = useRouter();
   const nextDir = dirs[dirs.findIndex((e) => e.link === router.pathname) + 1];
 
-  console.log(router.pathname);
   
   return (
     <BasicPage
