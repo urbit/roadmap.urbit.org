@@ -31,7 +31,7 @@ export default function Meta(post, disableImage) {
       
             <meta
                 name="twitter:card"
-                content="summary_large_image"
+                content={large ? "summary_large_image" : "summary"}
                 key="twitter-card"
             />
             <meta name="twitter:site" content="@urbit" key="twitter-site" />
