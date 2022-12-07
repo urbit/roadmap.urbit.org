@@ -16,10 +16,10 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ### Arcs
 - Title = Text
-- Class = Tag background color
+- Class = Hex value (arc tag bgcolor)
 
 ### Projects
-- Title = Title
+- Title = Text
 - Arcs = Array
 - Date = YYYY-MM-DD
 - Status = Completed/Current/Future/Next Up
@@ -28,7 +28,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - Contributors = Array (of @ps)
 
 ### Updates
-- Title = Title
+- Title = Text
 - Date = YYYY-MM-DD
 - Description = Text
 - Author = Text
