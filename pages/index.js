@@ -7,24 +7,20 @@ import { useRouter } from 'next/router';
 import BasicPage from '../components/BasicPage';
 import Sidebar from "../components/Sidebar";
 import Pagination from "../components/Pagination";
+import Head from "next/head";
+import Meta from "../components/Meta";
 
 export default function Home({ search, markdown }) {
 
-  const post = {
-    title: "Urbit Roadmap",
-    description: "The high-level goals that need to be achieved to make Urbit a consumer product.",
-    image: "https://storage.googleapis.com/media.urbit.org/site/opengraph/roadmap.png"
-  };
 
   const router = useRouter();
   const nextDir = dirs[dirs.findIndex((e) => e.link === router.pathname) + 1];
   return (
-    <BasicPage
-      post={{
-        title: "Overview"
-      }}
-      search={search}
-    >
+    
+    <BasicPage post={{title: "Overview"}} search={search}>
+
+
+
       <Grid className="col-span-full md:mt-40 relative">
         {/* Sidebar */}
         <div className="col-start-2 col-end-4">
