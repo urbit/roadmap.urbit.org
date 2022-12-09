@@ -14,7 +14,7 @@ export default function Home({ search, markdown, posts }) {
 
   const post = {
     title: "The Urbit Roadmap",
-    description: "The high-level goals that need to be achieved to make Urbit a consumer product.",
+    description: "The high-level goals that need to be achieved to make Urbit a consumer product."
   };
 
   const router = useRouter();
