@@ -17,13 +17,13 @@ export default function Current({ markdown, search, posts }) {
 }
 
 export async function getStaticProps() {
-    const intro = getPostBySlug(
-        "current",
-        ["title", "slug", "content"],
-        "/"
-    );
+    // const intro = getPostBySlug(
+    //     "current",
+    //     ["title", "slug", "content"],
+    //     "/"
+    // );
 
-    const markdown = JSON.stringify(Markdown.parse({ post: intro }));
+    // const markdown = JSON.stringify(Markdown.parse({ post: intro }));
 
     const posts = getAllPosts(
         ["title", "slug", "date", "description", "contributors", "status", "owner", "end_date", "arcs", "spec"],
@@ -40,6 +40,6 @@ export async function getStaticProps() {
     });
 
     return {
-        props: { markdown, posts },
+        props: { posts },
     };
 }

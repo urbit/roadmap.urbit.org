@@ -29,16 +29,16 @@ export async function getStaticProps() {
         }
     });
 
-    const intro = getPostBySlug(
-        "next",
-        ["title", "slug", "content"],
-        "/"
-    );
+    // const intro = getPostBySlug(
+    //     "next",
+    //     ["title", "slug", "content"],
+    //     "/"
+    // );
 
-    const markdown = JSON.stringify(Markdown.parse({ post: intro }));
+    // const markdown = JSON.stringify(Markdown.parse({ post: intro }));
 
 
     return {
-        props: { markdown, posts },
+        props: { posts },
     };
 }
