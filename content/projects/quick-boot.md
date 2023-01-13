@@ -2,9 +2,9 @@
 title = "Quick Boot"
 arcs = ["Reduce Hosting Costs"]
 start_date = "2022-07-01"
-end_date = "2022-12-15"
+end_date = ""
 owner = "~nidsut-tomdun"
-status = "Current"
+status = "Future"
 description = """
 The "quick boot" project aims to bring initial Urbit boot time down from ~10 minutes to well under a minute.
 """

@@ -2,7 +2,7 @@
 title = "Event Log Truncation"
 arcs = ["Reduce Hosting Costs"]
 start_date = "2021-01-01"
-end_date = "2022-12-15"
+end_date = "2023-2-15"
 owner = "~fanfun-mocbud"
 status = "Current"
 description = """

@@ -1,10 +1,10 @@
 +++
 title = "Terminal Improvements"
 arcs = ["Improve Developer Experience"]
-duration = "1 Month"
+end_date = "2023-01-17"
 manpower = "1 Engineer"
 owner = "~palfun-foslup"
-status = "Next Up"
+status = "Current"
 description = """
 ~palfun-foslup has written a whole suite of improvements to the terminal, which are slated for release soon.  This will open up a lot of opportunities for better developer experience and terminal-based user experience.  
 """
