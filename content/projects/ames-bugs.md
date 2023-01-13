@@ -17,6 +17,6 @@ request queue fix".  `~norsyr-torryn` is fixing these bugs.
 - [Ongoing Work](https://github.com/urbit/urbit/pull/6046)
 - [Issue](https://github.com/urbit/urbit/issues/6065)
 - [Issue](https://github.com/urbit/urbit/issues/6050)
-- [Issue](https://github.com/urbit/urbit/issues/6032)
+- [Issue](https://github.com/urbit/urbit/issues/6032) (Completed)
 - [Issue](https://github.com/urbit/urbit/issues/5986)
 - [Issue](https://github.com/urbit/urbit/issues/5979)
