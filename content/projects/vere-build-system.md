@@ -2,7 +2,7 @@
 title = "Improve Vere Build System"
 arcs = ["Increase Release Frequency"]
 start_date = "2022-11-01"
-date = "2023-01-013"
+date = "2023-01-13"
 owner = "~mastyr-bottec"
 status = "Completed"
 contributors = ["~mastyr-bottec","~fanfun-mocbud"]
