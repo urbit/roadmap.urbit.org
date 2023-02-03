@@ -18,4 +18,4 @@ reliable.  Since it moves the locus of control of agents from Gall to Clay, it's
 
 Early in 2022, bugs were identified in Arvo's upgrade system that have made pushing out new releases risky.  As of the latest release, those bugs no longer brick users' ships, but they can still erroneously turn off apps that should be running, requiring manual user attention to resolve.  The "agents-in-Clay" project addresses these bugs by greatly simplifying the upgrade system, making its correctness much easier to verify.
 
-- [PR] (https://github.com/urbit/urbit/pull/6092)
+- [PR](https://github.com/urbit/urbit/pull/6092)

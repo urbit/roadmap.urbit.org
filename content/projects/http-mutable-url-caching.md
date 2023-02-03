@@ -14,5 +14,10 @@ Urbit should be able to serve websites at custom URLs efficiently to support ser
 
 Vere will maintain a cache mapping from URL to response, and Arvo will invalidate cache entries when the application wants to serve an updated response at that URL.
 
-This is in development:
-https://github.com/urbit/urbit/pull/5927
+This is in development.  The first two phases of the grant have been
+completed.  What remains is to implement a cache in Vere so Vere can
+serve the webpages without sending requests to Arvo.
+
+- [Grant](https://urbit.org/grants/eyre-scry)
+- [PR](https://github.com/urbit/urbit/pull/5927)
+
