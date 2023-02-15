@@ -26,7 +26,7 @@ export default function Updates({ posts, search }) {
   return (
     <BasicPage
       post={{
-        title: "Weekly Updates"
+        title: "Updates"
       }}
       search={search}
     >

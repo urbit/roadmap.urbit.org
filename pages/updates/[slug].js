@@ -17,6 +17,7 @@ import Sidebar from "../../components/Sidebar";
 import Grid from "../../components/Grid";
 import { dirs } from '../../lib/constants';
 import cn from 'classnames'
+import { dateUrbit } from "../../lib/util";
 
 export default function UpdatePost({
   post, markdown, search
@@ -30,7 +31,7 @@ export default function UpdatePost({
     <BasicPage
       sectionTitle="Update"
       post={{
-        title: post.title
+        title: dateUrbit(new Date(date)) + " Update"
       }}
       search={search}
     >
@@ -47,13 +48,9 @@ export default function UpdatePost({
         {/* Content */}
         <div className="col-span-full md:col-start-4 md:col-end-12 lg:col-end-10 markdown mt-16 md:mt-0">
 
-          <h2 className="!mb-6">{post.title}</h2>
-          <div className="flex space-x-12 pb-8">
+        <h1>{dateUrbit(new Date(date))}</h1>
 
-            <div class="flex flex-col space-y-2 ">
-              <p class="!mb-1 font-semibold text-wall-400 uppercase !text-sm">Date</p>
-              <p class="!my-0 !text-base">{post.date}</p>
-            </div>
+          <div className="flex space-x-12 pb-12">
 
             <div class="flex flex-col space-y-2">
               <p class="!mb-1 font-semibold text-wall-400 uppercase !text-sm">Author</p>
