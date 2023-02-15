@@ -73,4 +73,4 @@ Within the next few years, we need to get to the point where future changes neve
 
 ## Improve Developer Experience
 
-[View Project Arc &rarr;](/arcs/improve-backward-compatibility)
+[View Project Arc &rarr;](/arcs/improve-developer-experience)
