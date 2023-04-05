@@ -4,7 +4,7 @@ arcs = ["Reduce Hosting Costs"]
 start_date = "2021-01-21"
 end_date = "2023-2-15"
 owner = "~mastyr-bottec"
-status = "Current"
+status = "Completed"
 description = """
 The event log grows indefinitely, using more disk space over time. Once event logs can be truncated, disk space can be reclaimed, using a roughly constant amount of disk space over time (the size of the Arvo snapshot, which grows much more slowly than the event log). Reducing disk space in this way is important for reducing cost and maintenance burden for running ships.
 """

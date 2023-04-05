@@ -2,9 +2,9 @@
 title = "Ames Bug Fixing"
 arcs = ["Zero-click Maintenance"]
 start_date = "2022-11-01"
-end_date = "2023-02-01"
+end_date = "2023-03-31"
 owner = "~norsyr-torryn"
-status = "Current"
+status = "Completed"
 description = """
 Multiple bugs were introduced by a major release in mid-2022, called the "gall
 request queue fix".  `~norsyr-torryn` is fixing these bugs.

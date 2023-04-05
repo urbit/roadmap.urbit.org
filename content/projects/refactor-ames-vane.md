@@ -1,10 +1,11 @@
 +++
 title = "Refactor Ames Vane"
 arcs = ["Zero-click Maintenance", "Improve Network Performance"]
+start_date = "2022-12-01"
+end_date = "2023-05-31"
 manpower = "1 Engineer"
-duration = "1-2 Months"
-owner = "TBD"
-status = "Future"
+owner = "~norsyr-torryn"
+status = "Current"
 description = """
 The Ames vane could be shorter, easier to read, more performant, and easier to prove correct.
 """

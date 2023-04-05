@@ -2,9 +2,8 @@
 title = "Mars/Urth Split"
 arcs = ["Zero-click Maintenance"]
 start_date = "2021-01-21"
-end_date = "2023-04-15"
 owner = "~master-morzod"
-status = "Current"
+status = "Future"
 description = """
 Move event log management into the same Unix process that manages
 snapshots.

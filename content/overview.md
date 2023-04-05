@@ -73,4 +73,6 @@ Within the next few years, we need to get to the point where future changes neve
 
 ## Improve Developer Experience
 
+Urbit, like all operating systems, is primarily a tool for developers to build applications.  For Urbit to win, the experience of developing applications needs to be top-notch.
+
 [View Project Arc &rarr;](/arcs/improve-developer-experience)

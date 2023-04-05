@@ -2,7 +2,7 @@
 title = "Native UI Research: Alpha"
 arcs = ["Improve Developer Experience"]
 start_date = "2023-01-30"
-end_date =" 2023-03-21"
+end_date =" 2023-04-15"
 status = "Current"
 owner = "~hastuc-dibtux"
 manpower = "TBD"
