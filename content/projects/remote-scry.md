@@ -21,4 +21,5 @@ Many of the other networking projects build on top of Fine to bring the system c
 
 Fine has been implemented and tested some on a testnet, but it will need more testing before deployment.  It affects both Arvo and Vere and requires a Kelvin bump.
 
-- [PR](https://github.com/urbit/urbit/pull/5878)
+- [Arvo PR](https://github.com/urbit/urbit/pull/6406)
+- [Vere PR](https://github.com/urbit/vere/pull/305)
