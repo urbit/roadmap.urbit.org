@@ -1,9 +1,10 @@
 +++
 title = "Typed Paths"
 arcs = ["Improve Network Performance","Improve Backward Compatibility"]
-status = "Next Up"
+status = "Completed"
 duration = "1 Week"
 manpower = "1 Engineer"
+end_date = "2023-05-09"
 owner = "~palfun-foslup"
 description = """
 Typed paths should improve performance and developer experience, and it could unblock a typed interface to publications.
@@ -19,8 +20,4 @@ With typed paths, only the outer edges of Arvo ever need to serialize a path to 
 
 In addition to performance, using typed paths improves developer ergonomics.  To dispatch on a typed path in an incoming request, a dev can write a straightforward `?-` switch statement, without needing to call parsers.  The schema of paths the agent is willing to ingest can even be specified in a type declaration, which could be made legible to the kernel as part of a new userspace/kernelspace interface, enabling later features such as auto-generated user interfaces.  This legibility also gives more flexibility for designing the typed interface to solid-state publications, since those are addressed by path.
 
-`~palfun-foslup` has already implemented typed paths and pattern-matching syntax for them, but it hasn't been integrated or deployed yet.
-
-Code:
-
-https://github.com/urbit/urbit/pull/5887
+- [PR](https://github.com/urbit/urbit/pull/5887)
