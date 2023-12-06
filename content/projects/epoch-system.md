@@ -1,10 +1,9 @@
 +++
 title = "Epoch System"
 arcs = ["Zero-click Maintenance"]
-start_date = "2021-03-27"
-end_date = "2023-04-28"
+date = "2023-09-18"
 owner = "~mastyr-bottec"
-status = "Current"
+status = "Completed"
 description = """
 Chunk Event Log into Epochs
 """
@@ -22,10 +21,4 @@ also stores a version file indicating which version of Vere originally ran
 these events -- this makes replay across different binary versions much 
 easier, especially in the case of a jet mismatch in an old binary.
 
-There is a now-closed implementation of the epoch system built on top of the
-[Mars/Urth Split](/project/mars-urth), but since that effort is 
-currently halted, an implemention using current (pre-split) Vere is 
-underway.
-
-- [Tracking issue for epoch system](https://github.com/urbit/vere/issues/313)
-- [Original (now closed) PR for epoch system](https://github.com/urbit/urbit/pull/5701)
+- [PR for epoch system](https://github.com/urbit/vere/pull/459)

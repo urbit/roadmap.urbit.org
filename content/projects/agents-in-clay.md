@@ -2,9 +2,8 @@
 title = "Agents in Clay"
 arcs = ["Increase Release Frequency", "Improve Backward Compatibility"]
 spec = "https://gist.github.com/belisarius222/2ae74bfb5a40860b59d28970d29b3329"
-start_date = "2022-07-06"
-end_date = "2022-12-01"
-owner = "~wicdev-wisryt"
+date = "2022-12-01"
+contributors = ["~wicdev-wisryt"]
 status = "Completed"
 description = """
 This project overhauls Arvo's upgrade system to make it simpler and more

@@ -1,10 +1,10 @@
 +++
 title = "HTTP Scrying"
 arcs = ["Improve Network Performance"]
-duration = "2-3 Months"
-manpower = "1-2 Engineers"
-status = "Future"
-owner = "TBD"
+date = "2023-09-19"
+status = "Completed"
+contributors = ["~watter-parter"]
+spec = "https://github.com/urbit/UIPs/blob/main/UIPS/UIP-0106.md"
 description = """
 The scry namespace should be made available over HTTP, to improve developer experience and performance for Urbit clients ("airlocks").
 """
@@ -15,3 +15,5 @@ The scry namespace should be made available over HTTP, to improve developer expe
 Adding this feature will allow the runtime to intercept these requests, and instead of injecting the request as an Arvo event, it can scry into Arvo for the response.  This saves a disk write, and the runtime could also cache the response so that future requests for that path don't even run Nock.
 
 If this is done well enough, it could lead to the development of HTTP-based thin-client "scry browsers" (UDP-based scry browsers generally require `libames`) that can explore a ship's state, and maybe even serve an auto-generated interface, with minimal client-side logic and state.
+
+- [Pull Request](https://github.com/urbit/urbit/pull/6741)

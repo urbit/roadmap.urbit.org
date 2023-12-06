@@ -1,11 +1,9 @@
 +++
 title = "Native UI Research: Alpha"
 arcs = ["Improve Developer Experience"]
-start_date = "2023-01-30"
-end_date =" 2023-04-15"
-status = "Current"
-owner = "~hastuc-dibtux"
-manpower = "TBD"
+date =" 2023-04-15"
+status = "Completed"
+contributors = ["~hastuc-dibtux"]
 description = """
 One of the main barriers to writing an Urbit app is that the standard way to present a user interface is by writing it in JavaScript that runs in a web browser.  This has advantages, but it requires writing code in two languages, and it means you can't stay in Urbit entirely when writing an app.
 """
