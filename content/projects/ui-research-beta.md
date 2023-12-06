@@ -1,9 +1,8 @@
 +++
 title = "Native UI Research: Test-type"
 arcs = ["Improve Developer Experience"]
-start_date = "2023-03-22"
 duration = "3 Months"
-status = "Next Up"
+status = "Future"
 owner = "~hastuc-dibtux"
 manpower = "1 Engineer"
 description = """
