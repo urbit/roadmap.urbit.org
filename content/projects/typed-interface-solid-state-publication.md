@@ -2,7 +2,7 @@
 title = "Typed Interface to Solid-State Publications"
 arcs = ["Improve Network Performance", "Improve Backward Compatibility"]
 duration = "4-8 Months"
-manpower = "1-2 Engineers"
+manpower = "1-2 Developers"
 status = "Future"
 owner = "~rovnys-ricfer"
 description = """

@@ -2,7 +2,7 @@
 title = "Shared Memory IPC"
 arcs = ["Improve Network Performance"]
 duration = "2-3 Months"
-manpower = "1-2 Engineers"
+manpower = "1-2 Developers"
 status = "Future"
 owner = "TBD"
 description = """

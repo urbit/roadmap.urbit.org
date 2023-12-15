@@ -1,7 +1,7 @@
 +++
 title = "Separating IPC Streams"
 arcs = ["Reduce Hosting Costs"]
-manpower = "1 Engineer"
+manpower = "1 Developer"
 duration = "1 Month"
 status = "Future"
 owner = "TBD"

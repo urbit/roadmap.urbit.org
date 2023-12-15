@@ -4,6 +4,7 @@ arcs = ["Make Urbit Fast"]
 start_date = "2022-01-01"
 end_date = "2024-02-29"
 owner = "~ritpub-sipsyl"
+contributors = ["~ritpub-sipsyl", "~finmep-lanteb", "~mastyr-bottec", "~barter-simsum", "~lagrev-nocfep"]
 status = "Current"
 description = """
 Ares is a rewrite of the Nock interpreter for much higher performance and data capacity. 

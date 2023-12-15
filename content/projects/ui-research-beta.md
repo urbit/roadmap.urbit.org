@@ -4,7 +4,7 @@ arcs = ["Improve Developer Experience"]
 duration = "3 Months"
 status = "Future"
 owner = "~hastuc-dibtux"
-manpower = "1 Engineer"
+manpower = "1 Developer"
 description = """
 One of the main barriers to writing an Urbit app is that the standard way to present a user interface is by writing it in JavaScript that runs in a web browser.  This has advantages, but it requires writing code in two languages, and it means you can't stay in Urbit entirely when writing an app. This phase of the work involves allowing hoon UI specifications to be rendered to a browser
 """

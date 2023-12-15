@@ -1,7 +1,7 @@
 +++
 title = "Shims for Userspace Code Over Old Kelvins"
 arcs = ["Increase Release Frequency", "Improve Backward Compatibility"]
-manpower = "2 Engineers"
+manpower = "2 Developers"
 duration = "2 Months"
 contributors = ["~tinnus-napbus", "~dinleb-rambep"]
 owner = "~dinleb-rambep"

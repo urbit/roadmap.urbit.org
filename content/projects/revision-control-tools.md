@@ -1,7 +1,7 @@
 +++
 title = "More Revision Control Tools"
 duration = "2-3 Months"
-manpower = "1 Engineer"
+manpower = "1 Developer"
 owner = "TBD"
 status = "Future"
 description = """

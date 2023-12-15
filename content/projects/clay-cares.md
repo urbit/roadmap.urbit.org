@@ -1,7 +1,7 @@
 +++
 title = "Clean up Clay %cares"
 arcs = ["Improve Backward Compatibility"]
-manpower = "1 Engineer"
+manpower = "1 Developer"
 duration = "2 Months"
 owner = "~wicdev-wisryt"
 status = "Future"

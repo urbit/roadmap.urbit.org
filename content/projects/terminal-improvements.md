@@ -2,7 +2,7 @@
 title = "Terminal Improvements"
 arcs = ["Improve Developer Experience"]
 date = "2023-01-18"
-manpower = "1 Engineer"
+manpower = "1 Developer"
 owner = "~palfun-foslup"
 contributors = ["~palfun-foslup"]
 status = "Completed"

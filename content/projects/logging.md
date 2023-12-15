@@ -2,7 +2,7 @@
 title = "Logging"
 arcs = ["Increase Release Frequency", "Improve Security", "Reduce Hosting Costs"]
 end_date = ""
-manpower = "1 Engineer"
+manpower = "1 Developer"
 status = "Future"
 duration = "TBD"
 owner = "TBD"

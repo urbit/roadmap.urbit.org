@@ -2,7 +2,7 @@
 title = "Add Urth-to-Urth Network Push Sessions"
 arcs = ["Improve Network Performance"]
 spec = "https://gist.github.com/belisarius222/390daafc146f7c6ddd98836e61dc307f"
-manpower = "2 Engineers"
+manpower = "2 Developers"
 duration = "4-6 Months"
 status = "Future"
 owner = "TBD"

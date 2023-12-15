@@ -15,5 +15,10 @@ The low-hanging fruit is to mark timers as "dead" if the ship they're re-sending
 
 This is a purely Arvo change.
 
+## Code
+
+This was released to the network in the 412K release.
+
 - [Pull Request 1](https://github.com/urbit/urbit/pull/6738)
 - [Pull Request 2](https://github.com/urbit/urbit/pull/6823)
+- [Release](https://github.com/urbit/urbit/releases/tag/412k)

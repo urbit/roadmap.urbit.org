@@ -1,7 +1,7 @@
 +++
 title = "Forward Secrecy Ratchet in Ames"
 arcs = ["Improve Security"]
-manpower = "1-2 Engineers"
+manpower = "1-2 Developers"
 duration = "3-6 Months"
 owner = "TBD"
 status = "Future"

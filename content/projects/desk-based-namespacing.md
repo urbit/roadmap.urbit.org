@@ -2,7 +2,7 @@
 title = "Desk-Based Namespacing"
 arcs = ["Improve Backward Compatibility"]
 duration = "3-6 Months"
-manpower = "1-2 Engineers"
+manpower = "1-2 Developers"
 status = "Future"
 owner = "TBD"
 description = """

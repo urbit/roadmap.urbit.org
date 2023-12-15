@@ -1,11 +1,14 @@
 +++
-title = "Directed Routing"
-arcs = ["Improve Network Performance"]
+title = "Directed Messaging"
+arcs = ["Make Urbit Fast"]
 spec = "https://gist.github.com/belisarius222/7ec6f40b3a498c38e696139d8dbd8b10"
+start_date = "2023-10-01"
+end_date = "2023-03-01"
 duration = "3-6 Months"
-manpower = "1-2 Engineers"
+manpower = "4 Developers"
 status = "Current"
-owner = "~rovnys-ricfer"
+owner = "~master-morzod"
+contributors = ["~master-morzod", "~hastuc-dibtux", "~watter-parter", "~norsyr-torryn", "~dinleb-rambep"]
 description = """
 Symmetric routing should improve multiple things about Ames networking, enabling star packet forwarding, as well as improving firewall flakiness and peer discovery.
 """

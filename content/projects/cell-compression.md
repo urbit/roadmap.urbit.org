@@ -1,7 +1,7 @@
 +++
 title = "Pointer Compression: Cell Compression"
 arcs = ["Increase Runtime Data Capacity"]
-manpower = "1 Engineer"
+manpower = "1 Developer"
 duration = "2-4 Months"
 status = "Next Up"
 owner = "TBD"

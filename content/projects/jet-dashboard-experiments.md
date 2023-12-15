@@ -1,7 +1,7 @@
 +++
 title = "Jet Dashboard Experiments"
 arcs = ["Zero-click Maintenance","Improve Security"]
-manpower = "1-2 Engineers"
+manpower = "1-2 Developers"
 duration = "2-4 Months"
 owner = "~master-morzod"
 status = "Next Up"

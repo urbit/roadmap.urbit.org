@@ -2,7 +2,7 @@
 title = "Memory-Efficient Meld"
 arcs = ["Increase Runtime Data Capacity", "Reduce Hosting Costs"]
 duration = "1-2 Months"
-manpower = "1 Engineer"
+manpower = "1 Developer"
 status = "Next Up"
 owner = "TBD"
 description = """
