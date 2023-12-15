@@ -12,9 +12,9 @@ Introduces an informal (stateless) ping mechanism, moving route maintenance out 
 
 For any ship to be accessible to others in the network, its sponsoring galaxy must be able to forward packets to it. For the sponsoring galaxy to forward packets to a ship, it must have a lane to that ship; to learn a lane to a ship, one must hear packets from that ship.
 
-Galaxies are always axiomatically available: any ship must always be able to get packets to their galaxy. Routinely pinging the sponsoring galaxy serves two purposes: the galaxy can learn a route to the ship in question (always direct), and any stateful firewalls or "NAT pinholes" are kept open, maintaining the route so that the galaxy can use it to forward requests to us.
-
 ## Motivation
+
+Galaxies are always axiomatically available: any ship must always be able to get packets to their galaxy. Routinely pinging the sponsoring galaxy serves two purposes: the galaxy can learn a route to the ship in question (always direct), and any stateful firewalls or "NAT pinholes" are kept open, maintaining the route so that the galaxy can use it to forward requests to us.
 
 Many local networks are configured to enforce client/server behavior: inbound packets from the broader internet are not allowed on to the local network unless they can be interpreted as a response to a request previously issued from the local network. Practically, this means that peers on such a network must send packets first before they can be received, and must resend often to maintain inbound connectivity -- the de-facto timeout for such behavior is ~s30.
 

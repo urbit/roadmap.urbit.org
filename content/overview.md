@@ -40,6 +40,6 @@ kernel.
 
 [Sandboxing browser clients](/project/frontend-sandboxing) will complete permissions enforcement for Urbit applications.
 
-[View Project Arc &rarr;](/arcs/plug-security-holes)
+[View Project Arc &rarr;](/arcs/security-malicious-apps)
 
 
