@@ -12,7 +12,7 @@ The following project arcs highlight our primary areas of focus for 2024, update
 
 Urbit has never been seriously optimized for performance.  Two large development efforts, both scheduled for deployment in early 2024, will bring Urbit's performance up to what is needed for most social applications:
 
-1. [Ares](/projects/ares), a clean-slate rewrite of the Nock interpreter, promises multiple orders of magnitude better performance in general Nock computation.
+1. [Ares](/project/ares), a clean-slate rewrite of the Nock interpreter, promises multiple orders of magnitude better performance in general Nock computation.
 2. [Directed Messaging](/project/directed-messaging), an overhaul of Urbit's networking stack will deliver drastic performance improvements.  The new system includes simpler and more robust relays and routing, much faster packet authentication, and runtime-based congestion control that removes most packet processing overhead.
 
 [View Project Arc &rarr;](/arcs/make-fast)
