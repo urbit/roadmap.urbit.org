@@ -21,5 +21,16 @@ Ares solves this problem virtue of being written with a 64 bit architecture, and
 its Persistent Memory Arena (PMA) is written with demand paging from the start
 to ensure efficient memory management. 
 
-A "Global Namespace" allows any node on the network to bind arbitrary data to an
-immutable, revision-controlled path. TODO: Ted
+Urbit's global namespace allows any node on the network to bind arbitrary data
+to an immutable, revision-controlled path. Our implementation of the global
+namespace (which is heavily inspired by the [Named Date
+Networking](https://named-data.net/project/) project) revolves around the
+concept of [remote
+scry](https://docs.urbit.org/userspace/apps/guides/remote-scry). We released the
+initial part of remote scry earlier this year, but further work is needed for it
+to become a true global namespace. When completed, it will enable:
+
+- A fast and scalable subscription system
+- Automatic caching of arbitrary content
+- Content distribution for a P2P network at scale
+- Links to arbitrary content

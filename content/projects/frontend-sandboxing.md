@@ -1,10 +1,9 @@
 +++
 title = "Frontend Sandboxing"
-arcs = ["Improve Security"]
-spec = "TODO"
+arcs = ["Security Against Malicious Apps"]
 duration = "3-6 Months"
 manpower = "1-2 Engineers"
-status = "Current"
+status = "Next Up"
 owner = "~wicdev-wisryt"
 description = """
 Sandboxing browser clients will prevent malicious apps from using their clients to circumvent userspace permissions policies.
