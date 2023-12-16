@@ -1,7 +1,7 @@
 +++
 title = "Multi-Session Terminal"
 duration = "1 Month"
-manpower = "1 Engineer"
+manpower = "1 Developer"
 status = "Future"
 owner = "~palfun-foslup"
 description = """

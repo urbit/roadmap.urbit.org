@@ -2,7 +2,7 @@
 title = "Multiprocess I/O"
 arcs = ["Improve Security"]
 duration = "2-3 Months"
-manpower = "1 Engineer"
+manpower = "1 Developer"
 status = "Future"
 owner = "TBD"
 description = """

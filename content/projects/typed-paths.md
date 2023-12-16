@@ -2,10 +2,8 @@
 title = "Typed Paths"
 arcs = ["Improve Network Performance","Improve Backward Compatibility"]
 status = "Completed"
-duration = "1 Week"
-manpower = "1 Engineer"
-end_date = "2023-05-09"
-owner = "~palfun-foslup"
+date = "2023-05-09"
+contributors = ["~palfun-foslup"]
 description = """
 Typed paths should improve performance and developer experience, and it could unblock a typed interface to publications.
 """

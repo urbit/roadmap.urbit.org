@@ -2,11 +2,8 @@
 title = "Basic Remote Scry Protocol"
 arcs = ["Improve Network Performance", "Improve Backward Compatibility"]
 spec = "https://gist.github.com/belisarius222/d9a9c164817d3e8bbda3c45f7d2000b9"
-start_date = "2021-01-01"
-end_date = "2023-05-09"
-duration = "1-2 Months"
-manpower = "1-2 Engineers"
-owner = "~master-morzod"
+date = "2023-06-30"
+contributors = ["~master-morzod", "~hastuc-dibtux", "~palfun-foslup", "~wicrum-wicrun", "~rovnys-ricfer"]
 status = "Completed"
 description = """
 The "Fine" remote scry protocol will form the foundation of scalable content distribution in Urbit, by allowing many subscriber ships to read data efficiently from a publisher ship without incurring excessive load on the publisher.

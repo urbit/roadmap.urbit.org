@@ -2,7 +2,7 @@
 title = "Outer HMACs on Packets for DDoS Protection"
 arcs = ["Improve Security"]
 duration = "1-3 Months"
-manpower = "1 Engineer"
+manpower = "1 Developer"
 status = "Future"
 owner = "TBD"
 description = """

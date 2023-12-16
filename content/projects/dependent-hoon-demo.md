@@ -3,7 +3,7 @@ title = "Dependent Hoon Demo"
 arcs = ["Improve Backward Compatibility"]
 status = "Future"
 duration = "3 Months"
-manpower = "1 Engineer"
+manpower = "1 Developer"
 owner = "~pilfer-pandex"
 description = """
 A version of Hoon with a dependent type system could make the type system easier to understand, improving developer experience.  

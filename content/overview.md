@@ -6,73 +6,40 @@ title = "Overview"
 
 This roadmap describes the plan for making the Urbit OS suitable for mass adoption. It is a living document, to be updated when milestones are achieved or when plans change.
 
-The following project arcs need to be completed to make Urbit a consumer product. The individual projects within each of these arcs can be viewed by status – Current, Next Up, Future, and Completed – in the left hand navigation.
+The following project arcs highlight our primary areas of focus for 2024, updated as of December 2023. The individual projects within each of these arcs can be viewed by status – Current, Next Up, Future, and Completed – in the left hand navigation.
 
-The rest of this document describes the strategies for achieving these goals.
+## Make Urbit Fast
 
-## Increase Release Frequency
+Urbit has never been seriously optimized for performance.  Two large development efforts, both scheduled for deployment in early 2024, will bring Urbit's performance up to what is needed for most social applications:
 
-Increasing the speed of releases is the core dev team's highest priority, since it will accelerate the pace of development overall.
-We will make a number of changes to the kernel and runtime for this purpose. We will also scale the team and its processes by providing better reference documentation, guides, training, roadmaps, and specifications.
+1. [Ares](/project/ares), a clean-slate rewrite of the Nock interpreter, promises multiple orders of magnitude better performance in general Nock computation.
+2. [Directed Messaging](/project/directed-messaging), an overhaul of Urbit's networking stack will deliver drastic performance improvements.  The new system includes simpler and more robust relays and routing, much faster packet authentication, and runtime-based congestion control that removes most packet processing overhead.
 
-[View Project Arc &rarr;](/arcs/increase-release-frequency)
-
-
-## Improve Security
-
-Much work remains to bulletproof Urbit to the point where it can not only defend its memory safety and cryptographic safety, but can also fend off denial of service attacks by dedicated assailants.
-
-We will first secure the system against an individual or small group intending to casually DoS the network by spamming packets. Following this we will establish basic software supply chain protection, and then work to defend against exploits of memory corruption in the runtime to gain remote code execution.
-
-[View Project Arc &rarr;](/arcs/improve-security)
+[View Project Arc &rarr;](/arcs/make-fast)
 
 
-## Increase Runtime Data Capacity
+## Increase Capability
 
-There are three main phases to increasing the amount of data the runtime can manage:
-- Use pointer compression to max out the 32-bit allocator
-- Improve auxiliary tooling to handle more data than fits in RAM
-- Implement 64-bit or other more experimental increases in data storage
+We'll be giving Urbit much-needed capabilities that it doesn't currently have,
+but has always promised to have, by the middle of 2024. These are:
 
-[View Project Arc &rarr;](arcs/increase-runtime-data-capacity)
+1. The ability to store arbitrarily large amounts of data, and
+2. A fully featured [Global Namespace](https://docs.urbit.org/userspace/apps/guides/remote-scry) that allows any node to bind arbitrary data to an immutable, revision-controlled path and distribute it to other nodes over the network.
 
-
-## Zero-Click Maintenance
-
-An Urbit ship should maintain itself so that a user does not need to intervene to keep it running properly. In order for this to be true, the ship needs to be reliable, handle upgrades properly, and manage its resources (e.g. RAM and disk space) efficiently.
-
-[View Project Arc &rarr;](/arcs/zero-click-maintenance)
+[View Project Arc &rarr;](/arcs/increase-capability)
 
 
-## Improve Network Performance
+## Security Against Malicious Apps
 
-An ordinary Urbit ship needs to be able to host a large chatroom, in addition to other scaling considerations. The performance of Urbit's networking is the bottleneck limiting this kind of scaling at the moment.
+Urbit is not secure today, but we do know how to secure it.
 
-A number of incremental improvements need to be made to the implementation of Ames, Urbit's networking protocol, including fixes for flaky connections and more efficient use of timers. A second protocol called Fine will also be added for scalable content distribution. A multi-part project called "subscription reform" will allow apps to use this protocol effectively.
+The most important effort is [userspace permissions](/project/userspace-permissions), which provides a
+security model for the barrier between different applications running in
+userspace, as well as the interface between userspace applications and the
+kernel.
 
-[View Project Arc &rarr;](/arcs/improve-network-performance)
+[Sandboxing browser clients](/project/frontend-sandboxing) will complete permissions enforcement for Urbit applications.
 
-
-## Reduce Hosting Costs
-
-Running an Urbit hosting company needs to have low enough unit costs per ship to have the possibility of profit. Some of the costs of hosting have to do with Urbit resource usage, especially RAM. Other costs stem from maintenance burden and difficulties with supervising Urbit processes from hosting environments.
-
-Demand paging in the runtime promises to reduce RAM usage significantly. Establishing "quiescence" should also reduce costs, by letting a host move a ship's data out of RAM into disk-based storage when not in use.
-
-[View Project Arc &rarr;](/arcs/reduce-hosting-costs)
+[View Project Arc &rarr;](/arcs/security-malicious-apps)
 
 
-## Improve Backward Compatibility
-
-As it stands, every Kelvin change breaks backward compatibility, requiring app devs to publish modified code so their users can keep the app running. This needs to happen less frequently over time, until eventually apps can be "write once, run forever."
-
-Within the next few years, we need to get to the point where future changes never necessitate deprecating old functionality. This requires stabilizing the interface the kernel presents to applications, so that old features are worth committing to maintaining, and future changes to the interface will be small enough that writing shims is not onerous.
-
-[View Project Arc &rarr;](/arcs/improve-backward-compatibility)
-
-
-## Improve Developer Experience
-
-Urbit, like all operating systems, is primarily a tool for developers to build applications.  For Urbit to win, the experience of developing applications needs to be top-notch.
-
-[View Project Arc &rarr;](/arcs/improve-developer-experience)

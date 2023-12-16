@@ -2,7 +2,7 @@
 title = "Vere Error Handling"
 arcs = ["Zero-click Maintenance"]
 duration = "1 Month"
-manpower = "1 Engineer"
+manpower = "1 Developer"
 status = "Future"
 owner = "TBD"
 description = """

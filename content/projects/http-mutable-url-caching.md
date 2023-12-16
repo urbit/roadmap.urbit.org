@@ -1,9 +1,8 @@
 +++
 title = "HTTP Mutable URL Caching"
 arcs = ["Improve Network Performance"]
-duration = "1 Month"
-manpower = "1 Engineer"
-owner = "~watter-parter"
+date = "2023-03-29"
+contributors = ["~watter-parter"]
 status = "Completed"
 description = """
 Urbit should be able to serve websites at custom URLs efficiently to support serving websites to the old web from a single ship without needing to configure caching reverse proxies such as nginx or varnish.
