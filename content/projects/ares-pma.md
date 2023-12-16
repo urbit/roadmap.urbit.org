@@ -13,7 +13,7 @@ Ares has a novel scheme for ensuring copy-on-write semantics for memory pages in
 """
 +++
 
-Ares has a novel scheme for ensuring copy-on-write semantics for memory pages in a way that minimizes disk write amplification when taking an incremental snapshot.  This scheme can be backported to Vere, which is especially important for maintaining performance once the loom (noun memory arena) exceeds the size of RAM, which will happen much more frequently with a 4GB or 8GB loom than it does now.
+Ares has a novel scheme for ensuring copy-on-write semantics for memory pages in a way that minimizes disk write amplification when taking an incremental snapshot.  This is used to implement a storage system that can efficiently manage up to 16 terabytes of data in a single Urbit ship.
 
 The work can be tracked here:
 
