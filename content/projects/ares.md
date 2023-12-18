@@ -11,9 +11,20 @@ Ares is a rewrite of the Nock interpreter for much higher performance and data c
 """
 +++
 
-Ares is a clean-slate rewrite of a large part of Urbit's runtime, intended for much higher performance and data storage capacity.  It is a large project with multiple components.  
+Ares is a clean-slate rewrite of a large part of Urbit's runtime, intended for much higher performance and data storage capacity.  It is a large project with multiple components.
 
-At a high level, Ares replaces the "Mars process": one of the two Unix processes that make up Vere, Urbit's current runtime.  The Mars process is responsible for running Urbit's Arvo kernel, and maintaining incremental snapshots of its state.  The other process, called Urth, which manages Urbit's event log and performs input and output, remains untouched by the Ares project.
+At a high level, Ares:
+
+- Increases Urbit's data capacity from 8GB to 16TB
+- Initially improves baseline computation speed by 10-100x
+- Presents a large surface area for ongoing substantial performance improvements
+- Is written in a more mainstream, maintainable language
+
+You can get more detail below, or in the [recent talk from Assembly 2023](https://www.youtube.com/watch?v=dAwCIZa6N9o&t=1s).
+
+## Detail
+
+Ares replaces the "Mars process": one of the two Unix processes that make up Vere, Urbit's current runtime.  The Mars process is responsible for running Urbit's Arvo kernel, and maintaining incremental snapshots of its state.  The other process, called Urth, which manages Urbit's event log and performs input and output, remains untouched by the Ares project.
 
 Ares takes dramatically different strategies from Vere for running Nock and snapshotting state.
 
@@ -59,4 +70,6 @@ The first version of Ares has a relatively unoptimized interpreter for the resul
 
 The goal of the Ares Nock execution project is to demonstrate that while Nock has historically been a slow language, that situation will not persist forever; over time Nock's speed will begin to approach that of native code.
 
-Talk: https://www.youtube.com/watch?v=dAwCIZa6N9o&t=1s
+## Code
+
+This project is under heavy active development and can be tracked via it's repository at [urbit/ares](https://github.com/urbit/ares).

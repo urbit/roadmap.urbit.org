@@ -3,7 +3,7 @@ title = "Directed Messaging"
 arcs = ["Make Urbit Fast"]
 spec = "https://github.com/urbit/UIPs/blob/main/UIPS/UIP-0113.md"
 start_date = "2023-10-01"
-end_date = "2023-04-01"
+end_date = "2024-04-01"
 duration = "3-6 Months"
 manpower = "4 Developers"
 status = "Current"
@@ -25,7 +25,7 @@ At a high level:
 - The entirety of the publisher-side implementation is a layering of small, stateless functions.
 - Existing semantics and interfaces for both %ames and fine can be straightforwardly rebased onto this model.
 
-## Motivation
+## Detail
 
 As of 2023 Urbit has two communication protocols: Ames, for sending commands and receiving acknowledgments; and Fine, a "remote scry protocol" for reading data out of other ships -- specifically, out of their scry namespaces.  Both protocols are forms of one-to-one communication between two Urbit nodes.  They both use Urbit's "galaxy" supernodes for peer discovery, and for packet relaying in case the nodes are behind firewalls.
 

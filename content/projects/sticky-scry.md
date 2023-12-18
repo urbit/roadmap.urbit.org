@@ -1,7 +1,7 @@
 +++
 title = "Sticky Scry"
 arcs = ["Increase Capability"]
-status = "Future"
+status = "Next Up"
 owner = "~rovnys-ricfer"
 start_date = "2023-06-30"
 spec = "https://github.com/urbit/UIPs/blob/main/UIPS/UIP-0100.md"

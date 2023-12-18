@@ -8,7 +8,7 @@ duration = "1-2 Months"
 manpower = "1 Developer"
 status = "Current"
 owner = "~wicdev-wisryt"
-contributors = ["~borref-tonnel"]
+contributors = ["~borref-tonnel", "~dinleb-rambep"]
 description = """
 Introduces a distinction between essential desks and non-essential desks, where only essential desks will block upgrades. Newly installed desks will default to non-essential.
 """
