@@ -15,7 +15,7 @@ Ares is a clean-slate rewrite of a large part of Urbit's runtime, intended for m
 
 At a high level, Ares:
 
-- Increases Urbit's data capacity from 8GB to 16TB
+- Increases Urbit's data capacity from 8GB to 64TB
 - Initially improves baseline computation speed by 10-100x
 - Presents a large surface area for ongoing substantial performance improvements
 - Is written in a more mainstream, maintainable language
@@ -24,11 +24,11 @@ You can get more detail below, or in the [recent talk from Assembly 2023](https:
 
 ## Detail
 
-Ares replaces the "Mars process": one of the two Unix processes that make up Vere, Urbit's current runtime.  The Mars process is responsible for running Urbit's Arvo kernel, and maintaining incremental snapshots of its state.  The other process, called Urth, which manages Urbit's event log and performs input and output, remains untouched by the Ares project.
+Ares replaces the "serf process": one of the two Unix processes that make up Vere, Urbit's current runtime.  The serf process is responsible for running Urbit's Arvo kernel, and maintaining incremental snapshots of its state.  The other process, called the "king", which manages Urbit's event log and performs input and output, remains untouched by the Ares project.
 
 Ares takes dramatically different strategies from Vere for running Nock and snapshotting state.
 
-The snapshotting system is called the Persistent Memory Arena (PMA).  It uses a specialized data structure called a copy-on-write B-tree to manage up to 16 terabytes of data as a [single-level store](https://en.wikipedia.org/wiki/Single-level_store).  All of this data is available to the Nock code of the Arvo kernel and its userspace applications.  Since most machines don't have 16TB of RAM, the PMA handles "paging" data back and forth between disk and RAM so that only the data being acted upon gets loaded into RAM as needed.  The PMA also ensures that minor changes to the data don't cause the whole arena, potentially multiple terabytes in size, to be rewritten back to disk -- it tracks the changes and writes only those and some bookkeeping data to disk, which is essential for managing that much data.
+The snapshotting system is called the Persistent Memory Arena (PMA).  It uses a specialized data structure called a copy-on-write B-tree to manage up to 64 terabytes of data as a [single-level store](https://en.wikipedia.org/wiki/Single-level_store).  All of this data is available to the Nock code of the Arvo kernel and its userspace applications.  Since most machines don't have 64TB of RAM, the PMA handles "paging" data back and forth between disk and RAM so that only the data being acted upon gets loaded into RAM as needed.  The PMA also ensures that minor changes to the data don't cause the whole arena, potentially multiple terabytes in size, to be rewritten back to disk -- it tracks the changes and writes only those and some bookkeeping data to disk, which is essential for managing that much data.
 
 To run Nock, Ares has a much more elaborate strategy than Vere.  There are two components to the Nock interpreter: "2stackz", a split function call stack that takes the place of a standard stack-and-heap system; and a pipeline of optimizations that transform naive Nock code into a special-purpose low-level language that can be run efficiently on a typical processor.
 
